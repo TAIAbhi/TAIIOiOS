@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tagabout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whisper" translatesAutoresizingMaskIntoConstraints="NO" id="Fco-yT-FM7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-ED-IDY">
+                                <rect key="frame" x="8" y="48" width="359" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDu-eu-APz">
+                                <rect key="frame" x="112" y="268.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="dvm-qL-ICQ"/>
+                                    <constraint firstAttribute="width" constant="150" id="rXZ-so-AA6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <state key="normal" backgroundImage="Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LkW-wj-tjH" kind="show" id="w7l-vc-usS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNP-xh-wIa">
+                                <rect key="frame" x="0.0" y="188.5" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VKb-0O-bCh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Sync Contacts">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapsyncConacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nl0-jl-e83"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEy-iC-r6L">
+                                <rect key="frame" x="8" y="397.5" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GDu-eu-APz" firstAttribute="top" secondItem="tNP-xh-wIa" secondAttribute="bottom" constant="20" id="1nV-fb-hmJ"/>
+                            <constraint firstItem="Fco-yT-FM7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4Jd-rS-bNi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OEy-iC-r6L" secondAttribute="trailing" constant="8" id="5Sy-0j-zmE"/>
+                            <constraint firstItem="Fco-yT-FM7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BLc-Zi-8bG"/>
+                            <constraint firstItem="Fco-yT-FM7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D7X-LZ-SP5"/>
+                            <constraint firstItem="tNP-xh-wIa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dym-dP-cxM"/>
+                            <constraint firstItem="MUh-ED-IDY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="IB1-Ll-4nJ"/>
+                            <constraint firstItem="MUh-ED-IDY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="LMC-dK-XbA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MUh-ED-IDY" secondAttribute="trailing" constant="8" id="Lg1-6e-3Fu"/>
+                            <constraint firstItem="OEy-iC-r6L" firstAttribute="bottom" secondItem="GDu-eu-APz" secondAttribute="bottom" id="M4G-A2-iF2"/>
+                            <constraint firstItem="Fco-yT-FM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tjc-xZ-BLA"/>
+                            <constraint firstItem="GDu-eu-APz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ww7-bk-tsa"/>
+                            <constraint firstItem="GDu-eu-APz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Z4f-ud-aSg"/>
+                            <constraint firstItem="OEy-iC-r6L" firstAttribute="centerX" secondItem="GDu-eu-APz" secondAttribute="centerX" id="fbl-94-TMY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tNP-xh-wIa" secondAttribute="trailing" id="q1z-OE-tjy"/>
+                            <constraint firstItem="OEy-iC-r6L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="tmD-oW-pfw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleMessage" destination="MUh-ED-IDY" id="ld0-Nr-xTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1466.4000000000001" y="-54.422788605697157"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="nLN-g9-6D1">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="LkW-wj-tjH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7V-Pi-Z8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="-54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="800" height="800"/>
+        <image name="Whisper" width="1200" height="627"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_Tagabout {
+  umbrella header "Pods-Tagabout-umbrella.h"
+
+  export *
+  module * { export * }
+}
