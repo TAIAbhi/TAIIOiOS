@@ -20,7 +20,6 @@
 		F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DDD2030527B00D95CCD /* Assets.xcassets */; };
 		F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */; };
 		F19F4DF72030CC3300D95CCD /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DF62030CC3300D95CCD /* movie.mov */; };
-		F1D26E40204902D10049638F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1D26E3E204902D10049638F /* Localizable.strings */; };
 		F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E4E2049229E0049638F /* UILocalizationConstants.swift */; };
 		F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D26E5B204A6B7A0049638F /* VideoplayerScene.storyboard */; };
 		F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E62204A9F0F0049638F /* APIGateway.swift */; };
@@ -47,9 +46,7 @@
 		F19F4DE02030527B00D95CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F19F4DE22030527B00D95CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19F4DF62030CC3300D95CCD /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
-		F1D26E3F204902D10049638F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ViewControllers/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F1D26E4E2049229E0049638F /* UILocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalizationConstants.swift; sourceTree = "<group>"; };
-		F1D26E5020495D180049638F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ViewControllers/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F1D26E5320495D180049638F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F1D26E5A204A6B7A0049638F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VideoplayerScene.storyboard; sourceTree = "<group>"; };
 		F1D26E5D204A6B7C0049638F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
@@ -139,14 +136,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		F19E7CB120395BB90072184C /* ViewControllers */ = {
+		F19E7CB120395BB90072184C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				F1D26E60204A6C9A0049638F /* VideoPlayer */,
 				F19F4DDA2030527B00D95CCD /* Main.storyboard */,
 				F159D978203D133300C1FF55 /* Onboarding */,
 			);
-			path = ViewControllers;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F19F4DCA2030527B00D95CCD = {
@@ -177,12 +174,11 @@
 				F1D26E4D204922520049638F /* Constants */,
 				F19759CD2042D8F400201147 /* Interactor */,
 				F19F4DD62030527B00D95CCD /* AppDelegate.swift */,
-				F19E7CB120395BB90072184C /* ViewControllers */,
+				F19E7CB120395BB90072184C /* ViewController */,
 				F19F4DDD2030527B00D95CCD /* Assets.xcassets */,
 				F19F4DF62030CC3300D95CCD /* movie.mov */,
 				F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */,
 				F19F4DE22030527B00D95CCD /* Info.plist */,
-				F1D26E3E204902D10049638F /* Localizable.strings */,
 			);
 			path = Tagabout;
 			sourceTree = "<group>";
@@ -287,7 +283,6 @@
 			files = (
 				F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */,
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
-				F1D26E40204902D10049638F /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
 				9EDB96DE204AC5F100AA9082 /* LoginViewController.xib in Resources */,
@@ -389,15 +384,6 @@
 				F1D26E5320495D180049638F /* ru */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F1D26E3E204902D10049638F /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1D26E3F204902D10049638F /* en */,
-				F1D26E5020495D180049638F /* ru */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		F1D26E5B204A6B7A0049638F /* VideoplayerScene.storyboard */ = {
