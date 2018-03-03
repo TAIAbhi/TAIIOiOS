@@ -10,10 +10,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var mobileView: TextFieldView!
+    @IBOutlet weak var passwordView: TextFieldView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setup()
+    }
+    
+    func setup() {
+        mobileView.setHeader("Mobile:", withPlaceholder: "Mobile", forKey: "mobile")
+        passwordView.setHeader("Password:", withPlaceholder: "Password", forKey: "password")
     }
 
     override func didReceiveMemoryWarning() {
