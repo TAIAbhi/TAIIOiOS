@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
+		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
+		9EDB96DE204AC5F100AA9082 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96DC204AC5F100AA9082 /* LoginViewController.xib */; };
+		9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96E0204AD13200AA9082 /* TextFieldView.xib */; };
+		9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96E2204AD42500AA9082 /* TextFieldView.swift */; };
 		F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19759CE2042DA3C00201147 /* ContactsInteractor.swift */; };
 		F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E7CB220395BF70072184C /* OnboardingPager.swift */; };
 		F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F4DD62030527B00D95CCD /* AppDelegate.swift */; };
@@ -27,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
+		9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9EDB96DC204AC5F100AA9082 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		9EDB96E0204AD13200AA9082 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		9EDB96E2204AD42500AA9082 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tagabout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD493753F71774E1090BF7F6 /* Pods-Tagabout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.debug.xcconfig"; sourceTree = "<group>"; };
 		F19759CE2042DA3C00201147 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
@@ -81,6 +89,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9EDB96D9204AC55400AA9082 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9EDB96DA204AC56700AA9082 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9EDB96DA204AC56700AA9082 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */,
+				9EDB96DC204AC5F100AA9082 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9EDB96DF204AD10600AA9082 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EDB96E4204AD4DE00AA9082 /* TextFieldView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EDB96E4204AD4DE00AA9082 /* TextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				9EDB96E0204AD13200AA9082 /* TextFieldView.xib */,
+				9EDB96E2204AD42500AA9082 /* TextFieldView.swift */,
+			);
+			path = TextFieldView;
+			sourceTree = "<group>";
+		};
 		F159D978203D133300C1FF55 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +170,8 @@
 		F19F4DD52030527B00D95CCD /* Tagabout */ = {
 			isa = PBXGroup;
 			children = (
+				9EDB96DF204AD10600AA9082 /* Views */,
+				9EDB96D9204AC55400AA9082 /* Scenes */,
 				F1D26E64204AA3A10049638F /* Models */,
 				F1D26E61204A9AA40049638F /* API Gateway */,
 				F1D26E4D204922520049638F /* Constants */,
@@ -246,6 +290,8 @@
 				F1D26E40204902D10049638F /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
+				9EDB96DE204AC5F100AA9082 /* LoginViewController.xib in Resources */,
+				9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */,
 				F19F4DDC2030527B00D95CCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,11 +360,13 @@
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
+				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
+				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        application.statusBarStyle = .lightContent
+        //application.statusBarStyle = .lightContent
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController.init(rootViewController: LoginViewController())
+        window?.makeKeyAndVisible()
+        
         // Override point for customization after application launch.
         return true
     }
