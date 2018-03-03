@@ -9,7 +9,7 @@
 import UIKit
 import AVKit
 
-class ViewController: UIViewController {
+class VideoPlayerViewController: UIViewController {
 
     @IBOutlet weak var titleMessage: UILabel!
     
