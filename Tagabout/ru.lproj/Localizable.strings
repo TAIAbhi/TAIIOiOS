@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Tagabout
+
+  Created by Karun Pant on 04/03/18.
+  Copyright © 2018 Tagabout. All rights reserved.
+*/
+"tagline"= "Помощь друзьям, помогает вам";
+"mobileLabel" = "Мобильный номер";
+"passwordLabel" = "пароль";

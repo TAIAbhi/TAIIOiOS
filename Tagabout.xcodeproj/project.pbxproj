@@ -11,10 +11,11 @@
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
 		9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96E0204AD13200AA9082 /* TextFieldView.xib */; };
 		9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96E2204AD42500AA9082 /* TextFieldView.swift */; };
-		F157928D204AE5EC00EFFEC0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F157928C204AE5EC00EFFEC0 /* LoginViewController.xib */; };
 		F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */; };
 		F1579292204AE63100EFFEC0 /* AddSuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1579290204AE63100EFFEC0 /* AddSuggestionViewController.xib */; };
 		F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1579293204B1D0100EFFEC0 /* DesignableView.swift */; };
+		F157929D204B2B4D00EFFEC0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F157929F204B2B4D00EFFEC0 /* LoginViewController.xib */; };
+		F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F15792A4204B2E8B00EFFEC0 /* Localizable.strings */; };
 		F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19759CE2042DA3C00201147 /* ContactsInteractor.swift */; };
 		F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E7CB220395BF70072184C /* OnboardingPager.swift */; };
 		F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F4DD62030527B00D95CCD /* AppDelegate.swift */; };
@@ -38,10 +39,19 @@
 		9EDB96E2204AD42500AA9082 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tagabout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD493753F71774E1090BF7F6 /* Pods-Tagabout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.debug.xcconfig"; sourceTree = "<group>"; };
-		F157928C204AE5EC00EFFEC0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionViewController.swift; sourceTree = "<group>"; };
 		F1579290204AE63100EFFEC0 /* AddSuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSuggestionViewController.xib; sourceTree = "<group>"; };
 		F1579293204B1D0100EFFEC0 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		F1579297204B2B2900EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
+		F1579298204B2B2900EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F1579299204B2B2A00EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F157929A204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
+		F157929B204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		F157929C204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F157929E204B2B4D00EFFEC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginViewController.xib; sourceTree = "<group>"; };
+		F15792A5204B2E8B00EFFEC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F15792A7204B2EAC00EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F15792A8204B2EAC00EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F19759CE2042DA3C00201147 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
 		F19E7CB220395BF70072184C /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		F19F4DD32030527B00D95CCD /* Tagabout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagabout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,10 +63,7 @@
 		F19F4DE22030527B00D95CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19F4DF62030CC3300D95CCD /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
 		F1D26E4E2049229E0049638F /* UILocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalizationConstants.swift; sourceTree = "<group>"; };
-		F1D26E5320495D180049638F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F1D26E5A204A6B7A0049638F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VideoplayerScene.storyboard; sourceTree = "<group>"; };
-		F1D26E5D204A6B7C0049638F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
-		F1D26E5F204A6B7D0049638F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
 		F1D26E62204A9F0F0049638F /* APIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGateway.swift; sourceTree = "<group>"; };
 		F1D26E65204AA3C00049638F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F1D26E67204AB1B60049638F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -105,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */,
-				F157928C204AE5EC00EFFEC0 /* LoginViewController.xib */,
+				F157929F204B2B4D00EFFEC0 /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 				F19F4DF62030CC3300D95CCD /* movie.mov */,
 				F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */,
 				F19F4DE22030527B00D95CCD /* Info.plist */,
+				F15792A4204B2E8B00EFFEC0 /* Localizable.strings */,
 			);
 			path = Tagabout;
 			sourceTree = "<group>";
@@ -279,8 +287,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 				ru,
 			);
 			mainGroup = F19F4DCA2030527B00D95CCD;
@@ -299,9 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1579292204AE63100EFFEC0 /* AddSuggestionViewController.xib in Resources */,
-				F157928D204AE5EC00EFFEC0 /* LoginViewController.xib in Resources */,
+				F157929D204B2B4D00EFFEC0 /* LoginViewController.xib in Resources */,
 				F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */,
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
+				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
 				9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */,
@@ -389,10 +398,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F157929F204B2B4D00EFFEC0 /* LoginViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F157929E204B2B4D00EFFEC0 /* Base */,
+			);
+			name = LoginViewController.xib;
+			sourceTree = "<group>";
+		};
+		F15792A4204B2E8B00EFFEC0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15792A5204B2E8B00EFFEC0 /* Base */,
+				F15792A7204B2EAC00EFFEC0 /* en */,
+				F15792A8204B2EAC00EFFEC0 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		F19F4DDA2030527B00D95CCD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F19F4DDB2030527B00D95CCD /* Base */,
+				F1579298204B2B2900EFFEC0 /* en */,
+				F157929B204B2B3400EFFEC0 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -401,7 +430,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F19F4DE02030527B00D95CCD /* Base */,
-				F1D26E5320495D180049638F /* ru */,
+				F1579299204B2B2A00EFFEC0 /* en */,
+				F157929C204B2B3400EFFEC0 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -410,8 +440,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F1D26E5A204A6B7A0049638F /* Base */,
-				F1D26E5D204A6B7C0049638F /* en */,
-				F1D26E5F204A6B7D0049638F /* ru */,
+				F1579297204B2B2900EFFEC0 /* en */,
+				F157929A204B2B3400EFFEC0 /* ru */,
 			);
 			name = VideoplayerScene.storyboard;
 			sourceTree = "<group>";

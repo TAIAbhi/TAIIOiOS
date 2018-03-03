@@ -31,13 +31,16 @@ class TextFieldView: DesignableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        viewSetup()
+       
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        viewSetup()
+ 
     }
     
+    override func awakeFromNib() {
+        viewSetup()
+    }
     fileprivate func viewSetup(){
         textField.layer.cornerRadius = 8.0
         textField.layer.borderWidth = 1.0

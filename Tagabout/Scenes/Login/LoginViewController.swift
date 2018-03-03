@@ -20,8 +20,8 @@ class LoginViewController: UIViewController {
     }
     
     func setup() {
-        mobileView.setHeader("Mobile:", withPlaceholder: "Mobile", forKey: "mobile")
-        passwordView.setHeader("Password:", withPlaceholder: "Password", forKey: "password")
+        mobileView.setHeader("\(UILocalizationConstants.mobileLabel):", withPlaceholder: UILocalizationConstants.mobileLabel, forKey: "mobile")
+        passwordView.setHeader("\(UILocalizationConstants.passwordLabel):", withPlaceholder: UILocalizationConstants.passwordLabel, forKey: "password")
     }
 
     override func didReceiveMemoryWarning() {
