@@ -27,7 +27,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dag-l9-Pfh">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dag-l9-Pfh">
                     <rect key="frame" x="16" y="56" width="343" height="38"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="38" id="2p8-y4-0y9"/>
@@ -48,7 +48,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-48" y="-303"/>
+            <point key="canvasLocation" x="-48.5" y="-303"/>
         </view>
     </objects>
 </document>

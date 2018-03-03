@@ -9,27 +9,17 @@
 import UIKit
 
 
-class TextFieldView: UIView {
+class TextFieldView: DesignableView {
 
-    let nibName = "TextFieldView"
-    var contentView: UIView?
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-        contentView = view
-    }
-    
-    func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
 
 }
