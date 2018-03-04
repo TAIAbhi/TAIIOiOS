@@ -39,6 +39,7 @@ class TextFieldView: DesignableView {
     }
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         viewSetup()
     }
     fileprivate func viewSetup(){

@@ -19,8 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //application.statusBarStyle = .lightContent
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController.init(rootViewController: LoginViewController())
-        window?.makeKeyAndVisible()
+        let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
+        if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController{
+            window?.rootViewController = UINavigationController.init(rootViewController: vc)
+            window?.makeKeyAndVisible()
+        }
         
         // Override point for customization after application launch.
         return true

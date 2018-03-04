@@ -14,8 +14,8 @@
 		F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */; };
 		F1579292204AE63100EFFEC0 /* AddSuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1579290204AE63100EFFEC0 /* AddSuggestionViewController.xib */; };
 		F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1579293204B1D0100EFFEC0 /* DesignableView.swift */; };
-		F157929D204B2B4D00EFFEC0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F157929F204B2B4D00EFFEC0 /* LoginViewController.xib */; };
 		F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F15792A4204B2E8B00EFFEC0 /* Localizable.strings */; };
+		F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15792A9204BE02800EFFEC0 /* UserStory.storyboard */; };
 		F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19759CE2042DA3C00201147 /* ContactsInteractor.swift */; };
 		F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E7CB220395BF70072184C /* OnboardingPager.swift */; };
 		F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F4DD62030527B00D95CCD /* AppDelegate.swift */; };
@@ -48,10 +48,10 @@
 		F157929A204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
 		F157929B204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		F157929C204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		F157929E204B2B4D00EFFEC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginViewController.xib; sourceTree = "<group>"; };
 		F15792A5204B2E8B00EFFEC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A7204B2EAC00EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A8204B2EAC00EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F15792A9204BE02800EFFEC0 /* UserStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserStory.storyboard; sourceTree = "<group>"; };
 		F19759CE2042DA3C00201147 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
 		F19E7CB220395BF70072184C /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		F19F4DD32030527B00D95CCD /* Tagabout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagabout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +104,7 @@
 			children = (
 				F157928E204AE60B00EFFEC0 /* Add Suggestion */,
 				9EDB96DA204AC56700AA9082 /* Login */,
+				F15792A9204BE02800EFFEC0 /* UserStory.storyboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -112,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */,
-				F157929F204B2B4D00EFFEC0 /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -307,8 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1579292204AE63100EFFEC0 /* AddSuggestionViewController.xib in Resources */,
-				F157929D204B2B4D00EFFEC0 /* LoginViewController.xib in Resources */,
 				F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */,
+				F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */,
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
 				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
@@ -398,14 +398,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F157929F204B2B4D00EFFEC0 /* LoginViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F157929E204B2B4D00EFFEC0 /* Base */,
-			);
-			name = LoginViewController.xib;
-			sourceTree = "<group>";
-		};
 		F15792A4204B2E8B00EFFEC0 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
