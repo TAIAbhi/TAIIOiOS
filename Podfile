@@ -3,4 +3,5 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Tagabout' do
+    pod 'SkyFloatingLabelTextField'
 end
