@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
+		9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */; };
+		9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEE204C3C01005744DE /* LoginInteractor.swift */; };
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
 		9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96E0204AD13200AA9082 /* TextFieldView.xib */; };
 		9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96E2204AD42500AA9082 /* TextFieldView.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
+		9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldExtension.swift; sourceTree = "<group>"; };
+		9E82FFEE204C3C01005744DE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9EDB96E0204AD13200AA9082 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
 		9EDB96E2204AD42500AA9082 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E82FFEB204C1100005744DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9EDB96D9204AC55400AA9082 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */,
+				9E82FFEE204C3C01005744DE /* LoginInteractor.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 		F19F4DD52030527B00D95CCD /* Tagabout */ = {
 			isa = PBXGroup;
 			children = (
+				9E82FFEB204C1100005744DE /* Extensions */,
 				9EDB96DF204AD10600AA9082 /* Views */,
 				9EDB96D9204AC55400AA9082 /* Scenes */,
 				F1D26E64204AA3A10049638F /* Models */,
@@ -343,11 +357,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -383,9 +397,11 @@
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
+				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
 				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
+				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,

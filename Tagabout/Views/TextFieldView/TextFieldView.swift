@@ -47,6 +47,8 @@ class TextFieldView: DesignableView {
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = UIColor(white: 0.7, alpha: 1.0).cgColor
         textField.layer.masksToBounds = true
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 38))
+        textField.leftViewMode = .always
     }
 
 }

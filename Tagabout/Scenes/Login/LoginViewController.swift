@@ -7,29 +7,38 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var mobileView: TextFieldView!
-    @IBOutlet weak var passwordView: TextFieldView!
+    @IBOutlet weak var mobileTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Login"
+        
         setup()
     }
     
     func setup() {
-        mobileView.setHeader("\(UILocalizationConstants.mobileLabel):", withPlaceholder: UILocalizationConstants.mobileLabel, forKey: "mobile")
-        passwordView.setHeader("\(UILocalizationConstants.passwordLabel):", withPlaceholder: UILocalizationConstants.passwordLabel, forKey: "password")
+        // textfield default colors
+        mobileTextField.setCutomDefaultValues()
+        passwordTextField.setCutomDefaultValues()
+        
+        // login button changes
+        loginButton.layer.cornerRadius = 4.0
+        loginButton.layer.masksToBounds = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        
     }
     
-
+    
     /*
     // MARK: - Navigation
 
