@@ -10,8 +10,6 @@ import Foundation
 
 class APIGateway{
     static let shared = APIGateway()
-    private init(){
-    }
     
     private var session : URLSession{
         get{
@@ -19,6 +17,7 @@ class APIGateway{
             return URLSession.init(configuration: config)
         }
     }
+    
     public func doDataCall(request: URLRequest, completion: ((Data)->())?, onError: ((Error)->())?) -> URLSessionTask?{
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error, let onError = onError{

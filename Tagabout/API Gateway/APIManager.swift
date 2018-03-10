@@ -9,9 +9,11 @@
 import UIKit
 
 struct APIManager {
-
+    
     static func doLogin(userName: String, password: String, completion:((User)->())?, onError: ((Error)->())?) -> URLSessionTask? {
-        let request = URLRequest.init(url: API.loginUrl)
+        let loginURL = API.getURL(to: "login/api/login", queryParams: ["userid" : userName, "password":password])
+        var request = URLRequest.init(url: loginURL)
+        request.httpMethod = "GET"
         let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
             print(data)
         }) { (error) in
