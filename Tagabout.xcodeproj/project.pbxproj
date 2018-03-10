@@ -14,7 +14,6 @@
 		9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96E0204AD13200AA9082 /* TextFieldView.xib */; };
 		9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96E2204AD42500AA9082 /* TextFieldView.swift */; };
 		F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */; };
-		F1579292204AE63100EFFEC0 /* AddSuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1579290204AE63100EFFEC0 /* AddSuggestionViewController.xib */; };
 		F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1579293204B1D0100EFFEC0 /* DesignableView.swift */; };
 		F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F15792A4204B2E8B00EFFEC0 /* Localizable.strings */; };
 		F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15792A9204BE02800EFFEC0 /* UserStory.storyboard */; };
@@ -26,6 +25,15 @@
 		F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DDD2030527B00D95CCD /* Assets.xcassets */; };
 		F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */; };
 		F19F4DF72030CC3300D95CCD /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DF62030CC3300D95CCD /* movie.mov */; };
+		F1AA1C052051B4BD000BFB01 /* SingleEntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C042051B4BD000BFB01 /* SingleEntryField.swift */; };
+		F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */; };
+		F1AA1C092051B535000BFB01 /* EntryWithCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C082051B535000BFB01 /* EntryWithCheckBox.swift */; };
+		F1AA1C0B2051B54D000BFB01 /* EntryForDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */; };
+		F1AA1C112051B82D000BFB01 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C102051B82D000BFB01 /* CheckBoxView.swift */; };
+		F1AA1C132051B83A000BFB01 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1AA1C122051B83A000BFB01 /* CheckBoxView.xib */; };
+		F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49F0E2052440400B9B960 /* Suggestion.swift */; };
+		F1B49F152053A3C800B9B960 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49F142053A3C800B9B960 /* Category.swift */; };
+		F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */; };
 		F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E4E2049229E0049638F /* UILocalizationConstants.swift */; };
 		F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D26E5B204A6B7A0049638F /* VideoplayerScene.storyboard */; };
 		F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E62204A9F0F0049638F /* APIGateway.swift */; };
@@ -44,7 +52,6 @@
 		A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tagabout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD493753F71774E1090BF7F6 /* Pods-Tagabout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.debug.xcconfig"; sourceTree = "<group>"; };
 		F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionViewController.swift; sourceTree = "<group>"; };
-		F1579290204AE63100EFFEC0 /* AddSuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSuggestionViewController.xib; sourceTree = "<group>"; };
 		F1579293204B1D0100EFFEC0 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		F1579297204B2B2900EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
 		F1579298204B2B2900EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -66,6 +73,15 @@
 		F19F4DE02030527B00D95CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F19F4DE22030527B00D95CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19F4DF62030CC3300D95CCD /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
+		F1AA1C042051B4BD000BFB01 /* SingleEntryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEntryField.swift; sourceTree = "<group>"; };
+		F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryWithAccessory.swift; sourceTree = "<group>"; };
+		F1AA1C082051B535000BFB01 /* EntryWithCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryWithCheckBox.swift; sourceTree = "<group>"; };
+		F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryForDetails.swift; sourceTree = "<group>"; };
+		F1AA1C102051B82D000BFB01 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		F1AA1C122051B83A000BFB01 /* CheckBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
+		F1B49F0E2052440400B9B960 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		F1B49F142053A3C800B9B960 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionInteractor.swift; sourceTree = "<group>"; };
 		F1D26E4E2049229E0049638F /* UILocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalizationConstants.swift; sourceTree = "<group>"; };
 		F1D26E5A204A6B7A0049638F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VideoplayerScene.storyboard; sourceTree = "<group>"; };
 		F1D26E62204A9F0F0049638F /* APIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGateway.swift; sourceTree = "<group>"; };
@@ -125,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */,
-				9E82FFEE204C3C01005744DE /* LoginInteractor.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -133,6 +148,8 @@
 		9EDB96DF204AD10600AA9082 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F1AA1C0D2051B72E000BFB01 /* CheckBoxView */,
+				F1AA1C032051B46E000BFB01 /* Cells */,
 				9EDB96E4204AD4DE00AA9082 /* TextFieldView */,
 				F1579293204B1D0100EFFEC0 /* DesignableView.swift */,
 			);
@@ -152,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */,
-				F1579290204AE63100EFFEC0 /* AddSuggestionViewController.xib */,
 			);
 			path = "Add Suggestion";
 			sourceTree = "<group>";
@@ -168,7 +184,9 @@
 		F19759CD2042D8F400201147 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				9E82FFEE204C3C01005744DE /* LoginInteractor.swift */,
 				F19759CE2042DA3C00201147 /* ContactsInteractor.swift */,
+				F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -222,6 +240,26 @@
 			path = Tagabout;
 			sourceTree = "<group>";
 		};
+		F1AA1C032051B46E000BFB01 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA1C042051B4BD000BFB01 /* SingleEntryField.swift */,
+				F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */,
+				F1AA1C082051B535000BFB01 /* EntryWithCheckBox.swift */,
+				F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F1AA1C0D2051B72E000BFB01 /* CheckBoxView */ = {
+			isa = PBXGroup;
+			children = (
+				F1AA1C102051B82D000BFB01 /* CheckBoxView.swift */,
+				F1AA1C122051B83A000BFB01 /* CheckBoxView.xib */,
+			);
+			path = CheckBoxView;
+			sourceTree = "<group>";
+		};
 		F1D26E4D204922520049638F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				F1D26E65204AA3C00049638F /* User.swift */,
+				F1B49F0E2052440400B9B960 /* Suggestion.swift */,
+				F1B49F142053A3C800B9B960 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,12 +360,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1579292204AE63100EFFEC0 /* AddSuggestionViewController.xib in Resources */,
 				F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */,
 				F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */,
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
 				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
+				F1AA1C132051B83A000BFB01 /* CheckBoxView.xib in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
 				9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */,
 				F19F4DDC2030527B00D95CCD /* Main.storyboard in Resources */,
@@ -357,10 +397,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,17 +436,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
+				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
+				F1AA1C092051B535000BFB01 /* EntryWithCheckBox.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
+				F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
+				F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */,
+				F1AA1C112051B82D000BFB01 /* CheckBoxView.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
 				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
+				F1B49F152053A3C800B9B960 /* Category.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
+				F1AA1C052051B4BD000BFB01 /* SingleEntryField.swift in Sources */,
+				F1AA1C0B2051B54D000BFB01 /* EntryForDetails.swift in Sources */,
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,
