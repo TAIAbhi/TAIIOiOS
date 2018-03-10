@@ -12,7 +12,7 @@ struct API{
     static let baseURL = "https://www.tai.com/"
     static var loginUrl : URL{
         get{
-            return URL.init(string: "\(baseURL)login")!
+            return URL.init(string: "http://devapitai.us-east-1.elasticbeanstalk.com/api/values/login")!
         }
     }
 }
