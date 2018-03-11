@@ -9,19 +9,23 @@
 import Foundation
 
 class LoginInteractor {
-    func loginUserWithMobile(_ loginId: String, andPassword password: String) {
+    func loginUserWithMobile(_ loginId: String, andPassword password: String, withSuccessHandler completion: ((Bool)->())?) {
         let loginURL = API.getURL(to: "login")
         var request = URLRequest.init(url: loginURL)
         let postParams = "loginId=\(loginId)&password=\(password)"
         guard let postData = postParams.data(using: String.Encoding.ascii, allowLossyConversion: true) else{ return }
         request.httpBody = postData
         let sessionTask : URLSessionTask? = APIManager.doPost(request: request, completion: { (response) in
-            if let response = response, response["action"] == "success", authToken = response["authToken"] as? String{
+            if let json = response, let action = json["action"] as? String, action == "success", let authToken = json["authToken"] as? String{
                 // save auth token to gateway for future use.
                 APIGateway.shared.authToken = authToken
+                if let completion = completion{ completion(true) }
+            }else{
+                if let completion = completion{ completion(false) }
             }
         }) { (error) in
             print("Error on Login \(error.localizedDescription)")
+            if let completion = completion{ completion(false) }
         }
         guard let _ = sessionTask else { return }
         // do something with task if needed.
