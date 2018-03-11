@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
+		9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */; };
+		9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98320557FED00FD8CEF /* LoginRouter.swift */; };
+		9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */; };
 		9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */; };
 		9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEE204C3C01005744DE /* LoginInteractor.swift */; };
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
+		9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListViewController.swift; sourceTree = "<group>"; };
+		9E5CA98320557FED00FD8CEF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListInteractor.swift; sourceTree = "<group>"; };
 		9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldExtension.swift; sourceTree = "<group>"; };
 		9E82FFEE204C3C01005744DE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E5CA98020557E1900FD8CEF /* Suggestions List */ = {
+			isa = PBXGroup;
+			children = (
+				9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */,
+				9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */,
+			);
+			path = "Suggestions List";
+			sourceTree = "<group>";
+		};
 		9E82FFEB204C1100005744DE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +139,7 @@
 		9EDB96D9204AC55400AA9082 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9E5CA98020557E1900FD8CEF /* Suggestions List */,
 				F157928E204AE60B00EFFEC0 /* Add Suggestion */,
 				9EDB96DA204AC56700AA9082 /* Login */,
 				F15792A9204BE02800EFFEC0 /* UserStory.storyboard */,
@@ -135,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */,
+				9E82FFEE204C3C01005744DE /* LoginInteractor.swift */,
+				9E5CA98320557FED00FD8CEF /* LoginRouter.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -177,7 +195,6 @@
 		F19759CD2042D8F400201147 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				9E82FFEE204C3C01005744DE /* LoginInteractor.swift */,
 				F19759CE2042DA3C00201147 /* ContactsInteractor.swift */,
 				F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */,
 			);
@@ -417,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */,
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
@@ -426,11 +444,13 @@
 				F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
+				9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */,
 				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
 				F1B49F152053A3C800B9B960 /* Category.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
+				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
 				F1AA1C052051B4BD000BFB01 /* SingleEntryField.swift in Sources */,

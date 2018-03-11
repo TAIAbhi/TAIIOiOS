@@ -88,6 +88,21 @@
             </objects>
             <point key="canvasLocation" x="-892" y="-460"/>
         </scene>
+        <!--Suggestion List View Controller-->
+        <scene sceneID="dxO-ra-Ort">
+            <objects>
+                <viewController storyboardIdentifier="SuggestionListViewController" id="rQp-dn-JDf" customClass="SuggestionListViewController" customModule="Tagabout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9PR-Yx-GDO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ino-zb-ptS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBK-NA-kLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-911" y="196"/>
+        </scene>
         <!--Add suggestion-->
         <scene sceneID="Vk9-Jt-ugt">
             <objects>
