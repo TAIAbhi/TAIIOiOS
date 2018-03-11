@@ -9,18 +9,18 @@
 import UIKit
 
 struct APIManager {
-    static func doPost(request: URLRequest, completion:((User)->())?, onError: ((Error)->())?) -> URLSessionTask?{
+    static func doPost(request: URLRequest, completion:(([String : Any]?)->())?, onError: ((Error)->())?) -> URLSessionTask?{
         var request = request
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
-            let string1 = String(data: data, encoding: String.Encoding.utf8) ?? "Data could not be printed"
-            print(string1)
             do{
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
+                if let json = json as? [String : Any], let completion = completion{ completion(json) }
             }catch{
-                 print("Unexpected error: \(error).")
+                if let completion = completion{ completion(nil) }
+                print("Unexpected error: \(error).")
+                
             }
         }) { (error) in
             if let onError = onError{ onError(error) }

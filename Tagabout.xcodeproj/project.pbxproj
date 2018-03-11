@@ -219,7 +219,7 @@
 				9EDB96DF204AD10600AA9082 /* Views */,
 				9EDB96D9204AC55400AA9082 /* Scenes */,
 				F1D26E64204AA3A10049638F /* Models */,
-				F1D26E61204A9AA40049638F /* API Gateway */,
+				F1D26E61204A9AA40049638F /* API Handlers */,
 				F1D26E4D204922520049638F /* Constants */,
 				F19759CD2042D8F400201147 /* Interactor */,
 				F19F4DD62030527B00D95CCD /* AppDelegate.swift */,
@@ -260,14 +260,14 @@
 			path = VideoPlayer;
 			sourceTree = "<group>";
 		};
-		F1D26E61204A9AA40049638F /* API Gateway */ = {
+		F1D26E61204A9AA40049638F /* API Handlers */ = {
 			isa = PBXGroup;
 			children = (
 				F1D26E62204A9F0F0049638F /* APIGateway.swift */,
 				F1D26E69204AB39A0049638F /* APIManager.swift */,
 				F1D26E67204AB1B60049638F /* API.swift */,
 			);
-			path = "API Gateway";
+			path = "API Handlers";
 			sourceTree = "<group>";
 		};
 		F1D26E64204AA3A10049638F /* Models */ = {

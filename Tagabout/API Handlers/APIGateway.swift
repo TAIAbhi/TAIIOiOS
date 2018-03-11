@@ -17,7 +17,20 @@ class APIGateway{
             return session
         }
     }
-    
+    public var authToken : String?{
+        get{
+            if let authToken = UserDefaults.standard.object(forKey: "authToken") as? String{
+                return authToken
+            }else{
+                return nil
+            }
+        }
+        set{
+            if let auth = newValue as String?{
+                UserDefaults.standard.set(auth, forKey: "authToken")
+            }
+        }
+    }
     public func doDataCall(request: URLRequest, completion: ((Data)->())?, onError: ((Error)->())?) -> URLSessionTask?{
         
         let task = session.dataTask(with: request) { (data, response, error) in
