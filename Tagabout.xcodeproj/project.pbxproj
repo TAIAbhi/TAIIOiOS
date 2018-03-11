@@ -27,10 +27,7 @@
 		F19F4DF72030CC3300D95CCD /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DF62030CC3300D95CCD /* movie.mov */; };
 		F1AA1C052051B4BD000BFB01 /* SingleEntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C042051B4BD000BFB01 /* SingleEntryField.swift */; };
 		F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */; };
-		F1AA1C092051B535000BFB01 /* EntryWithCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C082051B535000BFB01 /* EntryWithCheckBox.swift */; };
 		F1AA1C0B2051B54D000BFB01 /* EntryForDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */; };
-		F1AA1C112051B82D000BFB01 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C102051B82D000BFB01 /* CheckBoxView.swift */; };
-		F1AA1C132051B83A000BFB01 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1AA1C122051B83A000BFB01 /* CheckBoxView.xib */; };
 		F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49F0E2052440400B9B960 /* Suggestion.swift */; };
 		F1B49F152053A3C800B9B960 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49F142053A3C800B9B960 /* Category.swift */; };
 		F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */; };
@@ -75,10 +72,7 @@
 		F19F4DF62030CC3300D95CCD /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
 		F1AA1C042051B4BD000BFB01 /* SingleEntryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEntryField.swift; sourceTree = "<group>"; };
 		F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryWithAccessory.swift; sourceTree = "<group>"; };
-		F1AA1C082051B535000BFB01 /* EntryWithCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryWithCheckBox.swift; sourceTree = "<group>"; };
 		F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryForDetails.swift; sourceTree = "<group>"; };
-		F1AA1C102051B82D000BFB01 /* CheckBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
-		F1AA1C122051B83A000BFB01 /* CheckBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
 		F1B49F0E2052440400B9B960 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		F1B49F142053A3C800B9B960 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionInteractor.swift; sourceTree = "<group>"; };
@@ -148,7 +142,6 @@
 		9EDB96DF204AD10600AA9082 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F1AA1C0D2051B72E000BFB01 /* CheckBoxView */,
 				F1AA1C032051B46E000BFB01 /* Cells */,
 				9EDB96E4204AD4DE00AA9082 /* TextFieldView */,
 				F1579293204B1D0100EFFEC0 /* DesignableView.swift */,
@@ -245,19 +238,9 @@
 			children = (
 				F1AA1C042051B4BD000BFB01 /* SingleEntryField.swift */,
 				F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */,
-				F1AA1C082051B535000BFB01 /* EntryWithCheckBox.swift */,
 				F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		F1AA1C0D2051B72E000BFB01 /* CheckBoxView */ = {
-			isa = PBXGroup;
-			children = (
-				F1AA1C102051B82D000BFB01 /* CheckBoxView.swift */,
-				F1AA1C122051B83A000BFB01 /* CheckBoxView.xib */,
-			);
-			path = CheckBoxView;
 			sourceTree = "<group>";
 		};
 		F1D26E4D204922520049638F /* Constants */ = {
@@ -365,7 +348,6 @@
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
 				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
-				F1AA1C132051B83A000BFB01 /* CheckBoxView.xib in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
 				9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */,
 				F19F4DDC2030527B00D95CCD /* Main.storyboard in Resources */,
@@ -437,13 +419,11 @@
 			files = (
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
-				F1AA1C092051B535000BFB01 /* EntryWithCheckBox.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
 				F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
 				F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */,
-				F1AA1C112051B82D000BFB01 /* CheckBoxView.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
 				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,

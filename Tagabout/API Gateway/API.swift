@@ -9,8 +9,8 @@
 import UIKit
 
 struct API{
-    static let baseURL = "https://www.tai.com/"
-    static let devURL = "http://devapitai.us-east-1.elasticbeanstalk.com/";
+    static let baseURL = "http://tagaboutit.com/api/"
+    static let devURL = "http://devapitai.us-east-1.elasticbeanstalk.com/api/";
     static func getURL(to relativePath : String, queryParams: [String : String]? = nil) -> URL{
         var urlComponent = URLComponents.init(string: "\(devURL)\(relativePath)")
         if let queryParams = queryParams{

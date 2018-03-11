@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tagabout/Interactor/LoginInteractor.swift"
-            timestampString = "542375533.80136"
+            filePath = "Tagabout/API Gateway/APIGateway.swift"
+            timestampString = "542465181.4548841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "loginUserWithMobile(_:andPassword:withSuccessHandler:andfailureHandler:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "doDataCall(request:completion:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

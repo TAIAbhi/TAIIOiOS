@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //application.statusBarStyle = .lightContent
-        
+        setenv("CFNETWORK_DIAGNOSTICS", "3", 1)
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
         if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController{

@@ -13,12 +13,13 @@ class APIGateway{
     
     private var session : URLSession{
         get{
-            let config = URLSessionConfiguration.default
-            return URLSession.init(configuration: config)
+            let session = URLSession.init(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+            return session
         }
     }
     
     public func doDataCall(request: URLRequest, completion: ((Data)->())?, onError: ((Error)->())?) -> URLSessionTask?{
+        
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error, let onError = onError{
                 onError(error)
@@ -27,6 +28,7 @@ class APIGateway{
                 completion(data)
             }
         }
+        task.resume()
         return task
     }
 }
