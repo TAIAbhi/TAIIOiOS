@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    private lazy var loginRouter = LoginRouter(with: self)
     private lazy var interactor = LoginInteractor()
     
     override func viewDidLoad() {
@@ -37,8 +38,12 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        interactor.loginUserWithMobile(mobileTextField.text!, andPassword: passwordTextField.text!) { (diLogin) in
-            
+        interactor.loginUserWithMobile(mobileTextField.text!, andPassword: passwordTextField.text!) { (didLogin) in
+            if didLogin {
+                self.loginRouter.navigateToSuggestionList()
+            } else {
+                print("Login failed")
+            }
         }
     }
     
