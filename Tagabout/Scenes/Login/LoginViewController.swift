@@ -37,9 +37,7 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        interactor.loginUserWithMobile(mobileTextField.text!, andPassword: passwordTextField.text!, withSuccessHandler: { (data) in
-            
-        }) { (error) in
+        interactor.loginUserWithMobile(mobileTextField.text!, andPassword: passwordTextField.text!) { (diLogin) in
             
         }
     }
