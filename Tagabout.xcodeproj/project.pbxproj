@@ -11,6 +11,10 @@
 		9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */; };
 		9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98320557FED00FD8CEF /* LoginRouter.swift */; };
 		9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */; };
+		9E795FF420598D450090879B /* MyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FF320598D450090879B /* MyDetailsViewController.swift */; };
+		9E795FF6205990120090879B /* MyDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FF5205990120090879B /* MyDetailsInteractor.swift */; };
+		9E795FF82059A3D00090879B /* SuggestionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FF72059A3D00090879B /* SuggestionListTableViewDataSource.swift */; };
+		9E795FFC2059BA650090879B /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */; };
 		9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */; };
 		9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEE204C3C01005744DE /* LoginInteractor.swift */; };
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
@@ -47,6 +51,10 @@
 		9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListViewController.swift; sourceTree = "<group>"; };
 		9E5CA98320557FED00FD8CEF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListInteractor.swift; sourceTree = "<group>"; };
+		9E795FF320598D450090879B /* MyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsViewController.swift; sourceTree = "<group>"; };
+		9E795FF5205990120090879B /* MyDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsInteractor.swift; sourceTree = "<group>"; };
+		9E795FF72059A3D00090879B /* SuggestionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewDataSource.swift; sourceTree = "<group>"; };
+		9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
 		9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldExtension.swift; sourceTree = "<group>"; };
 		9E82FFEE204C3C01005744DE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -124,8 +132,19 @@
 			children = (
 				9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */,
 				9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */,
+				9E795FF72059A3D00090879B /* SuggestionListTableViewDataSource.swift */,
+				9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */,
 			);
 			path = "Suggestions List";
+			sourceTree = "<group>";
+		};
+		9E795FF220598D260090879B /* My Details */ = {
+			isa = PBXGroup;
+			children = (
+				9E795FF320598D450090879B /* MyDetailsViewController.swift */,
+				9E795FF5205990120090879B /* MyDetailsInteractor.swift */,
+			);
+			path = "My Details";
 			sourceTree = "<group>";
 		};
 		9E82FFEB204C1100005744DE /* Extensions */ = {
@@ -139,6 +158,7 @@
 		9EDB96D9204AC55400AA9082 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9E795FF220598D260090879B /* My Details */,
 				9E5CA98020557E1900FD8CEF /* Suggestions List */,
 				F157928E204AE60B00EFFEC0 /* Add Suggestion */,
 				9EDB96DA204AC56700AA9082 /* Login */,
@@ -438,13 +458,16 @@
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
+				9E795FF420598D450090879B /* MyDetailsViewController.swift in Sources */,
 				F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
 				F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */,
+				9E795FF6205990120090879B /* MyDetailsInteractor.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
 				9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */,
+				9E795FFC2059BA650090879B /* SuggestionListTableViewCell.swift in Sources */,
 				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
@@ -454,6 +477,7 @@
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
 				F1AA1C052051B4BD000BFB01 /* SingleEntryField.swift in Sources */,
+				9E795FF82059A3D00090879B /* SuggestionListTableViewDataSource.swift in Sources */,
 				F1AA1C0B2051B54D000BFB01 /* EntryForDetails.swift in Sources */,
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,

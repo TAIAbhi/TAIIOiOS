@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Suggestion : Codable{
+struct Suggestion : Codable {
     
     var sourceId : Int?
     var contactId : Int?
@@ -17,11 +17,18 @@ struct Suggestion : Codable{
     var microCategoryId : Int?
     var businessName : String?
     var businessContact : String?
-    var location : Location?
+    var location : String?
+    var contactNumber: String?
+    var category: String?
+    var microcategory: String?
+    var sourceName: String?
+    var citiLevelBusiness: Bool?
+    var comments: String?
+    var contactName: String?
     
 }
 
-struct Location : Codable{
+struct Location : Codable {
     var locationId : Int?
     var city : String?
     var area : String?
