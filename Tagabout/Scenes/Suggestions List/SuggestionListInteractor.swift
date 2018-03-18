@@ -11,7 +11,7 @@ import Foundation
 class SuggestionListInteractor {
     
     func fetchSuggestionCategories(with completion:  (([Category])->Void)?) {
-        let url = API.getURL(to: "suggestion", queryParams: ["contactNumber": "9867587106"])
+        let url = API.getURL(to: "suggestion")
         let request = URLRequest.init(url: url)
         let sessionTask : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
             if let json = response, let action = json["action"] as? String, action == "success" {
@@ -42,9 +42,17 @@ class SuggestionListInteractor {
         
     }
     
+    func fetchAllMySuggestions(_ completion:  (([Suggestion])->Void)?) {
+        let url = API.getURL(to: "getsuggestion")
+        fetchSuggestionsForUrl(url, with: completion)
+    }
     
     func fetchSuggestionsFor(category: Int, and subCategory: Int, with completion:  (([Suggestion])->Void)?) {
-        let url = API.getURL(to: "getmysuggestion", queryParams: ["mobile": "9867587106", "catId": "\(category)", "subCatId": "\(subCategory)"])
+        let url = API.getURL(to: "getsuggestion", queryParams: ["catId": "\(category)", "subCatId": "\(subCategory)"])
+        fetchSuggestionsForUrl(url, with: completion)
+    }
+    
+    func fetchSuggestionsForUrl(_ url: URL, with completion:  (([Suggestion])->Void)?) {
         let request = URLRequest.init(url: url)
         let sessionTask : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
             if let json = response, let action = json["action"] as? String, action == "success" {
@@ -63,7 +71,6 @@ class SuggestionListInteractor {
                     
                     completion(suggestionArray)
                 }
-                
             } else {
                 if let completion = completion { completion([]) }
             }

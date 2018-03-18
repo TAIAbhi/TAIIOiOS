@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
+		9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */; };
+		9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */; };
+		9E5B933D205EC10700696EB6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B933C205EC10600696EB6 /* Category.swift */; };
 		9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */; };
 		9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98320557FED00FD8CEF /* LoginRouter.swift */; };
 		9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */; };
@@ -24,9 +27,6 @@
 		F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1579293204B1D0100EFFEC0 /* DesignableView.swift */; };
 		F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F15792A4204B2E8B00EFFEC0 /* Localizable.strings */; };
 		F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15792A9204BE02800EFFEC0 /* UserStory.storyboard */; };
-		F187471D205E2E7900916DED /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187471C205E2E7900916DED /* Category.swift */; };
-		F187471F205E2EC500916DED /* SuggestionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187471E205E2EC500916DED /* SuggestionListTableViewDataSource.swift */; };
-		F1874721205E2EDA00916DED /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1874720205E2EDA00916DED /* SuggestionListTableViewCell.swift */; };
 		F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19759CE2042DA3C00201147 /* ContactsInteractor.swift */; };
 		F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E7CB220395BF70072184C /* OnboardingPager.swift */; };
 		F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F4DD62030527B00D95CCD /* AppDelegate.swift */; };
@@ -49,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
+		9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
+		9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewDataSource.swift; sourceTree = "<group>"; };
+		9E5B933C205EC10600696EB6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListViewController.swift; sourceTree = "<group>"; };
 		9E5CA98320557FED00FD8CEF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListInteractor.swift; sourceTree = "<group>"; };
@@ -75,9 +78,6 @@
 		F15792A7204B2EAC00EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A8204B2EAC00EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A9204BE02800EFFEC0 /* UserStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserStory.storyboard; sourceTree = "<group>"; };
-		F187471C205E2E7900916DED /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		F187471E205E2EC500916DED /* SuggestionListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewDataSource.swift; sourceTree = "<group>"; };
-		F1874720205E2EDA00916DED /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
 		F19759CE2042DA3C00201147 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
 		F19E7CB220395BF70072184C /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		F19F4DD32030527B00D95CCD /* Tagabout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagabout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,8 +132,8 @@
 		9E5CA98020557E1900FD8CEF /* Suggestions List */ = {
 			isa = PBXGroup;
 			children = (
-				F1874720205E2EDA00916DED /* SuggestionListTableViewCell.swift */,
-				F187471E205E2EC500916DED /* SuggestionListTableViewDataSource.swift */,
+				9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */,
+				9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */,
 				9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */,
 				9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */,
 			);
@@ -232,6 +232,7 @@
 				F19F4DD42030527B00D95CCD /* Products */,
 				31E56694F6E329CF47440E34 /* Pods */,
 				80D00088B9F7ABFDEC651A39 /* Frameworks */,
+				9E5B933B205EC02400696EB6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,7 +306,7 @@
 		F1D26E64204AA3A10049638F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F187471C205E2E7900916DED /* Category.swift */,
+				9E5B933C205EC10600696EB6 /* Category.swift */,
 				F1D26E65204AA3C00049638F /* User.swift */,
 				F1B49F0E2052440400B9B960 /* Suggestion.swift */,
 			);
@@ -454,11 +455,11 @@
 				9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */,
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
+				9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
 				F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */,
 				F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
-				F187471F205E2EC500916DED /* SuggestionListTableViewDataSource.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */,
@@ -468,13 +469,13 @@
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
-				F187471D205E2E7900916DED /* Category.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
-				F1874721205E2EDA00916DED /* SuggestionListTableViewCell.swift in Sources */,
+				9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
 				F1AA1C052051B4BD000BFB01 /* SingleEntryField.swift in Sources */,
 				F1AA1C0B2051B54D000BFB01 /* EntryForDetails.swift in Sources */,
+				9E5B933D205EC10700696EB6 /* Category.swift in Sources */,
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,

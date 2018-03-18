@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Category{
+struct Category: Codable {
     var catId : Int?
     var name : String?
     var isMicroCategoryAvailable : Bool?
@@ -29,7 +29,7 @@ struct Category{
     }
 }
 
-struct Subcategory{
+struct Subcategory: Codable {
     var subCatId : Int?
     var catId : Int?
     var name : String?
