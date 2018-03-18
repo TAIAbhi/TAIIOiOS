@@ -11,10 +11,6 @@
 		9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */; };
 		9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98320557FED00FD8CEF /* LoginRouter.swift */; };
 		9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */; };
-		9E795FF420598D450090879B /* MyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FF320598D450090879B /* MyDetailsViewController.swift */; };
-		9E795FF6205990120090879B /* MyDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FF5205990120090879B /* MyDetailsInteractor.swift */; };
-		9E795FF82059A3D00090879B /* SuggestionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FF72059A3D00090879B /* SuggestionListTableViewDataSource.swift */; };
-		9E795FFC2059BA650090879B /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */; };
 		9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */; };
 		9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEE204C3C01005744DE /* LoginInteractor.swift */; };
 		9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */; };
@@ -22,6 +18,8 @@
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
 		9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96E0204AD13200AA9082 /* TextFieldView.xib */; };
 		9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96E2204AD42500AA9082 /* TextFieldView.swift */; };
+		F14864182058511100778ED4 /* AddSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14864172058511100778ED4 /* AddSuggestionRouter.swift */; };
+		F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */; };
 		F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */; };
 		F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1579293204B1D0100EFFEC0 /* DesignableView.swift */; };
 		F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F15792A4204B2E8B00EFFEC0 /* Localizable.strings */; };
@@ -38,8 +36,6 @@
 		F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */; };
 		F1AA1C0B2051B54D000BFB01 /* EntryForDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */; };
 		F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49F0E2052440400B9B960 /* Suggestion.swift */; };
-		F1B49F152053A3C800B9B960 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B49F142053A3C800B9B960 /* Category.swift */; };
-		F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */; };
 		F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E4E2049229E0049638F /* UILocalizationConstants.swift */; };
 		F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D26E5B204A6B7A0049638F /* VideoplayerScene.storyboard */; };
 		F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E62204A9F0F0049638F /* APIGateway.swift */; };
@@ -53,10 +49,6 @@
 		9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListViewController.swift; sourceTree = "<group>"; };
 		9E5CA98320557FED00FD8CEF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListInteractor.swift; sourceTree = "<group>"; };
-		9E795FF320598D450090879B /* MyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsViewController.swift; sourceTree = "<group>"; };
-		9E795FF5205990120090879B /* MyDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailsInteractor.swift; sourceTree = "<group>"; };
-		9E795FF72059A3D00090879B /* SuggestionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewDataSource.swift; sourceTree = "<group>"; };
-		9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
 		9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldExtension.swift; sourceTree = "<group>"; };
 		9E82FFEE204C3C01005744DE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
@@ -66,6 +58,8 @@
 		9EDB96E2204AD42500AA9082 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tagabout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD493753F71774E1090BF7F6 /* Pods-Tagabout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.debug.xcconfig"; sourceTree = "<group>"; };
+		F14864172058511100778ED4 /* AddSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionRouter.swift; sourceTree = "<group>"; };
+		F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuggestionInteractor.swift; sourceTree = "<group>"; };
 		F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionViewController.swift; sourceTree = "<group>"; };
 		F1579293204B1D0100EFFEC0 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		F1579297204B2B2900EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
@@ -92,8 +86,6 @@
 		F1AA1C062051B4F1000BFB01 /* EntryWithAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryWithAccessory.swift; sourceTree = "<group>"; };
 		F1AA1C0A2051B54D000BFB01 /* EntryForDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryForDetails.swift; sourceTree = "<group>"; };
 		F1B49F0E2052440400B9B960 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
-		F1B49F142053A3C800B9B960 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionInteractor.swift; sourceTree = "<group>"; };
 		F1D26E4E2049229E0049638F /* UILocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILocalizationConstants.swift; sourceTree = "<group>"; };
 		F1D26E5A204A6B7A0049638F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VideoplayerScene.storyboard; sourceTree = "<group>"; };
 		F1D26E62204A9F0F0049638F /* APIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIGateway.swift; sourceTree = "<group>"; };
@@ -136,19 +128,8 @@
 			children = (
 				9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */,
 				9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */,
-				9E795FF72059A3D00090879B /* SuggestionListTableViewDataSource.swift */,
-				9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */,
 			);
 			path = "Suggestions List";
-			sourceTree = "<group>";
-		};
-		9E795FF220598D260090879B /* My Details */ = {
-			isa = PBXGroup;
-			children = (
-				9E795FF320598D450090879B /* MyDetailsViewController.swift */,
-				9E795FF5205990120090879B /* MyDetailsInteractor.swift */,
-			);
-			path = "My Details";
 			sourceTree = "<group>";
 		};
 		9E82FFEB204C1100005744DE /* Extensions */ = {
@@ -163,7 +144,6 @@
 		9EDB96D9204AC55400AA9082 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				9E795FF220598D260090879B /* My Details */,
 				9E5CA98020557E1900FD8CEF /* Suggestions List */,
 				F157928E204AE60B00EFFEC0 /* Add Suggestion */,
 				9EDB96DA204AC56700AA9082 /* Login */,
@@ -205,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */,
+				F14864172058511100778ED4 /* AddSuggestionRouter.swift */,
+				F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */,
 			);
 			path = "Add Suggestion";
 			sourceTree = "<group>";
@@ -221,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				F19759CE2042DA3C00201147 /* ContactsInteractor.swift */,
-				F1BEAD38204F86BD006D9470 /* AddSuggestionInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -318,7 +299,6 @@
 			children = (
 				F1D26E65204AA3C00049638F /* User.swift */,
 				F1B49F0E2052440400B9B960 /* Suggestion.swift */,
-				F1B49F142053A3C800B9B960 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,31 +441,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F14864182058511100778ED4 /* AddSuggestionRouter.swift in Sources */,
 				9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */,
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
-				9E795FF420598D450090879B /* MyDetailsViewController.swift in Sources */,
 				F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */,
+				F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
-				F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */,
-				9E795FF6205990120090879B /* MyDetailsInteractor.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
 				9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */,
-				9E795FFC2059BA650090879B /* SuggestionListTableViewCell.swift in Sources */,
 				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
-				F1B49F152053A3C800B9B960 /* Category.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
 				F1AA1C052051B4BD000BFB01 /* SingleEntryField.swift in Sources */,
-				9E795FF82059A3D00090879B /* SuggestionListTableViewDataSource.swift in Sources */,
 				F1AA1C0B2051B54D000BFB01 /* EntryForDetails.swift in Sources */,
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,

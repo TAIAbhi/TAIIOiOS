@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tagabout/API Handlers/APIGateway.swift"
-            timestampString = "542466512.65412"
+            filePath = "Tagabout/API Handlers/APIManager.swift"
+            timestampString = "542482732.272571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "authToken"
-            landmarkType = "24">
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "doGet(request:completion:onError:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,14 +25,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tagabout/API Handlers/APIGateway.swift"
-            timestampString = "542466513.93888"
+            filePath = "Tagabout/API Handlers/APIManager.swift"
+            timestampString = "542482732.273097"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "authToken"
-            landmarkType = "24">
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "doGet(request:completion:onError:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Tagabout.APIManager.doGet(request: Foundation.URLRequest, completion: Swift.Optional&lt;(Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()&gt;, onError: Swift.Optional&lt;(Swift.Error) -&gt; ()&gt;) -&gt; Swift.Optional&lt;__ObjC.URLSessionTask&gt;"
+                  moduleName = "Tagabout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Development/Tagabout/Tagabout/API%20Handlers/APIManager.swift"
+                  timestampString = "542482732.318036"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "255">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in static Tagabout.APIManager.doGet(request: Foundation.URLRequest, completion: Swift.Optional&lt;(Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()&gt;, onError: Swift.Optional&lt;(Swift.Error) -&gt; ()&gt;) -&gt; Swift.Optional&lt;__ObjC.URLSessionTask&gt;"
+                  moduleName = "Tagabout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Development/Tagabout/Tagabout/API%20Handlers/APIManager.swift"
+                  timestampString = "542482732.321483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
