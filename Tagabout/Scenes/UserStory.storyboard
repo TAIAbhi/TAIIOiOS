@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNv-yf-dt8" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="74" width="343" height="48"/>
+                                <rect key="frame" x="16" y="374" width="343" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="dVV-tb-9ek"/>
                                 </constraints>
@@ -39,7 +40,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F0b-TO-Mos" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="134" width="343" height="48"/>
+                                <rect key="frame" x="16" y="434" width="343" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="FWd-aD-SZA"/>
                                 </constraints>
@@ -51,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4D-vt-Qjk">
-                                <rect key="frame" x="16" y="202" width="343" height="40"/>
+                                <rect key="frame" x="16" y="502" width="343" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="I6b-JP-264"/>
@@ -64,30 +65,40 @@
                                     <action selector="loginButtonTapped:" destination="z9v-Wr-WgC" eventType="touchUpInside" id="izl-iM-Dm2"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C7f-CS-vis">
+                                <rect key="frame" x="62.666666666666657" y="74" width="249.99999999999997" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C7f-CS-vis" secondAttribute="height" multiplier="1:1" id="Hls-mq-ymb"/>
+                                    <constraint firstAttribute="width" constant="250" id="bLF-kT-OoC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="i4D-vt-Qjk" firstAttribute="leading" secondItem="F0b-TO-Mos" secondAttribute="leading" id="5K8-iU-d0D"/>
                             <constraint firstItem="azY-rT-V7J" firstAttribute="trailing" secondItem="F0b-TO-Mos" secondAttribute="trailing" constant="16" id="DaV-uS-WFc"/>
                             <constraint firstItem="i4D-vt-Qjk" firstAttribute="trailing" secondItem="F0b-TO-Mos" secondAttribute="trailing" id="Eet-vE-Un3"/>
+                            <constraint firstItem="C7f-CS-vis" firstAttribute="top" secondItem="azY-rT-V7J" secondAttribute="top" constant="30" id="Hby-rm-Nob"/>
                             <constraint firstItem="F0b-TO-Mos" firstAttribute="leading" secondItem="azY-rT-V7J" secondAttribute="leading" constant="16" id="NhW-ll-fHf"/>
-                            <constraint firstItem="NNv-yf-dt8" firstAttribute="top" secondItem="azY-rT-V7J" secondAttribute="top" constant="30" id="Svv-Ix-VOh"/>
+                            <constraint firstItem="NNv-yf-dt8" firstAttribute="top" secondItem="C7f-CS-vis" secondAttribute="bottom" constant="50" id="O2A-uv-7yd"/>
                             <constraint firstItem="F0b-TO-Mos" firstAttribute="top" secondItem="NNv-yf-dt8" secondAttribute="bottom" constant="12" id="ToC-S2-4sU"/>
                             <constraint firstItem="azY-rT-V7J" firstAttribute="trailing" secondItem="NNv-yf-dt8" secondAttribute="trailing" constant="16" id="X0O-gw-5jN"/>
                             <constraint firstItem="i4D-vt-Qjk" firstAttribute="top" secondItem="F0b-TO-Mos" secondAttribute="bottom" constant="20" id="XvV-l9-IeQ"/>
                             <constraint firstItem="NNv-yf-dt8" firstAttribute="leading" secondItem="azY-rT-V7J" secondAttribute="leading" constant="16" id="bAD-z2-ajc"/>
+                            <constraint firstItem="C7f-CS-vis" firstAttribute="centerX" secondItem="azY-rT-V7J" secondAttribute="centerX" id="tbj-xn-llJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="azY-rT-V7J"/>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="i4D-vt-Qjk" id="dla-Ya-wKD"/>
+                        <outlet property="logoImageView" destination="C7f-CS-vis" id="USG-Ad-I8c"/>
                         <outlet property="mobileTextField" destination="NNv-yf-dt8" id="8pF-Ii-dXJ"/>
                         <outlet property="passwordTextField" destination="F0b-TO-Mos" id="lBQ-1r-W94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1u-dq-uaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-892" y="-460"/>
+            <point key="canvasLocation" x="-892" y="-460.34482758620692"/>
         </scene>
         <!--Suggestion List View Controller-->
         <scene sceneID="dxO-ra-Ort">

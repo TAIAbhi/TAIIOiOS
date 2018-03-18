@@ -17,6 +17,8 @@
 		9E795FFC2059BA650090879B /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */; };
 		9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */; };
 		9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEE204C3C01005744DE /* LoginInteractor.swift */; };
+		9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */; };
+		9EC817E2205D3B2A00C3616D /* Logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9EC817E1205D3B2A00C3616D /* Logo.gif */; };
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
 		9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96E0204AD13200AA9082 /* TextFieldView.xib */; };
 		9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96E2204AD42500AA9082 /* TextFieldView.swift */; };
@@ -57,6 +59,8 @@
 		9E795FFB2059BA640090879B /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
 		9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldExtension.swift; sourceTree = "<group>"; };
 		9E82FFEE204C3C01005744DE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		9EC817E1205D3B2A00C3616D /* Logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Logo.gif; sourceTree = "<group>"; };
 		9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9EDB96E0204AD13200AA9082 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
 		9EDB96E2204AD42500AA9082 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */,
+				9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */,
 				F19F4DE22030527B00D95CCD /* Info.plist */,
 				F15792A4204B2E8B00EFFEC0 /* Localizable.strings */,
+				9EC817E1205D3B2A00C3616D /* Logo.gif */,
 			);
 			path = Tagabout;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
 				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
+				9EC817E2205D3B2A00C3616D /* Logo.gif in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
 				9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */,
 				F19F4DDC2030527B00D95CCD /* Main.storyboard in Resources */,
@@ -465,6 +472,7 @@
 				F1BEAD39204F86BD006D9470 /* AddSuggestionInteractor.swift in Sources */,
 				9E795FF6205990120090879B /* MyDetailsInteractor.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
+				9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
 				9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */,
 				9E795FFC2059BA650090879B /* SuggestionListTableViewCell.swift in Sources */,
