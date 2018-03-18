@@ -18,6 +18,7 @@ class LoginInteractor {
         let sessionTask : URLSessionTask? = APIManager.doPost(request: request, completion: { (response) in
             if let json = response, let action = json["action"] as? String, action == "success", let authToken = json["authToken"] as? String{
                 // save auth token to gateway for future use.
+                print("auth token == \(authToken)")
                 APIGateway.shared.authToken = authToken
                 if let completion = completion{ completion(true) }
             }else{

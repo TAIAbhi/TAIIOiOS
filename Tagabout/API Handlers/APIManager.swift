@@ -32,6 +32,7 @@ struct APIManager {
         var request = request
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(APIGateway.shared.authToken, forHTTPHeaderField: "Token")
         let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
