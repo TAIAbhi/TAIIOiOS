@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var mobileTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     private lazy var loginRouter = LoginRouter(with: self)
     private lazy var interactor = LoginInteractor()
@@ -34,6 +35,9 @@ class LoginViewController: UIViewController {
         // login button changes
         loginButton.layer.cornerRadius = 4.0
         loginButton.layer.masksToBounds = true
+        
+        // Logo gif
+        logoImageView.image = UIImage.gifImageWithName("Logo")
     }
 
     

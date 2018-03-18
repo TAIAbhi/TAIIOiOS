@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
+//        if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+//            window?.rootViewController = UINavigationController.init(rootViewController: vc)
+//            window?.makeKeyAndVisible()
+//        }
         if let authToken = UserDefaults.standard.object(forKey: "authToken") as? String, let vc: SuggestionListViewController = storyBoard.instantiateViewController(withIdentifier: "SuggestionListViewController") as? SuggestionListViewController {
-            // let vc: SuggestionListViewController = storyBoard.instantiateViewController(withIdentifier: "SuggestionListViewController") as? SuggestionListViewController
-            // let vc: MyDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "MyDetailsViewController") as? MyDetailsViewController
             APIGateway.shared.authToken = authToken
             window?.rootViewController = UINavigationController.init(rootViewController: vc)
             window?.makeKeyAndVisible()

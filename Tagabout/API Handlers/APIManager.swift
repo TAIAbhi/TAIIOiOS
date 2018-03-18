@@ -9,34 +9,52 @@
 import UIKit
 
 struct APIManager {
-    static func doPost(request: URLRequest, completion:(([String : Any]?)->())?, onError: ((Error)->())?) -> URLSessionTask?{
+    static func doPost(request: URLRequest, body: [String: Any], completion:(([String : Any]?)->())?, onError: ((Error)->())?) -> URLSessionTask?{
         var request = request
-        request.httpMethod = "POST"
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
-            do{
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                if let json = json as? [String : Any], let completion = completion{ completion(json) }
-            }catch{
-                if let completion = completion{ completion(nil) }
-                print("Unexpected error: \(error).")
-                
+        if let httpBody = try? JSONSerialization.data(withJSONObject: body, options: .prettyPrinted) {
+            request.httpBody = httpBody
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "Accept")
+            request.setValue(APIGateway.shared.authToken, forHTTPHeaderField: "Token")
+            print("calling POST == \(String(describing: request.url?.absoluteString))")
+            print("POST data  == \(body)")
+            let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    if let json = json as? [String : Any], let completion = completion{
+                        print("Json data == \(json)")
+                        completion(json)
+                    }
+                }catch{
+                    if let completion = completion{ completion(nil) }
+                    print("Unexpected error: \(error).")
+                    
+                }
+            }) { (error) in
+                if let onError = onError{ onError(error) }
             }
-        }) { (error) in
-            if let onError = onError{ onError(error) }
+            return task
         }
-        return task
+        
+        return nil
     }
     static func doGet(request: URLRequest, completion:(([String : Any]?)->())?, onError: ((Error)->())?) -> URLSessionTask? {
-        //request.setValue("application/json; charset=UTF-8" , forHTTPHeaderField: "Content-Type")
         var request = request
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(APIGateway.shared.authToken, forHTTPHeaderField: "Token")
+        
+        print("calling GET == \(String(describing: request.url?.absoluteString))")
+        
         let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
-                if let json = json as? [String : Any], let completion = completion { completion(json) }
+                if let json = json as? [String : Any], let completion = completion {
+                    print("Json data == \(json)")
+                    completion(json)
+                }
             } catch {
                 if let completion = completion { completion(nil) }
                 print("Unexpected error: \(error).")
