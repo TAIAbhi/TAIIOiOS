@@ -24,3 +24,21 @@ class SingleEntryField: UITableViewCell {
     }
 
 }
+class MicroCategoryEntry: UITableViewCell {
+    
+    @IBOutlet weak var field1: SkyFloatingLabelTextField!
+    @IBOutlet weak var field2: SkyFloatingLabelTextField!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+}
+
+

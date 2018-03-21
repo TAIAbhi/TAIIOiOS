@@ -17,17 +17,37 @@ class APIGateway{
             return session
         }
     }
+    
+    public var loginData : LoginData?{
+        get{
+            if let loginData = UserDefaults.standard.object(forKey: "loginData") as? Data{
+                let decoder = JSONDecoder()
+                do{
+                    let data = try decoder.decode(LoginData.self, from: loginData)
+                    return data
+                }catch{
+                    return nil
+                }
+            }
+            return nil
+        }
+        set{
+            if let loginData = newValue as LoginData?{
+                let encoder = JSONEncoder()
+                do{
+                    let data = try encoder.encode(loginData)
+                    UserDefaults.standard.set(data, forKey: "loginData")
+                }catch{}
+            }
+        }
+    }
+    
     public var authToken : String?{
         get{
-            if let authToken = UserDefaults.standard.object(forKey: "authToken") as? String{
+            if let loginData = loginData, let authToken = loginData.authToken{
                 return authToken
             }else{
                 return nil
-            }
-        }
-        set{
-            if let auth = newValue as String?{
-                UserDefaults.standard.set(auth, forKey: "authToken")
             }
         }
     }

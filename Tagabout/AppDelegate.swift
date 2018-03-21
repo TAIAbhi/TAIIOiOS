@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            window?.rootViewController = UINavigationController.init(rootViewController: vc)
 //            window?.makeKeyAndVisible()
 //        }
-        if let authToken = UserDefaults.standard.object(forKey: "authToken") as? String, let vc: SuggestionListViewController = storyBoard.instantiateViewController(withIdentifier: "SuggestionListViewController") as? SuggestionListViewController {
-            APIGateway.shared.authToken = authToken
-            window?.rootViewController = UINavigationController.init(rootViewController: vc)
+        if let _ = APIGateway.shared.authToken,
+            let vc: TabbarController = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController {
+            window?.rootViewController = vc
             window?.makeKeyAndVisible()
         } else {
             if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {

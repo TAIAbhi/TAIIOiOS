@@ -16,15 +16,15 @@ class LoginRouter {
         self.loginController = loginController
     }
     
-    func navigateToAddSuggestion() {
+    func openTabbar(){
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
-        if let addSuggestionVc: AddSuggestionViewController = storyBoard.instantiateViewController(withIdentifier: "AddSuggestionViewController") as? AddSuggestionViewController, let window = UIApplication.shared.keyWindow {
-            let navVc = UINavigationController(rootViewController: addSuggestionVc)
-            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                window.rootViewController = navVc
+        if let tabVC: TabbarController = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController, let window = UIApplication.shared.keyWindow {
+            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromRight, animations: {
+                window.rootViewController = tabVC
             }, completion: nil)
         }
     }
+    
     
     func navigateToSuggestionList() {
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)

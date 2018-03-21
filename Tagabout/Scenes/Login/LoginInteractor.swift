@@ -14,10 +14,13 @@ class LoginInteractor {
         let request = URLRequest.init(url: loginURL)
         let postParams = ["loginId": loginId, "password": password]
         let sessionTask : URLSessionTask? = APIManager.doPost(request: request, body: postParams, completion: { (response) in
-            if let json = response, let action = json["action"] as? String, action == "success", let authToken = json["authToken"] as? String {
-                // save auth token to gateway for future use.
-                print("auth token == \(authToken)")
-                APIGateway.shared.authToken = authToken
+            if let json = response, let action = json["action"] as? String, action == "success"{
+                let decoder = JSONDecoder()
+                do{
+                    let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+                    let loginData = try decoder.decode(LoginData.self, from: data)
+                    APIGateway.shared.loginData = loginData
+                }catch{}
                 if let completion = completion{ completion(true) }
             }else{
                 if let completion = completion{ completion(false) }

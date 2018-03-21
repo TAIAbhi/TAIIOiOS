@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         interactor.loginUserWithMobile(mobileTextField.text!, andPassword: passwordTextField.text!) { (didLogin) in
             if didLogin {
-                self.loginRouter.navigateToSuggestionList()
+                self.loginRouter.openTabbar()
             } else {
                 print("Login failed")
             }

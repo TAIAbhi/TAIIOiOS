@@ -16,7 +16,9 @@ struct APIManager {
             request.httpMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.setValue("application/json", forHTTPHeaderField: "Accept")
-            request.setValue(APIGateway.shared.authToken, forHTTPHeaderField: "Token")
+            if let authToken = APIGateway.shared.authToken{
+                request.setValue(authToken, forHTTPHeaderField: "Token")
+            }
             print("calling POST == \(String(describing: request.url?.absoluteString))")
             print("POST data  == \(body)")
             let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in

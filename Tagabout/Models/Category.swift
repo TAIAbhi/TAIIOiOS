@@ -8,41 +8,22 @@
 
 import Foundation
 
-struct Category{
+struct Category : Codable{
     var catId : Int?
     var name : String?
     var isMicroCategoryAvailable : Bool?
     var subCategories: [Subcategory]?
+    var isLocal : Bool?
     
-    init(_ data: [String: Any]) {
-        self.catId = data["catId"] as? Int ?? 0
-        self.name = data["name"] as? String ?? ""
-        self.isMicroCategoryAvailable = data["isMicroCategoryAvailable"] as? Bool ?? false
-        
-        var subCatArray = [Subcategory]()
-        if let subCats = data["subCategories"] as? [[String: Any]], subCats.count > 0 {
-            for s in subCats {
-                subCatArray.append(Subcategory(s))
-            }
-        }
-        self.subCategories = subCatArray
-    }
 }
 
-struct Subcategory{
+struct Subcategory : Codable{
     var subCatId : Int?
     var catId : Int?
     var name : String?
     var microCategoryToolTip : String?
     var commentsToolTip : String?
     
-    init(_ data: [String: Any]) {
-        self.catId = data["catId"] as? Int ?? 0
-        self.commentsToolTip = data["commesntsToolTip"] as? String ?? ""
-        self.microCategoryToolTip = data["microCategoryToolTip"] as? String ?? ""
-        self.name = data["name"] as? String ?? ""
-        self.subCatId = data["subCatId"] as? Int ?? 0
-    }
 }
 
 struct MicroCategory : Codable {
