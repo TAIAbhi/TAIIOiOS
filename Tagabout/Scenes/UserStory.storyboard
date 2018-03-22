@@ -134,6 +134,9 @@
                                 <state key="normal" title="Services (0)">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="categoryButtonTapped:" destination="rQp-dn-JDf" eventType="touchUpInside" id="T7Z-NK-HIu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llp-LU-EG3">
                                 <rect key="frame" x="250" y="60" width="109" height="38"/>
@@ -146,6 +149,9 @@
                                 <state key="normal" title="Shopping (0)">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="categoryButtonTapped:" destination="rQp-dn-JDf" eventType="touchUpInside" id="pqF-Kf-xHS"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zk9-HW-76H">
                                 <rect key="frame" x="0.0" y="106" width="375" height="623"/>

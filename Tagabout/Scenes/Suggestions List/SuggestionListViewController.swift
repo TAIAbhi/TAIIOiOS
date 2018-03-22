@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 class SuggestionListViewController: UIViewController {
 
@@ -27,12 +28,6 @@ class SuggestionListViewController: UIViewController {
         }
     }
     
-    var selectedCategory: Category? {
-        didSet {
-            showSubCatPicker()
-        }
-    }
-    var selectedSubCategory: Subcategory?
     lazy var tableViewDataSource = SuggestionListTableViewDataSource()
     
     @IBOutlet weak var hangoutsButton: UIButton!
@@ -40,49 +35,21 @@ class SuggestionListViewController: UIViewController {
     @IBOutlet weak var shoppingButton: UIButton!
     @IBOutlet weak var suggestionsTableView: UITableView!
     
-    var subCatPicker: UIPickerView?
-    lazy var subCategoryPickerView: UIView = {
-        let viewWidth = self.view.bounds.width
-        
-        let wrapperView = UIView.init(frame: CGRect.init(x: 0, y: self.view.bounds.height, width: viewWidth, height: 289))
-        
-        subCatPicker = UIPickerView.init(frame: CGRect.init(x: 0, y: 39, width: viewWidth, height: 251))
-        subCatPicker?.dataSource = self
-        subCatPicker?.delegate = self
-        subCatPicker?.showsSelectionIndicator = false
-        wrapperView.addSubview(subCatPicker!)
-        
-        let toolBar = UIToolbar.init(frame: CGRect.init(x: 0, y: 0, width: viewWidth, height: 38))
-        toolBar.barStyle = .default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
-        toolBar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(SuggestionListViewController.pickerDone))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SuggestionListViewController.pickerCancel))
-        
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        wrapperView.addSubview(toolBar)
-        
-        return wrapperView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "My Suggestions"
         
         interactor.fetchSuggestionCategories { (categories) in
             self.updateCategoryButtons(categories)
         }
         
-        view.addSubview(subCategoryPickerView)
-        
         suggestionsTableView.dataSource = tableViewDataSource
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        suggestionsTableView.tableFooterView = UIView()
+        
+        interactor.fetchAllMySuggestions { (suggestions) in
+            self.setTableViewData(suggestions)
+        }
     }
     
     // MARK: IBActions
@@ -91,19 +58,23 @@ class SuggestionListViewController: UIViewController {
         let tag = sender.tag
         switch tag {
         case 1:
-            openSubCatPickerFor(hangoutsCategory)
+            openSubCatPickerFor(hangoutsCategory, withAnchor: hangoutsButton)
             break
         case 2:
-            openSubCatPickerFor(servicesCategory)
+            openSubCatPickerFor(servicesCategory, withAnchor: servicesButton)
             break
         case 3:
-            openSubCatPickerFor(shoppingCategory)
+            openSubCatPickerFor(shoppingCategory, withAnchor: shoppingButton)
             break
         default:
             break
         }
     }
     
+    func setTableViewData(_ suggestions: [Suggestion]) {
+        self.tableViewDataSource.setData(suggestions)
+        self.suggestionsTableView.reloadSections(IndexSet(integer: 0), with: .fade)
+    }
 }
 
 // MARK: Category handling
@@ -127,64 +98,35 @@ extension SuggestionListViewController {
         }
     }
     
-    func openSubCatPickerFor(_ category: Category?) {
-        guard let category = category else { return }
-        selectedCategory = category
-    }
-}
-
-// MARk: UIPickerview
-extension SuggestionListViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    func showSubCatPicker() {
-        subCatPicker?.reloadAllComponents()
-        UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
-            self.subCategoryPickerView.frame = CGRect.init(x: 0, y: self.view.bounds.height - 289, width: self.view.bounds.width, height: 289)
-        }, completion: { (done) in
-            
+    func openSubCatPickerFor(_ category: Category?, withAnchor anchor: UIButton) {
+        
+        guard let category = category, let subCats = category.subCategories, subCats.count > 0 else { return }
+        
+        let dropDown = DropDown()
+        
+        // The view to which the drop down will appear on
+        dropDown.anchorView = anchor // UIView or UIBarButtonItem
+        dropDown.direction = .bottom
+        dropDown.shadowRadius = 1
+        dropDown.shadowOpacity = 0.2
+        dropDown.bottomOffset = CGPoint(x: 0, y:38)
+        // The list of items to display. Can be changed dynamically
+        dropDown.dataSource = subCats.map({ (subCat) in
+            if let name = subCat.name {
+                return name
+            }
+            return ""
         })
-    }
-    
-    func hideSubCatPicker() {
-        UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseOut, animations: {
-            self.subCategoryPickerView.frame = CGRect.init(x: 0, y: self.view.bounds.height, width: self.view.bounds.width, height: 289)
-        }, completion: nil)
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return selectedCategory?.subCategories?.count ?? 0
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if let subCats = selectedCategory?.subCategories {
-            return subCats[row].name ?? ""
-        }
-        return ""
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if let subCats = selectedCategory?.subCategories {
-            selectedSubCategory = subCats[row]
+        
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            let selectedSubCat = subCats[index]
+            if let catId = selectedSubCat.catId, let subCatId = selectedSubCat.subCatId {
+                self.interactor.fetchSuggestionsFor(category: catId, and: subCatId, with: { (suggestions) in
+                    self.setTableViewData(suggestions)
+                })
+            }
         }
         
-    }
-    
-    @objc func pickerDone() {
-        hideSubCatPicker()
-        if let catId = selectedSubCategory?.catId, let subCatId = selectedSubCategory?.subCatId {
-            interactor.fetchSuggestionsFor(category: catId, and: subCatId, with: { (suggestions) in
-                self.tableViewDataSource.setData(suggestions)
-                self.suggestionsTableView.reloadData()
-            })
-        }
-        
-    }
-    
-    @objc func pickerCancel() {
-        hideSubCatPicker()
+        dropDown.show()
     }
 }

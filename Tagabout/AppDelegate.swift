@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        DropDown.appearance().textColor = UIColor(white: 0.1, alpha: 1)
+        DropDown.appearance().textFont = UIFont.init(name: "Avenir", size: 16.0)!
+        DropDown.appearance().backgroundColor = UIColor(red: 253/255.0, green: 253/255.0, blue: 253/255.0, alpha: 1.0)
+        DropDown.appearance().selectionBackgroundColor = .lightGray
+        DropDown.appearance().cellHeight = 38
         
         // Override point for customization after application launch.
         return true
