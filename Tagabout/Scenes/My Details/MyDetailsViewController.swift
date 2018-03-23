@@ -11,12 +11,13 @@ import UIKit
 class MyDetailsViewController: UIViewController {
     
     let interactor = MyDetailsInteractor()
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        interactor.fetchMyDetails {
-            
+        interactor.fetchMyDetails { (user) in
+            self.user = user
         }
     }
 

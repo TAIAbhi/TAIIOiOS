@@ -10,7 +10,7 @@ import Foundation
 
 class MyDetailsInteractor {
     
-    func fetchMyDetails(with completion: (() -> Void)?) {
+    func fetchMyDetails(with completion: ((User?) -> Void)?) {
         let url = API.getURL(to: "me")
         let request = URLRequest.init(url: url)
         let sessionTask : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
@@ -18,17 +18,24 @@ class MyDetailsInteractor {
                 // save auth token to gateway for future use.
                 if let completion = completion, let data = json["message"] as? [[String: Any]] {
                     
-                    print("me == \(data)")
+                    do {
+                        let data = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+                        let decoder = JSONDecoder()
+                        let user = try decoder.decode(User.self, from: data)
+                        completion(user)
+                    } catch {
+                        completion(nil)
+                    }
                     
-                    completion()
+                    
                 }
                 
             } else {
-                if let completion = completion { completion() }
+                if let completion = completion { completion(nil) }
             }
         }) { (error) in
             print("Error on fetch suggestion \(error.localizedDescription)")
-            if let completion = completion { completion() }
+            if let completion = completion { completion(nil) }
         }
         guard let _ = sessionTask else { return }
     }

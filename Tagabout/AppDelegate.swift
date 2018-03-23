@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc: TabbarController = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController {
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
+
         } else {
             if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
                 window?.rootViewController = UINavigationController.init(rootViewController: vc)

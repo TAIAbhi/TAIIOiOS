@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 struct LoginData : Codable{
     var action : String?
     var authToken : String?
@@ -26,5 +27,20 @@ struct LoginDetails: Codable {
     var sourceName : String?
     var mobile : String?
     var sourceType : String?
+}
+
+struct User: Codable {
     
+    var contact: String?
+    var contactComments: String?
+    var contactId: Int?
+    var contactLevelUnderstanding: String?
+    var contactNumber: String?
+    var isContactDetailsAdded: String?
+    var location1: String?
+    var location2: String?
+    var location3: String?
+    var notification: String?
+    var source: String?
+    var sourceId: Int?
 }
