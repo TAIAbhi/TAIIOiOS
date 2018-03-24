@@ -28,10 +28,6 @@ class LoginViewController: UIViewController {
     }
     
     func setup() {
-        // textfield default colors
-        mobileTextField.setCutomDefaultValues()
-        passwordTextField.setCutomDefaultValues()
-        
         // login button changes
         loginButton.layer.cornerRadius = 4.0
         loginButton.layer.masksToBounds = true

@@ -36,11 +36,28 @@ struct User: Codable {
     var contactId: Int?
     var contactLevelUnderstanding: String?
     var contactNumber: String?
-    var isContactDetailsAdded: String?
+    var isContactDetailsAdded: Bool?
     var location1: String?
     var location2: String?
     var location3: String?
     var notification: String?
     var source: String?
     var sourceId: Int?
+    
+    // swift 4 decoder was not working -- can't help it -- no time
+    init(dict: [String: Any]) {
+        if let contact = dict["contact"] as? String { self.contact = contact }
+        if let contactComments = dict["contactComments"] as? String { self.contactComments = contactComments }
+        if let contactId = dict["contactId"] as? Int { self.contactId = contactId }
+        if let contactLevelUnderstanding = dict["contactLevelUnderstanding"] as? String { self.contactLevelUnderstanding = contactLevelUnderstanding }
+        if let contactNumber = dict["contactNumber"] as? String { self.contactNumber = contactNumber }
+        if let isContactDetailsAdded = dict["isContactDetailsAdded"] as? Bool { self.isContactDetailsAdded = isContactDetailsAdded }
+        if let location1 = dict["location1"] as? String { self.location1 = location1 }
+        if let location2 = dict["location2"] as? String { self.location2 = location2 }
+        if let location3 = dict["location3"] as? String { self.location3 = location3 }
+        if let notification = dict["notification"] as? String { self.notification = notification }
+        if let source = dict["source"] as? String { self.source = source }
+        if let sourceId = dict["sourceId"] as? Int { self.sourceId = sourceId }
+        
+    }
 }
