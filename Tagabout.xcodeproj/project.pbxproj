@@ -11,6 +11,8 @@
 		9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */; };
 		9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */; };
 		9E5B933D205EC10700696EB6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B933C205EC10600696EB6 /* Category.swift */; };
+		9E5B9341205EDC8300696EB6 /* MyDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B933F205EDC8300696EB6 /* MyDetailsInteractor.swift */; };
+		9E5B9342205EDC8300696EB6 /* MyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9340205EDC8300696EB6 /* MyDetailsViewController.swift */; };
 		9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */; };
 		9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA98320557FED00FD8CEF /* LoginRouter.swift */; };
 		9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */; };
@@ -54,6 +56,8 @@
 		9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
 		9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E5B933C205EC10600696EB6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9E5B933F205EDC8300696EB6 /* MyDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyDetailsInteractor.swift; path = "Tagabout/Scenes/My Details/MyDetailsInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		9E5B9340205EDC8300696EB6 /* MyDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyDetailsViewController.swift; path = "Tagabout/Scenes/My Details/MyDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListViewController.swift; sourceTree = "<group>"; };
 		9E5CA98320557FED00FD8CEF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListInteractor.swift; sourceTree = "<group>"; };
@@ -133,6 +137,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E5B933E205EDBC500696EB6 /* My Details */ = {
+			isa = PBXGroup;
+			children = (
+				9E5B933F205EDC8300696EB6 /* MyDetailsInteractor.swift */,
+				9E5B9340205EDC8300696EB6 /* MyDetailsViewController.swift */,
+			);
+			name = "My Details";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		9E5CA98020557E1900FD8CEF /* Suggestions List */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +170,7 @@
 		9EDB96D9204AC55400AA9082 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9E5B933E205EDBC500696EB6 /* My Details */,
 				9E5CA98020557E1900FD8CEF /* Suggestions List */,
 				F157928E204AE60B00EFFEC0 /* Add Suggestion */,
 				9EDB96DA204AC56700AA9082 /* Login */,
@@ -238,7 +253,6 @@
 				F19F4DD42030527B00D95CCD /* Products */,
 				31E56694F6E329CF47440E34 /* Pods */,
 				80D00088B9F7ABFDEC651A39 /* Frameworks */,
-				9E5B933B205EC02400696EB6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -465,6 +479,7 @@
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
 				F1AA1C072051B4F1000BFB01 /* EntryWithAccessory.swift in Sources */,
 				F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */,
+				9E5B9341205EDC8300696EB6 /* MyDetailsInteractor.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
@@ -487,6 +502,7 @@
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,
+				9E5B9342205EDC8300696EB6 /* MyDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

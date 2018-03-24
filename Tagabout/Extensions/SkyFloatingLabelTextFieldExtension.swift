@@ -11,6 +11,12 @@ import SkyFloatingLabelTextField
 
 extension SkyFloatingLabelTextField {
     
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setCutomDefaultValues()
+    }
+    
     func setCutomDefaultValues() {
         // black
         textColor = UIColor(red: 56/255.0, green: 56/255.0, blue: 56/255.0, alpha: 1.0)
@@ -26,6 +32,9 @@ extension SkyFloatingLabelTextField {
         
         lineHeight = 2.0
         selectedLineHeight = 2.0
+        
+        titleFont = UIFont(name: "Avenir-Book", size: 16.0)!
+        placeholderFont = UIFont(name: "Avenir-Book", size: 16.0)!
     }
     
 }
