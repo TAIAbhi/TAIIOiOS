@@ -31,7 +31,6 @@
 		F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1579293204B1D0100EFFEC0 /* DesignableView.swift */; };
 		F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F15792A4204B2E8B00EFFEC0 /* Localizable.strings */; };
 		F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15792A9204BE02800EFFEC0 /* UserStory.storyboard */; };
-		F1806D2A2065013C00CE0062 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1806D292065013C00CE0062 /* AddLocationViewController.swift */; };
 		F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19759CE2042DA3C00201147 /* ContactsInteractor.swift */; };
 		F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E7CB220395BF70072184C /* OnboardingPager.swift */; };
 		F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F4DD62030527B00D95CCD /* AppDelegate.swift */; };
@@ -86,7 +85,6 @@
 		F15792A7204B2EAC00EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A8204B2EAC00EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A9204BE02800EFFEC0 /* UserStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserStory.storyboard; sourceTree = "<group>"; };
-		F1806D292065013C00CE0062 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		F19759CE2042DA3C00201147 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
 		F19E7CB220395BF70072184C /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		F19F4DD32030527B00D95CCD /* Tagabout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagabout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,7 +222,6 @@
 				F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */,
 				F14864172058511100778ED4 /* AddSuggestionRouter.swift */,
 				F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */,
-				F1806D292065013C00CE0062 /* AddLocationViewController.swift */,
 			);
 			path = "Add Suggestion";
 			sourceTree = "<group>";
@@ -476,7 +473,6 @@
 				9E5B934720667E3100696EB6 /* MyDetailsViewController.swift in Sources */,
 				9E5B934620667E3100696EB6 /* MyDetailsInteractor.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
-				F1806D2A2065013C00CE0062 /* AddLocationViewController.swift in Sources */,
 				9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
 				F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */,
