@@ -11,8 +11,9 @@ import SkyFloatingLabelTextField
 
 class MyDetailsViewController: UIViewController {
     
-    let interactor = MyDetailsInteractor()
-    var user: User? {
+    private let interactor = MyDetailsInteractor()
+    private lazy var router = MyDetailsRouter(with: self)
+    private var user: User? {
         didSet {
             if let user = user {
                 referredByLabel.text = user.source ?? ""
@@ -35,10 +36,12 @@ class MyDetailsViewController: UIViewController {
     @IBOutlet weak var detailsTextArea: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interactor.fetchMyDetails { (user) in
+        interactor.fetchMyDetails { [unowned self] (user) in
             self.user = user
         }
     }
@@ -47,6 +50,9 @@ class MyDetailsViewController: UIViewController {
         
     }
 
+    @IBAction func addLocation(_ sender: UIButton) {
+        router.presentAddLocationViewController()
+    }
 }
 
 extension MyDetailsViewController: UITextFieldDelegate, UITextViewDelegate {

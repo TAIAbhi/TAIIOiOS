@@ -16,7 +16,7 @@ class SuggestionListInteractor {
         let sessionTask : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
             if let json = response, let action = json["action"] as? String, action == "success" {
                 // save auth token to gateway for future use.
-                if let completion = completion, let data = json["message"] as? [[String: Any]] {
+                if let completion = completion, let data = json["data"] as? [[String: Any]] {
                     
                     var catArray = [Category]()
                     let decoder = JSONDecoder()
@@ -57,7 +57,7 @@ class SuggestionListInteractor {
         let sessionTask : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
             if let json = response, let action = json["action"] as? String, action == "success" {
                 // save auth token to gateway for future use.
-                if let completion = completion, let data = json["message"] as? [[String: Any]] {
+                if let completion = completion, let data = json["data"] as? [[String: Any]] {
                     
                     var suggestionArray = [Suggestion]()
                     let decoder = JSONDecoder()

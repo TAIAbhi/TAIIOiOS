@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MyDetailsInteractor {
+struct MyDetailsInteractor {
     
     func fetchMyDetails(with completion: ((User?) -> Void)?) {
         let url = API.getURL(to: "me")
