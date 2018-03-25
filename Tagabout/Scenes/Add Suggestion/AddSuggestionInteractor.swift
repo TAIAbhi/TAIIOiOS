@@ -35,6 +35,32 @@ struct AddSuggestionInteractor{
         }
     }
     
+    func getMicroCategoriesFor(subcategoryId : Int, completion: (([MicroCategory]?)->())?){
+        ///api/microcat?subcategoryId=134
+        let microCategoriesURL = API.getURL(to: "microcat", queryParams: ["subcategoryId" : "\(subcategoryId)"])
+        let request = URLRequest.init(url: microCategoriesURL)
+        let _ : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
+            if let json = response, let action = json["action"] as? String, action == "success", let data = json["data"] as? [[String : Any]] {
+                // save auth token to gateway for future use.
+                var allMicroCategories : [MicroCategory] = [MicroCategory]()
+                let decoder = JSONDecoder()
+                for d in data {
+                    do {
+                        let data = try JSONSerialization.data(withJSONObject: d, options: .prettyPrinted)
+                        let microCat = try decoder.decode(MicroCategory.self, from: data)
+                        allMicroCategories.append(microCat)
+                    } catch { }
+                }
+                if let completion = completion{ completion(allMicroCategories) }
+            }else{
+                if let completion = completion{ completion(nil) }
+            }
+        }) { (error) in
+            print("Error getting micro categories \(error.localizedDescription)")
+            if let completion = completion{ completion(nil) }
+        }
+    }
+    
     func postSuggestion(suggestion : Suggestion) {//-> URLSessionDataTask {
         let jsonEncoder = JSONEncoder()
         do{

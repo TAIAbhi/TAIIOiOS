@@ -54,11 +54,18 @@ class APIGateway{
     public func doDataCall(request: URLRequest, completion: ((Data)->())?, onError: ((Error)->())?) -> URLSessionTask?{
         
         let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error, let onError = onError{
-                onError(error)
+            if let httpUrlResponse = response as? HTTPURLResponse
+            {
+                if let error = error, let onError = onError{
+                    onError(error)
+                    return
+                }else{
+                    print("\(httpUrlResponse.allHeaderFields)")
+                }
             }
             if let data = data, let completion = completion{
                 completion(data)
+                return
             }
         }
         task.resume()

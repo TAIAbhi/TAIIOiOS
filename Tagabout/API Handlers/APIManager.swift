@@ -19,8 +19,8 @@ struct APIManager {
             if let authToken = APIGateway.shared.authToken{
                 request.setValue(authToken, forHTTPHeaderField: "Token")
             }
-            print("calling POST == \(String(describing: request.url?.absoluteString))")
-            print("POST data  == \(body)")
+//            print("calling POST == \(String(describing: request.url?.absoluteString))")
+//            print("POST data  == \(body)")
             let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
@@ -47,8 +47,10 @@ struct APIManager {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(APIGateway.shared.authToken, forHTTPHeaderField: "Token")
-        
-        print("calling GET == \(String(describing: request.url?.absoluteString))")
+        if let authToken = APIGateway.shared.authToken{
+            request.setValue(authToken, forHTTPHeaderField: "Token")
+        }
+//        print("calling GET == \(String(describing: request.url?.absoluteString))")
         
         let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
             do {
