@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var logoTopConstraint: NSLayoutConstraint!
     
     private lazy var loginRouter = LoginRouter(with: self)
     private lazy var interactor = LoginInteractor()
@@ -25,6 +26,9 @@ class LoginViewController: UIViewController {
         title = "Login"
         
         setup()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func setup() {
@@ -36,9 +40,11 @@ class LoginViewController: UIViewController {
         logoImageView.image = UIImage.gifImageWithName("Logo")
     }
 
-    
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        interactor.loginUserWithMobile(mobileTextField.text!, andPassword: passwordTextField.text!) { (didLogin) in
+    func triggerLogin() {
+        guard let mobile = mobileTextField.text, mobile.count == 10 else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        interactor.loginUserWithMobile(mobile, andPassword: password) { [unowned self] (didLogin) in
             if didLogin {
                 self.loginRouter.openTabbar()
             } else {
@@ -47,15 +53,49 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        triggerLogin()
     }
-    */
 
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case passwordTextField:
+            triggerLogin()
+        default:
+            break
+        }
+        
+        return true
+    }
+}
+
+// Keyboard delegates
+extension LoginViewController {
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if ((notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            if logoTopConstraint.constant == 20 {
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.logoTopConstraint.constant = -231
+                    self.view.layoutSubviews()
+                })
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if ((notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            if logoTopConstraint.constant != 20 {
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.logoTopConstraint.constant = 20
+                    self.view.layoutSubviews()
+                })
+            }
+        }
+    }
 }

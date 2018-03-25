@@ -40,14 +40,14 @@ class SuggestionListViewController: UIViewController {
         
         title = "My Suggestions"
         
-        interactor.fetchSuggestionCategories { (categories) in
+        interactor.fetchSuggestionCategories { [unowned self] (categories) in
             self.updateCategoryButtons(categories)
         }
         
         suggestionsTableView.dataSource = tableViewDataSource
         suggestionsTableView.tableFooterView = UIView()
         
-        interactor.fetchAllMySuggestions { (suggestions) in
+        interactor.fetchAllMySuggestions { [unowned self] (suggestions) in
             self.setTableViewData(suggestions)
         }
     }
