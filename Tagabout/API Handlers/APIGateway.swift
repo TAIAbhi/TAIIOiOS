@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class APIGateway{
     static let shared = APIGateway()
@@ -60,6 +61,14 @@ class APIGateway{
                     onError(error)
                     return
                 }else{
+                    if httpUrlResponse.statusCode == 401 {
+                        let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
+                        if let window = UIApplication.shared.keyWindow,
+                            let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                            window.rootViewController = UINavigationController.init(rootViewController: vc)
+                            window.makeKeyAndVisible()
+                        }
+                    }
                     print("\(httpUrlResponse.allHeaderFields)")
                 }
             }
