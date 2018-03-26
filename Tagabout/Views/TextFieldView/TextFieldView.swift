@@ -13,17 +13,41 @@ import  SkyFloatingLabelTextField
 
 class TextFieldView: DesignableView {
     
-    @IBOutlet private weak var textField: SkyFloatingLabelTextField!
-    private var dropDown : DropDown?
-    @IBOutlet weak var topConstraint: NSLayoutConstraint!
-    private var isDropDownHidden : Bool = true
+    //consts
+    private let defaultViewHieght : CGFloat = 54.0
+    private let OTHERS = "Others"
     
-    private var key = ""
+    //flags
+    private var isDropDownHidden : Bool = true
     public var secureEntry: Bool = false
     public var isOtherNeeded : Bool = false
+    public var takeFreeText : Bool{
+        didSet{
+            if takeFreeText {
+                dropDown = nil
+            }
+        }
+    }
     
+    
+    //value provider
+    private var value : String?{
+        get{
+            if takeFreeText {
+                return textField.text
+            }else{
+                return nil
+            }
+        }
+    }
+    
+    //outlets
+    @IBOutlet private weak var textField: SkyFloatingLabelTextField!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    
+    //dropdown and view
+    private var dropDown : DropDown?
     private var dataSource : Array<String>?
-    public var filteredDataSource : [String]?
     public var viewHeight : CGFloat{
         didSet{
             if viewHeight == 0{
@@ -34,6 +58,19 @@ class TextFieldView: DesignableView {
         }
     }
     
+    override init(frame: CGRect) {
+        self.viewHeight = defaultViewHieght
+        self.takeFreeText = false
+        super.init(frame: frame)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        self.viewHeight = defaultViewHieght
+        self.takeFreeText = false
+        super.init(coder: aDecoder)
+        
+    }
+    
+    // setup method
     func hookDropdown(placeHolder:String, dataSource : Array<String>?, selectionCompletion: ((Int, String)-> ())?){
         textField.setCutomDefaultValues()
         textField.placeholder = placeHolder
@@ -50,13 +87,17 @@ class TextFieldView: DesignableView {
         dropDown?.anchorView = self
         dropDown?.shadowRadius = 1
         dropDown?.shadowOpacity = 0.2
-        dropDown?.bottomOffset = CGPoint(x: 0, y:54)
+        dropDown?.bottomOffset = CGPoint(x: 0, y:defaultViewHieght)
         dropDown?.dismissMode = .automatic
         // The list of items to display. Can be changed dynamically
         dropDown?.dataSource = newDataSource
         
         self.dataSource = dataSource
         dropDown?.selectionAction = {[unowned self] (index: Int, item: String) in
+            if item == self.OTHERS {
+                self.takeFreeText = true
+                return
+            }
             if let selectionCompletion = selectionCompletion{
                 selectionCompletion(index, item)
             }
@@ -65,19 +106,10 @@ class TextFieldView: DesignableView {
         }
     }
     
-    override init(frame: CGRect) {
-        self.viewHeight = 46
-        super.init(frame: frame)
-    }
-    required init?(coder aDecoder: NSCoder) {
-        self.viewHeight = 46
-        super.init(coder: aDecoder)
- 
-    }
-    
 }
 
 extension TextFieldView : UITextFieldDelegate{
+    // Text field delegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if let dropdown = dropDown{
             isDropDownHidden = false
@@ -88,21 +120,20 @@ extension TextFieldView : UITextFieldDelegate{
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let dataSource = dataSource else {
+        guard let dataSource = dataSource, let dropDown = self.dropDown else {
             return false
         }
         var newString = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
         newString = newString.trimmingCharacters(in: .whitespaces)
-        filteredDataSource = dataSource.filter{ $0.lowercased().contains(newString.lowercased())  || "Other".lowercased().contains(newString.lowercased()) }
-        dropDown?.dataSource = filteredDataSource!
+        
         if newString == ""{
-           dropDown?.dataSource = dataSource
-        }
-        if isDropDownHidden {
-            if let dropdown = dropDown{
-                isDropDownHidden = false
-                dropdown.show()
-            }
+            dropDown.dataSource = dataSource
+            dropDown.show()
+        }else{
+            let filteredDataSource = dataSource.filter{ $0.lowercased().contains(newString.lowercased()) }
+            dropDown.dataSource = filteredDataSource
+            dropDown.show()
+            
         }
         return true
     }
