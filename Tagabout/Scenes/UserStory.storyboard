@@ -508,31 +508,32 @@
                                     <action selector="closeScreen:" destination="CMe-xJ-ZBx" eventType="touchUpInside" id="eLB-17-Cm4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-rK-UgF" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="158" width="343" height="38"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msS-xk-qD3" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
+                                <rect key="frame" x="16" y="138" width="343" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="R1g-cF-qF7"/>
+                                    <constraint firstAttribute="height" constant="56" id="1dw-2n-7ve"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Suburb"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
                                 </userDefinedRuntimeAttributes>
-                            </textField>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GiF-rK-UgF" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="4Dd-jH-RJg"/>
                             <constraint firstItem="s51-8c-yJX" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="Hfn-Be-1eS"/>
-                            <constraint firstItem="Hef-qJ-bNg" firstAttribute="trailing" secondItem="GiF-rK-UgF" secondAttribute="trailing" constant="16" id="cFp-Zg-OhR"/>
+                            <constraint firstItem="Hef-qJ-bNg" firstAttribute="trailing" secondItem="msS-xk-qD3" secondAttribute="trailing" constant="16" id="Xx7-00-MyO"/>
+                            <constraint firstItem="msS-xk-qD3" firstAttribute="top" secondItem="s51-8c-yJX" secondAttribute="bottom" constant="30" id="kFe-Lr-tCe"/>
+                            <constraint firstItem="msS-xk-qD3" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="mRN-Ht-uPq"/>
                             <constraint firstItem="s51-8c-yJX" firstAttribute="top" secondItem="Hef-qJ-bNg" secondAttribute="top" constant="16" id="pOx-Ig-nMu"/>
-                            <constraint firstItem="GiF-rK-UgF" firstAttribute="top" secondItem="s51-8c-yJX" secondAttribute="bottom" constant="50" id="skd-Om-4vs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hef-qJ-bNg"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="suburbTextField" destination="msS-xk-qD3" id="9Vb-9C-5AU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNO-5N-pUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
