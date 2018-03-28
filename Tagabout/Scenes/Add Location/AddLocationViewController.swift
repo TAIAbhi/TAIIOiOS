@@ -10,20 +10,47 @@ import UIKit
 
 class AddLocationViewController: UIViewController {
 
-    @IBOutlet weak var suburbTextField: TextFieldView!
+    @IBOutlet private weak var suburbTextField: TextFieldView!
+    @IBOutlet private weak var locationTextField: TextFieldView!
     
     private let interactor = AddLocationInteractor()
     
-    private var suburbsArray: [Suburb]?
+    private var suburbsArray: [Suburb]? {
+        didSet {
+            if let suburbs = suburbsArray {
+                suburbTextField.updateDataSource(suburbs.map({ (suburb) in
+                    if let name = suburb.suburb {
+                        return name
+                    }
+                    return ""
+                }))
+            }
+        }
+    }
+    
+    private var locationsArray: [Location]? {
+        didSet {
+            if let locations = locationsArray {
+                locationTextField.updateDataSource(locations.map({ (location) in
+                    if let name = location.locationName {
+                        return name
+                    }
+                    return ""
+                }))
+            }
+        }
+    }
+    
+    private var selectedSuburb: Suburb?
+    private var selectedLocation: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        setupFields()
+        setupFields()
         
         interactor.fetchSuburbs { [unowned self] (suburbs) in
             self.suburbsArray = suburbs
-            self.setupFields()
         }
     }
 
@@ -31,15 +58,38 @@ class AddLocationViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onAddButtonPress(_ sender: Any) {
+        
+    }
+    
     func setupFields() {
         suburbTextField.hookDropdown(placeHolder: "Suburb",
-                                     dataSource: suburbsArray?.map({(suburb) in
-                                        if let str = suburb.suburb {
-                                            return str
+                                     dataSource: [String]()) { (index, text) in
+                                            if let suburb = self.suburbsArray?[index] {
+                                                self.selectedSuburb = suburb
+                                            }
+                                            
+        }
+        
+        
+        
+        locationTextField.hookDropdown(placeHolder: "Location",
+                                     dataSource: [String]()) { (index, text) in
+                                        if let str = self.locationsArray?[index] {
+                                            self.selectedLocation = str
                                         }
-                                        return ""
-                                        })) { (index, text) in
                                         
         }
+        
+        locationTextField.onTextFieldChange = onTextFieldChange
+    }
+    
+    func onTextFieldChange(_ textField: UITextField, range: NSRange, string: String) -> Bool {
+        
+        interactor.fetchLocationFromQuery(string) { [unowned self] (locations) in
+            self.locationsArray = locations
+        }
+        
+        return true
     }
 }

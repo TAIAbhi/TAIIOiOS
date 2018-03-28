@@ -58,6 +58,8 @@ class TextFieldView: DesignableView {
         }
     }
     
+    var onTextFieldChange: ((_ textField: UITextField, _ range: NSRange, _ string: String) -> Bool)?
+    
     override init(frame: CGRect) {
         self.viewHeight = defaultViewHieght
         self.takeFreeText = false
@@ -82,7 +84,7 @@ class TextFieldView: DesignableView {
     
     // setup method
     func hookDropdown(placeHolder:String, dataSource : Array<String>?, selectionCompletion: ((Int, String)-> ())?){
-        textField.setCutomDefaultValues()
+//        textField.setCutomDefaultValues()
         textField.placeholder = placeHolder
         guard let dataSource = dataSource else { return }
         textField.delegate = self
@@ -145,6 +147,11 @@ extension TextFieldView : UITextFieldDelegate{
             dropDown.show()
             
         }
+        
+        if onTextFieldChange != nil {
+            return onTextFieldChange!(textField, range, string)
+        }
+        
         return true
     }
 }

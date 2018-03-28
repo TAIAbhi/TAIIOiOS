@@ -518,11 +518,41 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBC-YB-jbA" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
+                                <rect key="frame" x="16" y="202" width="343" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="nvM-Ck-lwd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfX-sq-ivY">
+                                <rect key="frame" x="16" y="274" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tjb-I5-3LN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddButtonPress:" destination="CMe-xJ-ZBx" eventType="touchUpInside" id="CbT-Uf-PO8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="PBC-YB-jbA" firstAttribute="top" secondItem="msS-xk-qD3" secondAttribute="bottom" constant="8" id="0DC-5s-eyj"/>
+                            <constraint firstItem="PBC-YB-jbA" firstAttribute="leading" secondItem="msS-xk-qD3" secondAttribute="leading" id="2Hg-vt-y61"/>
                             <constraint firstItem="s51-8c-yJX" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="Hfn-Be-1eS"/>
+                            <constraint firstItem="PBC-YB-jbA" firstAttribute="trailing" secondItem="msS-xk-qD3" secondAttribute="trailing" id="RR4-Yg-s4K"/>
+                            <constraint firstItem="CfX-sq-ivY" firstAttribute="leading" secondItem="PBC-YB-jbA" secondAttribute="leading" id="UDd-iL-iNH"/>
                             <constraint firstItem="Hef-qJ-bNg" firstAttribute="trailing" secondItem="msS-xk-qD3" secondAttribute="trailing" constant="16" id="Xx7-00-MyO"/>
+                            <constraint firstItem="CfX-sq-ivY" firstAttribute="trailing" secondItem="PBC-YB-jbA" secondAttribute="trailing" id="iRS-RV-cN9"/>
+                            <constraint firstItem="CfX-sq-ivY" firstAttribute="top" secondItem="PBC-YB-jbA" secondAttribute="bottom" constant="16" id="joh-kh-1d6"/>
                             <constraint firstItem="msS-xk-qD3" firstAttribute="top" secondItem="s51-8c-yJX" secondAttribute="bottom" constant="30" id="kFe-Lr-tCe"/>
                             <constraint firstItem="msS-xk-qD3" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="mRN-Ht-uPq"/>
                             <constraint firstItem="s51-8c-yJX" firstAttribute="top" secondItem="Hef-qJ-bNg" secondAttribute="top" constant="16" id="pOx-Ig-nMu"/>
@@ -532,6 +562,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="locationTextField" destination="PBC-YB-jbA" id="8s6-mc-Hnk"/>
                         <outlet property="suburbTextField" destination="msS-xk-qD3" id="9Vb-9C-5AU"/>
                     </connections>
                 </viewController>

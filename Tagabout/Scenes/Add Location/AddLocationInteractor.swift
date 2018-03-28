@@ -21,8 +21,8 @@ struct AddLocationInteractor {
                     for d in data {
                         do {
                             let data = try JSONSerialization.data(withJSONObject: d, options: .prettyPrinted)
-                            let suggestion = try decoder.decode(Suburb.self, from: data)
-                            suburbs.append(suggestion)
+                            let suburb = try decoder.decode(Suburb.self, from: data)
+                            suburbs.append(suburb)
                         } catch { }
                     }
                     completion(suburbs)
@@ -32,6 +32,34 @@ struct AddLocationInteractor {
             if let completion = completion { completion([Suburb]()) }
         }) { (error) in
             if let completion = completion { completion([Suburb]()) }
+        }
+        
+        guard let _ = sessionTask else { return }
+    }
+    
+    
+    func fetchLocationFromQuery(_ query: String, completion: (([Location])->Void)?) {
+        let url = API.getURL(to: "location", queryParams: ["query": query])
+        let request = URLRequest.init(url: url)
+        let sessionTask : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
+            if let json = response, let action = json["action"] as? String, action == "success" {
+                if let completion = completion, let data = json["data"] as? [[String: Any]] {
+                    var locations = [Location]()
+                    let decoder = JSONDecoder()
+                    for d in data {
+                        do {
+                            let data = try JSONSerialization.data(withJSONObject: d, options: .prettyPrinted)
+                            let location = try decoder.decode(Location.self, from: data)
+                            locations.append(location)
+                        } catch { }
+                    }
+                    completion(locations)
+                    return
+                }
+            }
+            if let completion = completion { completion([Location]()) }
+        }) { (error) in
+            if let completion = completion { completion([Location]()) }
         }
         
         guard let _ = sessionTask else { return }
