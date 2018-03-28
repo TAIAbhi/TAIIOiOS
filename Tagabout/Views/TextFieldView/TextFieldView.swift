@@ -70,6 +70,16 @@ class TextFieldView: DesignableView {
         
     }
     
+    func updateDataSource(_ dataSource: Array<String>){
+        if let dropDown = dropDown{
+            self.dataSource = dataSource
+            dropDown.dataSource = dataSource
+            dropDown.show()
+        }else{
+            assert(true, "Call hook dropdown before calling updateDataSource")
+        }
+    }
+    
     // setup method
     func hookDropdown(placeHolder:String, dataSource : Array<String>?, selectionCompletion: ((Int, String)-> ())?){
         textField.setCutomDefaultValues()
