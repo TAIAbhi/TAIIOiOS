@@ -50,7 +50,7 @@ struct APIManager {
         if let authToken = APIGateway.shared.authToken{
             request.setValue(authToken, forHTTPHeaderField: "Token")
         }
-//        print("calling GET == \(String(describing: request.url?.absoluteString))")
+        print("calling GET == \(String(describing: request.url?.absoluteString))")
         
         let task = APIGateway.shared.doDataCall(request: request, completion: { (data) in
             do {

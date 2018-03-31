@@ -17,23 +17,9 @@ struct MyDetailsInteractor {
             if let json = response, let action = json["action"] as? String, action == "success" {
                 // save auth token to gateway for future use.
                 if let completion = completion, let data = json["data"] as? [String: Any] {
-//                    print("dataArray == \(dataArray)")
-//                    guard let data = dataArray.first else { completion(nil); return }
-//                    print("data == \(data)")
                     let user = User(dict: data)
                     completion(user)
-//                    do {
-//                        let encodedData = try JSONSerialization.data(withJSONObject: data, options: [])
-//                        let decoder = JSONDecoder()
-//                        let user = try decoder.decode(User.self, from: encodedData)
-//                        print("user == \(user)")
-//                        completion(user)
-//                    } catch {
-//                        completion(nil)
-//                    }
-                    
                 }
-                
             } else {
                 if let completion = completion { completion(nil) }
             }

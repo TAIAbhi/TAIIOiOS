@@ -34,6 +34,7 @@ struct Location : Codable {
     var area : String?
     var suburb : String?
     var locationName : String?
+    var locSuburb: String?
 }
 
 
