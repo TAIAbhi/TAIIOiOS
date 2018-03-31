@@ -21,4 +21,9 @@ struct MyDetailsRouter {
         viewController?.performSegue(withIdentifier: "MyDetailsToAddLocation", sender: nil)
     }
     
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MyDetailsToAddLocation", let vc = segue.destination as? AddLocationViewController {
+            vc.delegate = viewController
+        }
+    }
 }

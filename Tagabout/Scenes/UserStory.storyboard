@@ -336,7 +336,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JuT-O2-Wga" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                                <rect key="frame" x="16" y="224" width="287" height="48"/>
+                                                <rect key="frame" x="16" y="224" width="343" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="FQt-wI-sYM"/>
                                                 </constraints>
@@ -407,18 +407,6 @@
                                                     <action selector="onUpdateButtonClick:" destination="an7-xo-rnC" eventType="touchUpInside" id="bdJ-QH-0UT"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulq-Uh-2ps">
-                                                <rect key="frame" x="311" y="224" width="48" height="48"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="2OY-6v-oG3"/>
-                                                    <constraint firstAttribute="width" constant="48" id="5gl-Kt-QSK"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="+"/>
-                                                <connections>
-                                                    <action selector="addLocation:" destination="an7-xo-rnC" eventType="touchUpInside" id="YBs-c3-yjO"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -427,22 +415,20 @@
                                             <constraint firstAttribute="trailing" secondItem="IkT-XH-sXv" secondAttribute="trailing" constant="16" id="0z1-DX-87V"/>
                                             <constraint firstAttribute="trailing" secondItem="SWa-R1-6Vc" secondAttribute="trailing" constant="16" id="3kS-fz-buS"/>
                                             <constraint firstAttribute="trailing" secondItem="UMc-AP-grw" secondAttribute="trailing" constant="16" id="569-4d-iHe"/>
-                                            <constraint firstItem="ulq-Uh-2ps" firstAttribute="leading" secondItem="JuT-O2-Wga" secondAttribute="trailing" constant="8" id="8na-RV-c5j"/>
                                             <constraint firstAttribute="trailing" secondItem="33M-dk-zS8" secondAttribute="trailing" constant="16" id="DIM-4U-Kag"/>
                                             <constraint firstAttribute="trailing" secondItem="EXf-8A-pH4" secondAttribute="trailing" constant="16" id="DyW-le-bLm"/>
                                             <constraint firstItem="HpX-4a-JIJ" firstAttribute="top" secondItem="JuT-O2-Wga" secondAttribute="bottom" constant="20" id="H2U-WD-M7l"/>
                                             <constraint firstAttribute="bottom" secondItem="33M-dk-zS8" secondAttribute="bottom" constant="20" id="Hrl-Kg-aha"/>
                                             <constraint firstItem="SWa-R1-6Vc" firstAttribute="leading" secondItem="xQF-cK-V4W" secondAttribute="leading" constant="16" id="KdZ-YO-GLE"/>
-                                            <constraint firstItem="ulq-Uh-2ps" firstAttribute="centerY" secondItem="JuT-O2-Wga" secondAttribute="centerY" id="NLe-2r-yVi"/>
                                             <constraint firstItem="JuT-O2-Wga" firstAttribute="leading" secondItem="xQF-cK-V4W" secondAttribute="leading" constant="16" id="Rbn-iq-koI"/>
                                             <constraint firstAttribute="trailing" secondItem="D32-P2-UNG" secondAttribute="trailing" constant="16" id="V4n-Eu-wPy"/>
+                                            <constraint firstAttribute="trailing" secondItem="JuT-O2-Wga" secondAttribute="trailing" constant="16" id="Zb9-l7-HHW"/>
                                             <constraint firstItem="JuT-O2-Wga" firstAttribute="top" secondItem="SWa-R1-6Vc" secondAttribute="bottom" constant="20" id="aMd-cK-oma"/>
                                             <constraint firstAttribute="trailing" secondItem="HpX-4a-JIJ" secondAttribute="trailing" constant="16" id="ajC-w4-Hm3"/>
                                             <constraint firstItem="IkT-XH-sXv" firstAttribute="top" secondItem="EXf-8A-pH4" secondAttribute="bottom" constant="20" id="b4b-Hm-cdY"/>
                                             <constraint firstItem="EXf-8A-pH4" firstAttribute="leading" secondItem="xQF-cK-V4W" secondAttribute="leading" constant="16" id="df3-z3-7cw"/>
                                             <constraint firstItem="IkT-XH-sXv" firstAttribute="leading" secondItem="xQF-cK-V4W" secondAttribute="leading" constant="16" id="dju-fj-qb3"/>
                                             <constraint firstItem="SWa-R1-6Vc" firstAttribute="top" secondItem="UMc-AP-grw" secondAttribute="bottom" constant="20" id="hsJ-9l-VhZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="ulq-Uh-2ps" secondAttribute="trailing" constant="16" id="hxw-zh-ZMV"/>
                                             <constraint firstItem="D32-P2-UNG" firstAttribute="top" secondItem="xQF-cK-V4W" secondAttribute="top" constant="20" id="kNv-kr-oRV"/>
                                             <constraint firstItem="HpX-4a-JIJ" firstAttribute="leading" secondItem="xQF-cK-V4W" secondAttribute="leading" constant="16" id="ohn-qK-Nlq"/>
                                             <constraint firstItem="UMc-AP-grw" firstAttribute="top" secondItem="D32-P2-UNG" secondAttribute="bottom" constant="20" id="prH-Pk-mc0"/>
@@ -486,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8B-M3-fc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="163"/>
+            <point key="canvasLocation" x="952.79999999999995" y="162.5615763546798"/>
         </scene>
         <!--Add Location View Controller-->
         <scene sceneID="8Pu-e9-j9J">
@@ -508,31 +494,63 @@
                                     <action selector="closeScreen:" destination="CMe-xJ-ZBx" eventType="touchUpInside" id="eLB-17-Cm4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-rK-UgF" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="16" y="158" width="343" height="38"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msS-xk-qD3" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
+                                <rect key="frame" x="16" y="138" width="343" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="R1g-cF-qF7"/>
+                                    <constraint firstAttribute="height" constant="56" id="1dw-2n-7ve"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Suburb"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
                                 </userDefinedRuntimeAttributes>
-                            </textField>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBC-YB-jbA" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
+                                <rect key="frame" x="16" y="202" width="343" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="nvM-Ck-lwd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfX-sq-ivY">
+                                <rect key="frame" x="16" y="274" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tjb-I5-3LN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddButtonPress:" destination="CMe-xJ-ZBx" eventType="touchUpInside" id="CbT-Uf-PO8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GiF-rK-UgF" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="4Dd-jH-RJg"/>
+                            <constraint firstItem="PBC-YB-jbA" firstAttribute="top" secondItem="msS-xk-qD3" secondAttribute="bottom" constant="8" id="0DC-5s-eyj"/>
+                            <constraint firstItem="PBC-YB-jbA" firstAttribute="leading" secondItem="msS-xk-qD3" secondAttribute="leading" id="2Hg-vt-y61"/>
                             <constraint firstItem="s51-8c-yJX" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="Hfn-Be-1eS"/>
-                            <constraint firstItem="Hef-qJ-bNg" firstAttribute="trailing" secondItem="GiF-rK-UgF" secondAttribute="trailing" constant="16" id="cFp-Zg-OhR"/>
+                            <constraint firstItem="PBC-YB-jbA" firstAttribute="trailing" secondItem="msS-xk-qD3" secondAttribute="trailing" id="RR4-Yg-s4K"/>
+                            <constraint firstItem="CfX-sq-ivY" firstAttribute="leading" secondItem="PBC-YB-jbA" secondAttribute="leading" id="UDd-iL-iNH"/>
+                            <constraint firstItem="Hef-qJ-bNg" firstAttribute="trailing" secondItem="msS-xk-qD3" secondAttribute="trailing" constant="16" id="Xx7-00-MyO"/>
+                            <constraint firstItem="CfX-sq-ivY" firstAttribute="trailing" secondItem="PBC-YB-jbA" secondAttribute="trailing" id="iRS-RV-cN9"/>
+                            <constraint firstItem="CfX-sq-ivY" firstAttribute="top" secondItem="PBC-YB-jbA" secondAttribute="bottom" constant="16" id="joh-kh-1d6"/>
+                            <constraint firstItem="msS-xk-qD3" firstAttribute="top" secondItem="s51-8c-yJX" secondAttribute="bottom" constant="30" id="kFe-Lr-tCe"/>
+                            <constraint firstItem="msS-xk-qD3" firstAttribute="leading" secondItem="Hef-qJ-bNg" secondAttribute="leading" constant="16" id="mRN-Ht-uPq"/>
                             <constraint firstItem="s51-8c-yJX" firstAttribute="top" secondItem="Hef-qJ-bNg" secondAttribute="top" constant="16" id="pOx-Ig-nMu"/>
-                            <constraint firstItem="GiF-rK-UgF" firstAttribute="top" secondItem="s51-8c-yJX" secondAttribute="bottom" constant="50" id="skd-Om-4vs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hef-qJ-bNg"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="locationTextField" destination="PBC-YB-jbA" id="8s6-mc-Hnk"/>
+                        <outlet property="suburbTextField" destination="msS-xk-qD3" id="9Vb-9C-5AU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNO-5N-pUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

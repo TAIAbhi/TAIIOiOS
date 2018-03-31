@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            window?.rootViewController = UINavigationController.init(rootViewController: vc)
 //            window?.makeKeyAndVisible()
 //        }
+        print("API token - \(APIGateway.shared.authToken)")
         if let _ = APIGateway.shared.authToken,
             let vc: TabbarController = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController {
             window?.rootViewController = vc

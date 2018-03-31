@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
+		9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592712206BFC7100D58FF5 /* AddLocationInteractor.swift */; };
+		9E592715206BFDCE00D58FF5 /* Suburb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592714206BFDCE00D58FF5 /* Suburb.swift */; };
 		9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */; };
 		9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */; };
 		9E5B933D205EC10700696EB6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B933C205EC10600696EB6 /* Category.swift */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
+		9E592712206BFC7100D58FF5 /* AddLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationInteractor.swift; sourceTree = "<group>"; };
+		9E592714206BFDCE00D58FF5 /* Suburb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suburb.swift; sourceTree = "<group>"; };
 		9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
 		9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E5B933C205EC10600696EB6 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				9E5B93492066979A00696EB6 /* AddLocationViewController.swift */,
+				9E592712206BFC7100D58FF5 /* AddLocationInteractor.swift */,
 			);
 			path = "Add Location";
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				9E5B933C205EC10600696EB6 /* Category.swift */,
 				F1D26E65204AA3C00049638F /* User.swift */,
 				F1B49F0E2052440400B9B960 /* Suggestion.swift */,
+				9E592714206BFDCE00D58FF5 /* Suburb.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
+				9E592715206BFDCE00D58FF5 /* Suburb.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
@@ -486,6 +493,7 @@
 				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
+				9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
@@ -663,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2R2V5X487E;
+				DEVELOPMENT_TEAM = K244U468VG;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -682,7 +690,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2R2V5X487E;
+				DEVELOPMENT_TEAM = K244U468VG;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

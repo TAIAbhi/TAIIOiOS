@@ -36,7 +36,7 @@ class TextFieldView: DesignableView {
     }
     
     //outlets
-    @IBOutlet private weak var textField: SkyFloatingLabelTextField!
+    @IBOutlet weak var textField: SkyFloatingLabelTextField!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     //dropdown and view
@@ -51,6 +51,8 @@ class TextFieldView: DesignableView {
             }
         }
     }
+    
+    var onTextFieldChange: ((_ textField: UITextField, _ range: NSRange, _ string: String) -> Bool)?
     
     override init(frame: CGRect) {
         self.viewHeight = defaultViewHieght
@@ -68,7 +70,7 @@ class TextFieldView: DesignableView {
         if let dropDown = dropDown{
             self.dataSource = dataSource
             dropDown.dataSource = dataSource
-            dropDown.show()
+//            dropDown.show()
         }else{
             assert(true, "Call hook dropdown before calling updateDataSource")
         }
@@ -76,7 +78,7 @@ class TextFieldView: DesignableView {
     
     // setup method
     func hookDropdown(placeHolder:String, dataSource : Array<String>?, selectionCompletion: ((Int, String)-> ())?){
-        textField.setCutomDefaultValues()
+//        textField.setCutomDefaultValues()
         textField.placeholder = placeHolder
         guard let dataSource = dataSource else { return }
         textField.delegate = self
@@ -139,6 +141,11 @@ extension TextFieldView : UITextFieldDelegate{
             dropDown.show()
             
         }
+        
+        if onTextFieldChange != nil {
+            return onTextFieldChange!(textField, range, string)
+        }
+        
         return true
     }
 }

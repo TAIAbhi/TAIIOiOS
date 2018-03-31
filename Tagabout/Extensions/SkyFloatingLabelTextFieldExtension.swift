@@ -33,7 +33,7 @@ extension SkyFloatingLabelTextField {
         lineHeight = 2.0
         selectedLineHeight = 2.0
         
-        titleFont = UIFont(name: "Avenir-Book", size: 16.0)!
+        titleFont = UIFont(name: "Avenir-Book", size: 10.0)!
         placeholderFont = UIFont(name: "Avenir-Book", size: 16.0)!
     }
     
