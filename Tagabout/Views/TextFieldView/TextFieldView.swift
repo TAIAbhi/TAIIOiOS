@@ -31,14 +31,8 @@ class TextFieldView: DesignableView {
     
     
     //value provider
-    private var value : String?{
-        get{
-            if takeFreeText {
-                return textField.text
-            }else{
-                return nil
-            }
-        }
+    public var text : String?{
+        return textField.text
     }
     
     //outlets
