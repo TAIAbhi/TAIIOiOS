@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol AddLocationProtocol: class {
+    func updateLocation(_ location: String)
+}
+
 class AddLocationViewController: UIViewController {
 
     @IBOutlet private weak var suburbTextField: TextFieldView!
     @IBOutlet private weak var locationTextField: TextFieldView!
     
     private let interactor = AddLocationInteractor()
+    
+    weak var delegate: AddLocationProtocol?
     
     private var suburbsArray: [Suburb]? {
         didSet {
@@ -59,7 +65,15 @@ class AddLocationViewController: UIViewController {
     }
     
     @IBAction func onAddButtonPress(_ sender: Any) {
-        
+        if let suburb = suburbTextField.textField.text, let location = locationTextField.textField.text {
+            interactor.addLocation(suburb: suburb, location: location, completion: { (success) in
+                if let delegate = self.delegate, success {
+                    self.dismiss(animated: true, completion: {
+                        delegate.updateLocation("\(location) - \(suburb)")
+                    })
+                }
+            })
+        }
     }
     
     func setupFields() {
@@ -70,8 +84,6 @@ class AddLocationViewController: UIViewController {
                                             }
                                             
         }
-        
-        
         
         locationTextField.hookDropdown(placeHolder: "Location",
                                      dataSource: [String]()) { (index, text) in
@@ -86,8 +98,11 @@ class AddLocationViewController: UIViewController {
     
     func onTextFieldChange(_ textField: UITextField, range: NSRange, string: String) -> Bool {
         
-        interactor.fetchLocationFromQuery(string) { [unowned self] (locations) in
-            self.locationsArray = locations
+        if let text = textField.text, text != "" {
+            let query = text + string
+            interactor.fetchLocationFromQuery(query) { [unowned self] (locations) in
+                self.locationsArray = locations
+            }
         }
         
         return true

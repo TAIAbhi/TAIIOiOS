@@ -65,4 +65,19 @@ struct AddLocationInteractor {
         guard let _ = sessionTask else { return }
     }
     
+    func addLocation(suburb: String, location: String, completion: @escaping ((Bool)->())) {
+        let url = API.getURL(to: "location")
+        let request = URLRequest.init(url: url)
+        let postParams = ["suburb": suburb, "locationName": location]
+        _ = APIManager.doPost(request: request, body: postParams, completion: { (response) in
+            if let json = response, let action = json["action"] as? String, action.lowercased() == "success" {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }) { (error) in
+            completion(false)
+        }
+    }
+    
 }

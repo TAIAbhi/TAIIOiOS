@@ -42,7 +42,7 @@ class TextFieldView: DesignableView {
     }
     
     //outlets
-    @IBOutlet private weak var textField: SkyFloatingLabelTextField!
+    @IBOutlet weak var textField: SkyFloatingLabelTextField!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
     //dropdown and view
@@ -76,7 +76,7 @@ class TextFieldView: DesignableView {
         if let dropDown = dropDown{
             self.dataSource = dataSource
             dropDown.dataSource = dataSource
-            dropDown.show()
+//            dropDown.show()
         }else{
             assert(true, "Call hook dropdown before calling updateDataSource")
         }
