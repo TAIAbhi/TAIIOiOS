@@ -60,7 +60,25 @@ class MyDetailsViewController: UIViewController {
     }
     
     @IBAction func onUpdateButtonClick(_ sender: UIButton) {
-        
+        var postData = [String: Any]()
+        if let location1 = location1Label.text {
+            postData["location1"] = location1
+        }
+        if let location2 = location2Label.text {
+            postData["location2"] = location2
+        }
+        if let location3 = location3Label.text {
+            postData["location3"] = location3
+        }
+        if let comments = detailsTextArea.text {
+            postData["comments"] = comments
+        }
+        if let contactId = user?.contactId {
+            postData["contactId"] = contactId
+        }
+        interactor.updateMyDetailsWithData(postData) { (done) in
+            print(done)
+        }
     }
     
     @objc func openAddLocation() {
