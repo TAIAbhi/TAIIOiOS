@@ -6,14 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Heavy</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -23,24 +19,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag about.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vht-96-13s">
-                                <rect key="frame" x="90.5" y="324.5" width="194.5" height="38.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head_white" translatesAutoresizingMaskIntoConstraints="NO" id="p8q-rM-3yY">
+                                <rect key="frame" x="27.5" y="291" width="320" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="74Z-Ug-x67"/>
+                                    <constraint firstAttribute="width" secondItem="p8q-rM-3yY" secondAttribute="height" multiplier="976/320" id="Q4w-GY-3KL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.091708151180000003" green="0.73668830590000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.52549019610000003" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vht-96-13s" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fmo-aI-RRh"/>
-                            <constraint firstItem="vht-96-13s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="odT-Zt-W2X"/>
+                            <constraint firstItem="p8q-rM-3yY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CQc-nm-nqJ"/>
+                            <constraint firstItem="p8q-rM-3yY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UCg-mE-1e2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="head_white" width="976" height="320"/>
+    </resources>
 </document>
