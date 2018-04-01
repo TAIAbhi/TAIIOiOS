@@ -15,9 +15,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DropDownView" customModule="Tagabout" customModuleProvider="target">
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="DropDownView"/>
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="height" destination="thn-bG-mGD" id="0Qu-5E-j4G"/>

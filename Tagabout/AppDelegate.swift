@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            window?.rootViewController = UINavigationController.init(rootViewController: vc)
 //            window?.makeKeyAndVisible()
 //        }
-        print("API token - \(APIGateway.shared.authToken)")
         if let _ = APIGateway.shared.authToken,
             let vc: TabbarController = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController {
             window?.rootViewController = vc
@@ -41,6 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DropDown.appearance().backgroundColor = UIColor(red: 253/255.0, green: 253/255.0, blue: 253/255.0, alpha: 1.0)
         DropDown.appearance().selectionBackgroundColor = .lightGray
         DropDown.appearance().cellHeight = 38
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0, green: 0/255, blue: 0/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        application.statusBarStyle = .lightContent
         
         // Override point for customization after application launch.
         return true

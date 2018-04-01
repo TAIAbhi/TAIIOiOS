@@ -25,8 +25,13 @@
 		9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */; };
 		9EC817E2205D3B2A00C3616D /* Logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9EC817E1205D3B2A00C3616D /* Logo.gif */; };
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
-		9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EDB96E0204AD13200AA9082 /* TextFieldView.xib */; };
-		9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96E2204AD42500AA9082 /* TextFieldView.swift */; };
+		F145620F2070FDAA007C60EB /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145620D2070FDA9007C60EB /* DropdownView.swift */; };
+		F14562102070FDAA007C60EB /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F145620E2070FDA9007C60EB /* DropdownView.xib */; };
+		F14562132070FDC8007C60EB /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14562112070FDC8007C60EB /* TextFieldView.swift */; };
+		F14562142070FDC8007C60EB /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F14562122070FDC8007C60EB /* TextFieldView.xib */; };
+		F145621720713F34007C60EB /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145621520713F34007C60EB /* FloatLabelTextView.swift */; };
+		F145621820713F34007C60EB /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145621620713F34007C60EB /* FloatLabelTextField.swift */; };
+		F145621A20715929007C60EB /* TAINaviagtionbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145621920715929007C60EB /* TAINaviagtionbar.swift */; };
 		F14864182058511100778ED4 /* AddSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14864172058511100778ED4 /* AddSuggestionRouter.swift */; };
 		F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */; };
 		F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */; };
@@ -49,7 +54,8 @@
 		F1D26E68204AB1B60049638F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E67204AB1B60049638F /* API.swift */; };
 		F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E69204AB39A0049638F /* APIManager.swift */; };
 		F1E6EEAC205EDD8000F8C878 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6EEAB205EDD8000F8C878 /* TabbarController.swift */; };
-		F1E6EEAE20603B9700F8C878 /* TAISection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6EEAD20603B9700F8C878 /* TAISection.swift */; };
+		F1E6EEAE20603B9700F8C878 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6EEAD20603B9700F8C878 /* Buttons.swift */; };
+		F1EF06E62070D32100DC96ED /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF06E52070D32100DC96ED /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,10 +77,15 @@
 		9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		9EC817E1205D3B2A00C3616D /* Logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Logo.gif; sourceTree = "<group>"; };
 		9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9EDB96E0204AD13200AA9082 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
-		9EDB96E2204AD42500AA9082 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tagabout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD493753F71774E1090BF7F6 /* Pods-Tagabout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.debug.xcconfig"; sourceTree = "<group>"; };
+		F145620D2070FDA9007C60EB /* DropdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
+		F145620E2070FDA9007C60EB /* DropdownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropdownView.xib; sourceTree = "<group>"; };
+		F14562112070FDC8007C60EB /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		F14562122070FDC8007C60EB /* TextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		F145621520713F34007C60EB /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		F145621620713F34007C60EB /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		F145621920715929007C60EB /* TAINaviagtionbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAINaviagtionbar.swift; sourceTree = "<group>"; };
 		F14864172058511100778ED4 /* AddSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionRouter.swift; sourceTree = "<group>"; };
 		F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuggestionInteractor.swift; sourceTree = "<group>"; };
 		F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +118,8 @@
 		F1D26E67204AB1B60049638F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F1D26E69204AB39A0049638F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F1E6EEAB205EDD8000F8C878 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
-		F1E6EEAD20603B9700F8C878 /* TAISection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAISection.swift; sourceTree = "<group>"; };
+		F1E6EEAD20603B9700F8C878 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		F1EF06E52070D32100DC96ED /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */,
+				F145621920715929007C60EB /* TAINaviagtionbar.swift */,
 				9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */,
+				F1EF06E52070D32100DC96ED /* Theme.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,7 +221,9 @@
 			children = (
 				9EDB96E4204AD4DE00AA9082 /* TextFieldView */,
 				F1579293204B1D0100EFFEC0 /* DesignableView.swift */,
-				F1E6EEAD20603B9700F8C878 /* TAISection.swift */,
+				F1E6EEAD20603B9700F8C878 /* Buttons.swift */,
+				F145621620713F34007C60EB /* FloatLabelTextField.swift */,
+				F145621520713F34007C60EB /* FloatLabelTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,8 +231,10 @@
 		9EDB96E4204AD4DE00AA9082 /* TextFieldView */ = {
 			isa = PBXGroup;
 			children = (
-				9EDB96E0204AD13200AA9082 /* TextFieldView.xib */,
-				9EDB96E2204AD42500AA9082 /* TextFieldView.swift */,
+				F14562112070FDC8007C60EB /* TextFieldView.swift */,
+				F14562122070FDC8007C60EB /* TextFieldView.xib */,
+				F145620D2070FDA9007C60EB /* DropdownView.swift */,
+				F145620E2070FDA9007C60EB /* DropdownView.xib */,
 			);
 			path = TextFieldView;
 			sourceTree = "<group>";
@@ -403,10 +421,11 @@
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
 				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
+				F14562142070FDC8007C60EB /* TextFieldView.xib in Resources */,
 				9EC817E2205D3B2A00C3616D /* Logo.gif in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
-				9EDB96E1204AD13200AA9082 /* TextFieldView.xib in Resources */,
 				F19F4DDC2030527B00D95CCD /* Main.storyboard in Resources */,
+				F14562102070FDAA007C60EB /* DropdownView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +495,7 @@
 				F14864182058511100778ED4 /* AddSuggestionRouter.swift in Sources */,
 				9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */,
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
+				F14562132070FDC8007C60EB /* TextFieldView.swift in Sources */,
 				9E5B934720667E3100696EB6 /* MyDetailsViewController.swift in Sources */,
 				9E5B934620667E3100696EB6 /* MyDetailsInteractor.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
@@ -485,24 +505,28 @@
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
 				9E592715206BFDCE00D58FF5 /* Suburb.swift in Sources */,
+				F1EF06E62070D32100DC96ED /* Theme.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
 				9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */,
+				F145621A20715929007C60EB /* TAINaviagtionbar.swift in Sources */,
 				9E5B934A2066979A00696EB6 /* AddLocationViewController.swift in Sources */,
-				9EDB96E3204AD42500AA9082 /* TextFieldView.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
+				F145621720713F34007C60EB /* FloatLabelTextView.swift in Sources */,
 				9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */,
+				F145621820713F34007C60EB /* FloatLabelTextField.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
-				F1E6EEAE20603B9700F8C878 /* TAISection.swift in Sources */,
+				F1E6EEAE20603B9700F8C878 /* Buttons.swift in Sources */,
 				F1E6EEAC205EDD8000F8C878 /* TabbarController.swift in Sources */,
 				9E5B933D205EC10700696EB6 /* Category.swift in Sources */,
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
+				F145620F2070FDAA007C60EB /* DropdownView.swift in Sources */,
 				9E5B934C206697B400696EB6 /* MyDetailsRouter.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,
@@ -671,7 +695,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K244U468VG;
+				DEVELOPMENT_TEAM = 2R2V5X487E;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -690,7 +714,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K244U468VG;
+				DEVELOPMENT_TEAM = 2R2V5X487E;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

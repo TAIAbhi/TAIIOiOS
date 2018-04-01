@@ -12,23 +12,23 @@ import SkyFloatingLabelTextField
 extension SkyFloatingLabelTextField {
     
     open override func awakeFromNib() {
+        setCustomDefaultValues()
         super.awakeFromNib()
-        
-        setCutomDefaultValues()
     }
     
-    func setCutomDefaultValues() {
+    func setCustomDefaultValues() {
         // black
-        textColor = UIColor(red: 56/255.0, green: 56/255.0, blue: 56/255.0, alpha: 1.0)
+        textColor = Theme.black
         // gray
-        titleColor = UIColor(red: 150/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0)
+        titleColor = Theme.blue
         // light gray
-        lineColor = UIColor(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 1.0)
+        lineColor = Theme.blue
         // blue
-        selectedLineColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
-        selectedTitleColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
+        selectedLineColor = Theme.black
+        selectedTitleColor = Theme.blue
         // red
         errorColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1.0)
+        placeholderColor = Theme.textGrey
         
         lineHeight = 2.0
         selectedLineHeight = 2.0

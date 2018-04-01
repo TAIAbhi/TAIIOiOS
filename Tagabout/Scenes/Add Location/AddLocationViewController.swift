@@ -14,8 +14,8 @@ protocol AddLocationProtocol: class {
 
 class AddLocationViewController: UIViewController {
 
-    @IBOutlet private weak var suburbTextField: TextFieldView!
-    @IBOutlet private weak var locationTextField: TextFieldView!
+    @IBOutlet private weak var suburbTextField: DropDownView!
+    @IBOutlet private weak var locationTextField: DropDownView!
     
     private let interactor = AddLocationInteractor()
     

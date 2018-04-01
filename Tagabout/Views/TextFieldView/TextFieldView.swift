@@ -2,12 +2,11 @@
 //  TextFieldView.swift
 //  Tagabout
 //
-//  Created by Madanlal on 03/03/18.
+//  Created by KarunPant on 03/03/18.
 //  Copyright © 2018 Tagabout. All rights reserved.
 //
 
 import UIKit
-import DropDown
 import  SkyFloatingLabelTextField
 
 
@@ -15,138 +14,52 @@ class TextFieldView: DesignableView {
     
     //consts
     private let defaultViewHieght : CGFloat = 54.0
-    private let OTHERS = "Others"
-    
-    //flags
-    private var isDropDownHidden : Bool = true
-    public var secureEntry: Bool = false
-    public var isOtherNeeded : Bool = false
-    public var takeFreeText : Bool{
-        didSet{
-            if takeFreeText {
-                dropDown = nil
-            }
-        }
-    }
-    
-    
-    //value provider
-    public var text : String?{
-        return textField.text
-    }
     
     //outlets
     @IBOutlet weak var textField: SkyFloatingLabelTextField!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var height: NSLayoutConstraint!
     
-    //dropdown and view
-    private var dropDown : DropDown?
-    private var dataSource : Array<String>?
-    public var viewHeight : CGFloat{
+    
+    
+    public var ownerHeightConstraint: NSLayoutConstraint?
+    
+    public var isMandatory = false
+    typealias validator = ((String?) -> (Bool))
+    public func isValid(_ validator : validator? = nil) -> Bool{
+        guard let validator = validator else{
+            return textField.text?.trimmingCharacters(in: .whitespaces) != "" || !isMandatory
+        }
+        let isValid = textField.text?.trimmingCharacters(in: .whitespaces) != "" ? validator(textField.text) : !isMandatory
+        return isValid
+    }
+    
+    public func hide(_ hide : Bool){
+        if hide{
+            ownerHeightConstraint?.constant = 0
+            topConstraint.constant = 0
+            height.constant = 0
+        }else{
+            ownerHeightConstraint?.constant = 52
+            topConstraint.constant = 14
+            height.constant = 38
+        }
+    }
+    
+    public var placeholder : String?{
         didSet{
-            if viewHeight == 0{
-                topConstraint.constant = 0
-            }else{
-                topConstraint.constant = 8
+            if let placeholder = placeholder{
+                textField.placeholder = placeholder
             }
         }
     }
     
-    var onTextFieldChange: ((_ textField: UITextField, _ range: NSRange, _ string: String) -> Bool)?
-    
     override init(frame: CGRect) {
-        self.viewHeight = defaultViewHieght
-        self.takeFreeText = false
         super.init(frame: frame)
     }
     required init?(coder aDecoder: NSCoder) {
-        self.viewHeight = defaultViewHieght
-        self.takeFreeText = false
         super.init(coder: aDecoder)
         
-    }
-    
-    func updateDataSource(_ dataSource: Array<String>){
-        if let dropDown = dropDown{
-            self.dataSource = dataSource
-            dropDown.dataSource = dataSource
-//            dropDown.show()
-        }else{
-            assert(true, "Call hook dropdown before calling updateDataSource")
-        }
-    }
-    
-    // setup method
-    func hookDropdown(placeHolder:String, dataSource : Array<String>?, selectionCompletion: ((Int, String)-> ())?){
-//        textField.setCutomDefaultValues()
-        textField.placeholder = placeHolder
-        guard let dataSource = dataSource else { return }
-        textField.delegate = self
-        
-        var newDataSource = dataSource
-        if isOtherNeeded{
-            newDataSource.append("Other")
-        }
-        DropDown.startListeningToKeyboard()
-        // The view to which the drop down will appear on
-        dropDown = DropDown()
-        dropDown?.anchorView = self
-        dropDown?.shadowRadius = 1
-        dropDown?.shadowOpacity = 0.2
-        dropDown?.bottomOffset = CGPoint(x: 0, y:defaultViewHieght)
-        dropDown?.dismissMode = .automatic
-        // The list of items to display. Can be changed dynamically
-        dropDown?.dataSource = newDataSource
-        
-        self.dataSource = dataSource
-        dropDown?.selectionAction = {[unowned self] (index: Int, item: String) in
-            if item == self.OTHERS {
-                self.takeFreeText = true
-                return
-            }
-            if let selectionCompletion = selectionCompletion{
-                selectionCompletion(index, item)
-            }
-            self.isDropDownHidden = true
-            self.textField.text = item
-        }
-    }
-    
-}
-
-extension TextFieldView : UITextFieldDelegate{
-    // Text field delegate
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if let dropdown = dropDown{
-            isDropDownHidden = false
-            guard let dataSource = dataSource else { return }
-            dropdown.dataSource = dataSource
-            dropdown.show()
-        }
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let dataSource = dataSource, let dropDown = self.dropDown else {
-            return false
-        }
-        var newString = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
-        newString = newString.trimmingCharacters(in: .whitespaces)
-        
-        if newString == ""{
-            dropDown.dataSource = dataSource
-            dropDown.show()
-        }else{
-            let filteredDataSource = dataSource.filter{ $0.lowercased().contains(newString.lowercased()) }
-            dropDown.dataSource = filteredDataSource
-            dropDown.show()
-            
-        }
-        
-        if onTextFieldChange != nil {
-            return onTextFieldChange!(textField, range, string)
-        }
-        
-        return true
     }
 }
 
