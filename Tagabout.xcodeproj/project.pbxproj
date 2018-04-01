@@ -30,7 +30,6 @@
 		F14562132070FDC8007C60EB /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14562112070FDC8007C60EB /* TextFieldView.swift */; };
 		F14562142070FDC8007C60EB /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F14562122070FDC8007C60EB /* TextFieldView.xib */; };
 		F145621720713F34007C60EB /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145621520713F34007C60EB /* FloatLabelTextView.swift */; };
-		F145621820713F34007C60EB /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145621620713F34007C60EB /* FloatLabelTextField.swift */; };
 		F145621A20715929007C60EB /* TAINaviagtionbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145621920715929007C60EB /* TAINaviagtionbar.swift */; };
 		F14864182058511100778ED4 /* AddSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14864172058511100778ED4 /* AddSuggestionRouter.swift */; };
 		F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */; };
@@ -84,7 +83,6 @@
 		F14562112070FDC8007C60EB /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		F14562122070FDC8007C60EB /* TextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
 		F145621520713F34007C60EB /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
-		F145621620713F34007C60EB /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		F145621920715929007C60EB /* TAINaviagtionbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAINaviagtionbar.swift; sourceTree = "<group>"; };
 		F14864172058511100778ED4 /* AddSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionRouter.swift; sourceTree = "<group>"; };
 		F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuggestionInteractor.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 				9EDB96E4204AD4DE00AA9082 /* TextFieldView */,
 				F1579293204B1D0100EFFEC0 /* DesignableView.swift */,
 				F1E6EEAD20603B9700F8C878 /* Buttons.swift */,
-				F145621620713F34007C60EB /* FloatLabelTextField.swift */,
 				F145621520713F34007C60EB /* FloatLabelTextView.swift */,
 			);
 			path = Views;
@@ -516,7 +513,6 @@
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
 				F145621720713F34007C60EB /* FloatLabelTextView.swift in Sources */,
 				9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */,
-				F145621820713F34007C60EB /* FloatLabelTextField.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
