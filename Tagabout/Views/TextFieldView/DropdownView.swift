@@ -114,19 +114,21 @@ class DropDownView: DesignableView {
         dropDown?.dataSource = newDataSource
         
         self.dataSource = dataSource
-        dropDown?.selectionAction = {[unowned self] (index: Int, item: String) in
-            if item == self.OTHERS {
-                self.takeFreeText = true
+        dropDown?.selectionAction = {[weak self] (index: Int, item: String) in
+            guard let strongSelf = self else{ return }
+            
+            if item == strongSelf.OTHERS {
+                strongSelf.takeFreeText = true
                 return
             }
             
-            self.takeFreeText = false
-            self.isSelectedFromDropDown = true
+            strongSelf.takeFreeText = false
+            strongSelf.isSelectedFromDropDown = true
             if let selectionCompletion = selectionCompletion{
                 selectionCompletion(index, item)
             }
-            self.isDropDownHidden = true
-            self.textField.text = item
+            strongSelf.isDropDownHidden = true
+            strongSelf.textField.text = item
         }
     }
     

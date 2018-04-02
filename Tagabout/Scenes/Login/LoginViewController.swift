@@ -44,9 +44,10 @@ class LoginViewController: UIViewController {
         guard let mobile = mobileTextField.text, mobile.count == 10 else { return }
         guard let password = passwordTextField.text else { return }
         
-        interactor.loginUserWithMobile(mobile, andPassword: password) { [unowned self] (didLogin) in
+        interactor.loginUserWithMobile(mobile, andPassword: password) { [weak self] (didLogin) in
+            guard let strongSelf = self else{ return }
             if didLogin {
-                self.loginRouter.openTabbar()
+                strongSelf.loginRouter.openTabbar()
             } else {
                 print("Login failed")
             }

@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            window?.makeKeyAndVisible()
 //        }
         if let _ = APIGateway.shared.authToken,
-            let vc: TabbarController = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController {
+            let vc: UINavigationController = storyBoard.instantiateViewController(withIdentifier: "parentNavigation") as? UINavigationController {
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
 

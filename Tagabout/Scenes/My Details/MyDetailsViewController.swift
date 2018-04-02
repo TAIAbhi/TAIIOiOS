@@ -25,6 +25,7 @@ class MyDetailsViewController: UIViewController {
                 location2Label.text = user.location2 ?? ""
                 location3Label.text = user.location3 ?? ""
                 detailsTextArea.text = user.contactComments ?? ""
+                detailsTextArea.layoutSubviews()
             }
         }
     }
@@ -43,7 +44,7 @@ class MyDetailsViewController: UIViewController {
     @IBOutlet weak var location1Label: SkyFloatingLabelTextField!
     @IBOutlet weak var location2Label: SkyFloatingLabelTextField!
     @IBOutlet weak var location3Label: SkyFloatingLabelTextField!
-    @IBOutlet weak var detailsTextArea: UITextView!
+    @IBOutlet weak var detailsTextArea: FloatLabelTextView!
     @IBOutlet weak var scrollView: UIScrollView!
     
     
@@ -51,8 +52,14 @@ class MyDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interactor.fetchMyDetails { [unowned self] (user) in
-            self.user = user
+        detailsTextArea.layer.cornerRadius = 4
+        detailsTextArea.layer.borderColor = Theme.blue.cgColor
+        detailsTextArea.layer.borderWidth = 2
+        detailsTextArea.contentInset = UIEdgeInsets.init(top: 5, left: 8, bottom: 5, right: 8)
+        detailsTextArea.titleFont = Theme.avenirTitle!
+        interactor.fetchMyDetails { [weak self] (user) in
+            guard let strongSelf = self else{ return }
+            strongSelf.user = user
         }
         
         let rightButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(MyDetailsViewController.openAddLocation))
@@ -101,8 +108,9 @@ extension MyDetailsViewController: UITextFieldDelegate, UITextViewDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text, text != "" {
             let query = text + string
-            locationInteractor.fetchLocationFromQuery(query) { [unowned self] (locations) in
-                self.locations = locations
+            locationInteractor.fetchLocationFromQuery(query) { [weak self] (locations) in
+                guard let strongSelf = self else{ return }
+                strongSelf.locations = locations
             }
         }
         

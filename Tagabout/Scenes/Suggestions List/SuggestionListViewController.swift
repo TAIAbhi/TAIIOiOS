@@ -14,17 +14,17 @@ class SuggestionListViewController: UIViewController {
     lazy var interactor = SuggestionListInteractor()
     var hangoutsCategory: Category? {
         didSet {
-            hangoutsButton.setTitle(hangoutsCategory?.name, for: .normal)
+            hangoutsButton.setTitle(hangoutsCategory?.name?.uppercased(), for: .normal)
         }
     }
     var servicesCategory: Category? {
         didSet {
-            servicesButton.setTitle(servicesCategory?.name, for: .normal)
+            servicesButton.setTitle(servicesCategory?.name?.uppercased(), for: .normal)
         }
     }
     var shoppingCategory: Category? {
         didSet {
-            shoppingButton.setTitle(shoppingCategory?.name, for: .normal)
+            shoppingButton.setTitle(shoppingCategory?.name?.uppercased(), for: .normal)
         }
     }
     
@@ -40,15 +40,17 @@ class SuggestionListViewController: UIViewController {
         
         title = "My Suggestions"
         
-        interactor.fetchSuggestionCategories { [unowned self] (categories) in
-            self.updateCategoryButtons(categories)
+        interactor.fetchSuggestionCategories { [weak self] (categories) in
+            guard let strongSelf = self else{ return }
+            strongSelf.updateCategoryButtons(categories)
         }
         
         suggestionsTableView.dataSource = tableViewDataSource
         suggestionsTableView.tableFooterView = UIView()
         
-        interactor.fetchAllMySuggestions { [unowned self] (suggestions) in
-            self.setTableViewData(suggestions)
+        interactor.fetchAllMySuggestions { [weak self] (suggestions) in
+            guard let strongSelf = self else{ return }
+            strongSelf.setTableViewData(suggestions)
         }
     }
     
@@ -118,11 +120,12 @@ extension SuggestionListViewController {
             return ""
         })
         
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            guard let strongSelf = self else{ return }
             let selectedSubCat = subCats[index]
             if let catId = selectedSubCat.catId, let subCatId = selectedSubCat.subCatId {
-                self.interactor.fetchSuggestionsFor(category: catId, and: subCatId, with: { (suggestions) in
-                    self.setTableViewData(suggestions)
+                strongSelf.interactor.fetchSuggestionsFor(category: catId, and: subCatId, with: { (suggestions) in
+                    strongSelf.setTableViewData(suggestions)
                 })
             }
         }

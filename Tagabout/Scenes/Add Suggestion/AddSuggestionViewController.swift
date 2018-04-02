@@ -9,6 +9,7 @@
 import UIKit
 import DropDown
 import SkyFloatingLabelTextField
+import LabelSwitch
 
 
 
@@ -70,7 +71,10 @@ class AddSuggestionViewController: UIViewController {
     @IBOutlet weak var microCat2: DropDownView!
     @IBOutlet weak var microCat2Height: NSLayoutConstraint!
     
-    @IBOutlet weak var isLocal: UISwitch!
+    @IBOutlet weak var isLocal: LabelSwitch!
+    
+    @IBOutlet weak var isAChain: LabelSwitch!
+    
     @IBOutlet weak var name: TextFieldView!
     @IBOutlet weak var contact: TextFieldView!
     @IBOutlet weak var location: DropDownView!
@@ -86,24 +90,22 @@ class AddSuggestionViewController: UIViewController {
         self.sectionView.backgroundColor = Theme.grey
         self.emptyStateLabel.text = "Loading categories..."
         self.addButton.isEnabled = false
-        self.details.contentInset = UIEdgeInsets.init(top: 5, left: 8, bottom: 5, right: 8)
-        self.details.titleFont = Theme.avenirTitle!
-        self.navigationController?.navigationBar.setup()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         self.scrollView.isHidden = true
         
-       interactor.getCategories { [unowned self] categories in
-            self.processing.stopAnimating()
-            self.emptyStateLabel.text = "Select a category to continue."
+       interactor.getCategories { [weak self] categories in
+        guard let strongSelf = self else{ return }
+            strongSelf.processing.stopAnimating()
+            strongSelf.emptyStateLabel.text = "Select a category to continue."
             if let categories = categories{
-                self.categories = categories
+                strongSelf.categories = categories
                 if categories.count >= 3{
-                    self.section1.setTitle(categories[0].name?.uppercased(), for: .normal)
-                    self.section2.setTitle(categories[1].name?.uppercased(), for: .normal)
-                    self.section3.setTitle(categories[2].name?.uppercased(), for: .normal)
+                    strongSelf.section1.setTitle(categories[0].name?.uppercased(), for: .normal)
+                    strongSelf.section2.setTitle(categories[1].name?.uppercased(), for: .normal)
+                    strongSelf.section3.setTitle(categories[2].name?.uppercased(), for: .normal)
                 }
             }
         }
@@ -147,29 +149,30 @@ class AddSuggestionViewController: UIViewController {
             dropDown.dismissMode = .automatic
             dropDown.show()
             dropDown.anchorView = sender
-            dropDown.selectionAction = {[unowned self] (index: Int, item: String) in
-                self.selectionData[self.selectedSubCategoryName] = item
+            dropDown.selectionAction = {[weak self] (index: Int, item: String) in
+                guard let strongSelf = self else{ return }
+                strongSelf.selectionData[strongSelf.selectedSubCategoryName] = item
                 let selectedSubCat = subcats[index]
                 if let subCatId = selectedSubCat.subCatId {
-                    self.selectionData[self.selectedSubCategoryValue] = subCatId
+                    strongSelf.selectionData[strongSelf.selectedSubCategoryValue] = subCatId
                 }
                 
                 // configure
-                self.lblSelectedCategory.text = "\(item)"
-                if let previousSelected = self.previousSelectedSection{
+                strongSelf.lblSelectedCategory.text = "\(item)"
+                if let previousSelected = strongSelf.previousSelectedSection{
                     previousSelected.isSectionSelected = false
                 }
                 sender.isSectionSelected = true
-                self.previousSelectedSection = sender
-                self.configureForm()
-                self.scrollView.isHidden = false
+                strongSelf.previousSelectedSection = sender
+                strongSelf.configureForm()
+                strongSelf.scrollView.isHidden = false
                 
                 if let isMicroCategoryAvailable = selectedCategory.isMicroCategoryAvailable, isMicroCategoryAvailable {
                     let selectedSubCat = subcats[index]
                     if let subCatId = selectedSubCat.subCatId {
                         // get micro categories for selected subcategory.
-                        self.interactor.getMicroCategoriesFor(subcategoryId: subCatId, completion: { (microCategories) in
-                            self.microCategories = microCategories
+                        strongSelf.interactor.getMicroCategoriesFor(subcategoryId: subCatId, completion: { (microCategories) in
+                            strongSelf.microCategories = microCategories
                         })
                     }
                 }
@@ -221,8 +224,9 @@ extension AddSuggestionViewController{
             return ""
         })
         
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.selectionData[self.selectedMicroCategoryValue] = item
+        dropDown.selectionAction = { [weak self] (index: Int, item: String) in
+            guard let strongSelf = self else{ return }
+            strongSelf.selectionData[strongSelf.selectedMicroCategoryValue] = item
         }
         
         dropDown.show()
@@ -248,6 +252,7 @@ extension AddSuggestionViewController{
             microCat2.hide(true)
         }else{
             microCat1.hide(true)
+            microCat1.hookDropdown(placeHolder: "", dataSource: nil, selectionCompletion: nil)
             microCat2.hide(true)
 
         }
@@ -255,8 +260,10 @@ extension AddSuggestionViewController{
         name.isMandatory = true
         contact.placeholder = "Contact number"
         details.layer.cornerRadius = 4
-        details.layer.borderColor = UIColor.lightGray.cgColor
+        details.layer.borderColor = Theme.blue.cgColor
         details.layer.borderWidth = 0.9
+        details.contentInset = UIEdgeInsets.init(top: 5, left: 8, bottom: 5, right: 8)
+        details.titleFont = Theme.avenirTitle!
         location.hookDropdown(placeHolder: "Location (Mumbai only) *", dataSource: nil, selectionCompletion: nil)
         
     }

@@ -55,8 +55,9 @@ class AddLocationViewController: UIViewController {
 
         setupFields()
         
-        interactor.fetchSuburbs { [unowned self] (suburbs) in
-            self.suburbsArray = suburbs
+        interactor.fetchSuburbs { [weak self] (suburbs) in
+            guard let strongSelf = self else{ return }
+            strongSelf.suburbsArray = suburbs
         }
     }
 
@@ -100,8 +101,9 @@ class AddLocationViewController: UIViewController {
         
         if let text = textField.text, text != "" {
             let query = text + string
-            interactor.fetchLocationFromQuery(query) { [unowned self] (locations) in
-                self.locationsArray = locations
+            interactor.fetchLocationFromQuery(query) { [weak self] (locations) in
+                guard let strongSelf = self else{ return }
+                strongSelf.locationsArray = locations
             }
         }
         

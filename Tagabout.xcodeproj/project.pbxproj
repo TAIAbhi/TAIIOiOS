@@ -185,7 +185,6 @@
 				9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */,
 				F145621920715929007C60EB /* TAINaviagtionbar.swift */,
 				9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */,
-				F1EF06E52070D32100DC96ED /* Theme.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +253,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		F17FF1B62072BE2200AC4A4A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F1EF06E52070D32100DC96ED /* Theme.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F19759CD2042D8F400201147 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +300,7 @@
 		F19F4DD52030527B00D95CCD /* Tagabout */ = {
 			isa = PBXGroup;
 			children = (
+				F17FF1B62072BE2200AC4A4A /* Utils */,
 				9E82FFEB204C1100005744DE /* Extensions */,
 				9EDB96DF204AD10600AA9082 /* Views */,
 				9EDB96D9204AC55400AA9082 /* Scenes */,
@@ -452,12 +460,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/LabelSwitch/LabelSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/UIFloatLabelTextView/UIFloatLabelTextView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LabelSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFloatLabelTextView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

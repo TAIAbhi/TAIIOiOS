@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 extension UINavigationBar{
-    func setup(){
+    
+    func setupLogo(){
         let logoImage = UIImageView.init(image: #imageLiteral(resourceName: "head_blue"))
         self.addSubview(logoImage)
     }
+    
 }

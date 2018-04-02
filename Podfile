@@ -5,6 +5,6 @@ use_frameworks!
 target 'Tagabout' do
     pod 'SkyFloatingLabelTextField'
     pod 'DropDown'
-    pod 'UIFloatLabelTextField'
     pod 'UIFloatLabelTextView'
+    pod 'LabelSwitch'
 end

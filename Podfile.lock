@@ -1,15 +1,21 @@
 PODS:
   - DropDown (2.0.2)
+  - LabelSwitch (0.1.1)
   - SkyFloatingLabelTextField (3.4.0)
+  - UIFloatLabelTextView (1.0.10)
 
 DEPENDENCIES:
   - DropDown
+  - LabelSwitch
   - SkyFloatingLabelTextField
+  - UIFloatLabelTextView
 
 SPEC CHECKSUMS:
   DropDown: 75562633a203f57a917021b4edb96c76f293b0ec
+  LabelSwitch: 4329b57315bacc361f729d41514711251223db08
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
+  UIFloatLabelTextView: 96b7c5a18739fd1af8fd9480f7943d75a7547e4d
 
-PODFILE CHECKSUM: 0afb9c73888b7c6424dcc58b04fed4acb1801d4a
+PODFILE CHECKSUM: a1417f8a7b5bd68f7e426fa3ea39497277bf5c97
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
