@@ -586,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNO-5N-pUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="761.82266009852219"/>
+            <point key="canvasLocation" x="2138.4000000000001" y="761.82266009852219"/>
         </scene>
         <!--Add suggestion-->
         <scene sceneID="IhQ-oo-gUp">
@@ -679,7 +679,7 @@
                                 <rect key="frame" x="0.0" y="144" width="375" height="585"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="551" translatesAutoresizingMaskIntoConstraints="NO" id="1yJ-Od-XqI">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlx-9h-iG5" userLabel="category selected">
                                                 <rect key="frame" x="0.0" y="10" width="375" height="40"/>
@@ -731,10 +731,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u35-wZ-fqJ" userLabel="switchesView">
-                                                <rect key="frame" x="30" y="159" width="315" height="50"/>
+                                                <rect key="frame" x="30" y="159" width="315" height="66"/>
                                                 <subviews>
-                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keO-E2-151" customClass="LabelSwitch" customModule="LabelSwitch">
-                                                        <rect key="frame" x="208.33333333333334" y="8" width="106.66666666666666" height="42"/>
+                                                    <view tag="2" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keO-E2-151" customClass="LabelSwitch" customModule="LabelSwitch">
+                                                        <rect key="frame" x="208.33333333333337" y="8" width="106.66666666666663" height="58"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="lBackColor">
@@ -756,8 +756,8 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="lText" value="Single store"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQE-33-PsH" customClass="LabelSwitch" customModule="LabelSwitch">
-                                                        <rect key="frame" x="0.0" y="8" width="106.66666666666667" height="42"/>
+                                                    <view tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQE-33-PsH" customClass="LabelSwitch" customModule="LabelSwitch">
+                                                        <rect key="frame" x="0.0" y="8" width="106.66666666666667" height="58"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="lBackColor">
@@ -791,7 +791,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSC-Kc-wui" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="209" width="315" height="52"/>
+                                                <rect key="frame" x="30" y="225" width="315" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="Tp2-2j-HB0"/>
@@ -801,7 +801,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-pb-Zcy" customClass="DropDownView" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="261" width="315" height="52"/>
+                                                <rect key="frame" x="30" y="277" width="315" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="TCf-lP-kdg"/>
@@ -811,7 +811,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXW-lY-YvA" customClass="DropDownView" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="313" width="315" height="52"/>
+                                                <rect key="frame" x="30" y="329" width="315" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fbL-yn-KQd"/>
@@ -821,7 +821,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-IB-V3B" userLabel="Details">
-                                                <rect key="frame" x="30" y="379" width="315" height="80"/>
+                                                <rect key="frame" x="30" y="395" width="315" height="80"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="always" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-U6-Sag" userLabel="txtDetails" customClass="FloatLabelTextView" customModule="Tagabout" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="80"/>
@@ -857,7 +857,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50Q-zd-hVN" customClass="TAIAction" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="77.666666666666686" y="479" width="220" height="36"/>
+                                                <rect key="frame" x="77.666666666666686" y="495" width="220" height="36"/>
                                                 <color key="backgroundColor" red="0.12156862745098039" green="0.52549019607843139" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="Q4m-cJ-D9Z"/>
