@@ -48,19 +48,9 @@ class SuggestionListViewController: UIViewController {
         suggestionsTableView.dataSource = tableViewDataSource
         suggestionsTableView.tableFooterView = UIView()
         
-<<<<<<< HEAD
         interactor.fetchAllMySuggestions { [weak self] (suggestions) in
             guard let strongSelf = self else{ return }
             strongSelf.setTableViewData(suggestions)
-=======
-        interactor.fetchAllSuggestions { [unowned self] (suggestions) in
-            var tDict = [String: Any]()
-            for s in suggestions {
-                guard let subCatId = s.subCategoryId else { break }
-                
-            }
-            self.setTableViewData(suggestions)
->>>>>>> WIP suggestions list
         }
     }
     
