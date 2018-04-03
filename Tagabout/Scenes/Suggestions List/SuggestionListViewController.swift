@@ -54,6 +54,11 @@ class SuggestionListViewController: UIViewController {
             strongSelf.setTableViewData(suggestions)
 =======
         interactor.fetchAllSuggestions { [unowned self] (suggestions) in
+            var tDict = [String: Any]()
+            for s in suggestions {
+                guard let subCatId = s.subCategoryId else { break }
+                
+            }
             self.setTableViewData(suggestions)
 >>>>>>> WIP suggestions list
         }
