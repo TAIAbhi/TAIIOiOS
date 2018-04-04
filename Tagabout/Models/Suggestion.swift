@@ -12,7 +12,7 @@ struct Suggestion : Codable {
     
     var sourceId : Int?
     var contactId : Int?
-    var subcategoryId : Int?
+    var subCategoryId : Int?
     var catId : Int?
     var microCategoryId : Int?
     var businessName : String?
@@ -25,6 +25,9 @@ struct Suggestion : Codable {
     var citiLevelBusiness: Bool?
     var comments: String?
     var contactName: String?
+    var isAChain: Bool?
+    var subCategory: String?
+    var suggestionId: Int?
     
 }
 

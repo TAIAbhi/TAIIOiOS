@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
+		9E152CFF2073EC1200B57DA5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152CFE2073EC1100B57DA5 /* Theme.swift */; };
 		9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592712206BFC7100D58FF5 /* AddLocationInteractor.swift */; };
 		9E592715206BFDCE00D58FF5 /* Suburb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592714206BFDCE00D58FF5 /* Suburb.swift */; };
 		9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */; };
@@ -24,6 +25,7 @@
 		9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82FFEE204C3C01005744DE /* LoginInteractor.swift */; };
 		9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */; };
 		9EC817E2205D3B2A00C3616D /* Logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9EC817E1205D3B2A00C3616D /* Logo.gif */; };
+		9EC950582072508E00A0014F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC950572072508E00A0014F /* Util.swift */; };
 		9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */; };
 		F145620F2070FDAA007C60EB /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145620D2070FDA9007C60EB /* DropdownView.swift */; };
 		F14562102070FDAA007C60EB /* DropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F145620E2070FDA9007C60EB /* DropdownView.xib */; };
@@ -54,11 +56,11 @@
 		F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D26E69204AB39A0049638F /* APIManager.swift */; };
 		F1E6EEAC205EDD8000F8C878 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6EEAB205EDD8000F8C878 /* TabbarController.swift */; };
 		F1E6EEAE20603B9700F8C878 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E6EEAD20603B9700F8C878 /* Buttons.swift */; };
-		F1EF06E62070D32100DC96ED /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EF06E52070D32100DC96ED /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
+		9E152CFE2073EC1100B57DA5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9E592712206BFC7100D58FF5 /* AddLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationInteractor.swift; sourceTree = "<group>"; };
 		9E592714206BFDCE00D58FF5 /* Suburb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suburb.swift; sourceTree = "<group>"; };
 		9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		9E82FFEE204C3C01005744DE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 		9EC817E1205D3B2A00C3616D /* Logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Logo.gif; sourceTree = "<group>"; };
+		9EC950572072508E00A0014F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		9EDB96DB204AC5F100AA9082 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tagabout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD493753F71774E1090BF7F6 /* Pods-Tagabout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +120,6 @@
 		F1D26E69204AB39A0049638F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F1E6EEAB205EDD8000F8C878 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		F1E6EEAD20603B9700F8C878 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		F1EF06E52070D32100DC96ED /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				9E82FFEC204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift */,
 				F145621920715929007C60EB /* TAINaviagtionbar.swift */,
 				9EC817DD205D345800C3616D /* iOSDevCenters+GIF.swift */,
+				9EC950572072508E00A0014F /* Util.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,7 +259,7 @@
 		F17FF1B62072BE2200AC4A4A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F1EF06E52070D32100DC96ED /* Theme.swift */,
+				9E152CFE2073EC1100B57DA5 /* Theme.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -514,10 +517,10 @@
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
 				9E592715206BFDCE00D58FF5 /* Suburb.swift in Sources */,
-				F1EF06E62070D32100DC96ED /* Theme.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
 				9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
+				9EC950582072508E00A0014F /* Util.swift in Sources */,
 				9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */,
 				F145621A20715929007C60EB /* TAINaviagtionbar.swift in Sources */,
 				9E5B934A2066979A00696EB6 /* AddLocationViewController.swift in Sources */,
@@ -530,6 +533,7 @@
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */,
 				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
+				9E152CFF2073EC1200B57DA5 /* Theme.swift in Sources */,
 				F1E6EEAE20603B9700F8C878 /* Buttons.swift in Sources */,
 				F1E6EEAC205EDD8000F8C878 /* TabbarController.swift in Sources */,
 				9E5B933D205EC10700696EB6 /* Category.swift in Sources */,
