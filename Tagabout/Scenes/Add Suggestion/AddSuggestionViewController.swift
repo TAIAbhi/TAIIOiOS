@@ -52,6 +52,7 @@ class AddSuggestionViewController: UIViewController {
         }
     }
     fileprivate lazy var interactor = AddSuggestionInteractor()
+    fileprivate lazy var locationInteractor = AddLocationInteractor()
     fileprivate var previousSelectedSection : TAISection?
     
     fileprivate var selectionData : [String : Any] = [String : Any]()
@@ -77,12 +78,21 @@ class AddSuggestionViewController: UIViewController {
     
     @IBOutlet weak var name: TextFieldView!
     @IBOutlet weak var contact: TextFieldView!
-    @IBOutlet weak var location: DropDownView!
+    @IBOutlet weak var location: TextFieldView!
     
     @IBOutlet weak var details: FloatLabelTextView!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var lblSelectedCategory: UILabel!
+    
+    private var locations: [Location]? {
+        didSet {
+            updateDataSourceForDropDown()
+        }
+    }
+    
+    private lazy var dropDown = DropDown()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -90,10 +100,11 @@ class AddSuggestionViewController: UIViewController {
         self.sectionView.backgroundColor = Theme.grey
         self.emptyStateLabel.text = "Loading categories..."
         self.addButton.isEnabled = false
+        DropDown.startListeningToKeyboard()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         self.scrollView.isHidden = true
         
        interactor.getCategories { [weak self] categories in
@@ -181,18 +192,18 @@ class AddSuggestionViewController: UIViewController {
         }
     }
     
-    @objc func keyboardWillShow(_ notification:Notification) {
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            scrollBarBottom.constant = keyboardSize.height
-        }
-    }
-    @objc func keyboardWillHide(_ notification:Notification) {
-        
-        if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            scrollBarBottom.constant = 0
-        }
-    }
+//    @objc func keyboardWillShow(_ notification:Notification) {
+//
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            scrollBarBottom.constant = keyboardSize.height
+//        }
+//    }
+//    @objc func keyboardWillHide(_ notification:Notification) {
+//
+//        if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            scrollBarBottom.constant = 0
+//        }
+//    }
     @IBAction func addLocation(_ sender: UIButton) {
     }
     override func didReceiveMemoryWarning() {
@@ -264,7 +275,109 @@ extension AddSuggestionViewController{
         details.layer.borderWidth = 0.9
         details.contentInset = UIEdgeInsets.init(top: 5, left: 8, bottom: 5, right: 8)
         details.titleFont = Theme.avenirTitle!
-        location.hookDropdown(placeHolder: "Location (Mumbai only) *", dataSource: nil, selectionCompletion: nil)
+        location.placeholder = "Location (Mumbai only) *"
+        location.isMandatory = true
+        location.textField.delegate = self
         
     }
+}
+
+
+extension AddSuggestionViewController : UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        scrollView.contentInset = UIEdgeInsetsMake(0, 0, 251, 0)
+        if textField == location.textField{
+            setDropDownForSelectedTextField()
+        }
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let query = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
+        
+        if query.trimmingCharacters(in: .whitespaces) != ""{
+            locationInteractor.fetchLocationFromQuery(query) { [weak self] (locations) in
+                guard let strongSelf = self else{ return }
+                strongSelf.locations = locations
+            }
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        var tag = textField.tag
+        tag += 1
+        
+        if tag < 7 {
+            if let view = view.viewWithTag(tag) as? UITextField {
+                view.becomeFirstResponder()
+            }
+        } else if tag == 7 {
+            if let view = view.viewWithTag(tag) as? UITextView {
+                view.becomeFirstResponder()
+            }
+        }
+        
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
+    // TextView
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        scrollView.contentInset = UIEdgeInsetsMake(0, 0, 251, 0)
+        scrollView.scrollRectToVisible(CGRect(x: 1, y: 600, width: 100, height: 1), animated: true)
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+}
+
+extension AddSuggestionViewController: AddLocationProtocol {
+    func updateLocation(_ location: String) {
+        print(location)
+    }
+}
+extension AddSuggestionViewController {
+    
+    func setDropDownForSelectedTextField() {
+        
+        // The view to which the drop down will appear ondropDown = DropDown()
+        dropDown.anchorView = location
+        dropDown.shadowRadius = 1
+        dropDown.shadowOpacity = 0.2
+        dropDown.bottomOffset = CGPoint(x: 0, y:60)
+        dropDown.dismissMode = .automatic
+    }
+    
+    func updateDataSourceForDropDown() {
+        
+        // The list of items to display. Can be changed dynamically
+        guard let locations = locations else { return }
+        if location.textField.text?.trimmingCharacters(in: .whitespaces) != ""{
+            dropDown.dataSource = locations.map({ (location) in
+                if let name = location.locSuburb {
+                    return name
+                }
+                return ""
+            })
+        }else{
+            dropDown.dataSource = []
+        }
+        
+        dropDown.selectionAction = {[weak self] (index: Int, item: String) in
+            guard let strongSelf = self else{
+                return
+            }
+            let selectedLocation = locations[index]
+            strongSelf.location.textField.text = selectedLocation.locSuburb
+        }
+        
+        dropDown.show()
+    }
+    
 }

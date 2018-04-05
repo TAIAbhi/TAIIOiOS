@@ -720,7 +720,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fki-xK-4j2" customClass="DropDownView" customModule="Tagabout" customModuleProvider="target">
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fki-xK-4j2" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="107" width="315" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>

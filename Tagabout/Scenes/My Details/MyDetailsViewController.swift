@@ -106,8 +106,9 @@ extension MyDetailsViewController: UITextFieldDelegate, UITextViewDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let text = textField.text, text != "" {
-            let query = text + string
+        let query = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
+        
+        if query.trimmingCharacters(in: .whitespaces) != ""{
             locationInteractor.fetchLocationFromQuery(query) { [weak self] (locations) in
                 guard let strongSelf = self else{ return }
                 strongSelf.locations = locations
@@ -171,10 +172,11 @@ extension MyDetailsViewController {
         
         // The view to which the drop down will appear on
         dropDown.anchorView = textField
-        dropDown.direction = .bottom
+        dropDown.topOffset = CGPoint(x: 0, y:64)
         dropDown.shadowRadius = 1
         dropDown.shadowOpacity = 0.2
         dropDown.bottomOffset = CGPoint(x: 0, y:48)
+        dropDown.dismissMode = .automatic
     }
     
     func updateDataSourceForDropDown() {
@@ -182,12 +184,16 @@ extension MyDetailsViewController {
         
         // The list of items to display. Can be changed dynamically
         guard let locations = locations else { return }
-        dropDown.dataSource = locations.map({ (location) in
-            if let name = location.locSuburb {
-                return name
-            }
-            return ""
-        })
+        if textField.text?.trimmingCharacters(in: .whitespaces) != ""{
+            dropDown.dataSource = locations.map({ (location) in
+                if let name = location.locSuburb {
+                    return name
+                }
+                return ""
+            })
+        }else{
+            dropDown.dataSource = []
+        }
         
         dropDown.selectionAction = { (index: Int, item: String) in
             let selectedLocation = locations[index]
