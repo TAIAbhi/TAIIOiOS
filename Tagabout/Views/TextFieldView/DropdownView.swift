@@ -11,6 +11,18 @@ import DropDown
 import  SkyFloatingLabelTextField
 
 
+protocol DropDownViewTextDelegate {
+    func dropDownTextFieldDidBeginEditing(_ textField: UITextField);
+    func dropDownTextFieldDidEndEditing(_ textField: UITextField);
+    func dropDownSearchPrefix(_ textField: UITextField) -> String;
+}
+
+extension DropDownViewTextDelegate{
+    func dropDownSearchPrefix(_ textField: UITextField) -> String{
+        return ""
+    }
+}
+
 class DropDownView: DesignableView {
     
     //consts
@@ -41,7 +53,9 @@ class DropDownView: DesignableView {
     
     //value provider
     public var text : String?{
-        return textField.text
+        get{
+            return textField.text
+        }
     }
     
     //outlets
@@ -54,6 +68,7 @@ class DropDownView: DesignableView {
     //dropdown and view
     private var dropDown : DropDown?
     private var dataSource : Array<String>?
+    public var textDelegate : DropDownViewTextDelegate?
    
     
     public func hide(_ hide : Bool){
@@ -109,9 +124,13 @@ class DropDownView: DesignableView {
         dropDown?.shadowRadius = 1
         dropDown?.shadowOpacity = 0.2
         dropDown?.bottomOffset = CGPoint(x: 0, y:defaultViewHieght)
+        dropDown?.direction = .bottom
+//        dropDown?.topOffset = CGPoint(x: 0, y:defaultViewHieght)
+        dropDown?.offsetFromWindowBottom = 64.0
         dropDown?.dismissMode = .automatic
         // The list of items to display. Can be changed dynamically
         dropDown?.dataSource = newDataSource
+        dropDown?.width = self.textField.frame.size.width
         
         self.dataSource = dataSource
         dropDown?.selectionAction = {[weak self] (index: Int, item: String) in
@@ -124,11 +143,11 @@ class DropDownView: DesignableView {
             
             strongSelf.takeFreeText = false
             strongSelf.isSelectedFromDropDown = true
+            strongSelf.isDropDownHidden = true
+            strongSelf.textField.text = item
             if let selectionCompletion = selectionCompletion{
                 selectionCompletion(index, item)
             }
-            strongSelf.isDropDownHidden = true
-            strongSelf.textField.text = item
         }
     }
     
@@ -137,6 +156,10 @@ class DropDownView: DesignableView {
 extension DropDownView : UITextFieldDelegate{
     // Text field delegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if let textDelegate = textDelegate{
+            textDelegate.dropDownTextFieldDidBeginEditing(textField)
+        }
         if let dropdown = dropDown{
             isDropDownHidden = false
             guard let dataSource = dataSource else { return }
@@ -145,13 +168,24 @@ extension DropDownView : UITextFieldDelegate{
         }
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let textDelegate = textDelegate{
+            textDelegate.dropDownTextFieldDidEndEditing(textField)
+        }
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         isSelectedFromDropDown = false
         guard let dataSource = dataSource, let dropDown = self.dropDown else {
             return false
         }
+        var prefix = ""
+        if let textDelegate = textDelegate {
+            prefix = textDelegate.dropDownSearchPrefix(textField)
+        }
         var newString = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
         newString = newString.trimmingCharacters(in: .whitespaces)
+        newString = prefix == "" ? newString : "\(prefix)~\(newString)"
         
         if newString == ""{
             dropDown.dataSource = dataSource

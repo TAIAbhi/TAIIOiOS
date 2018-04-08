@@ -35,15 +35,25 @@
 		F145621A20715929007C60EB /* TAINaviagtionbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145621920715929007C60EB /* TAINaviagtionbar.swift */; };
 		F14864182058511100778ED4 /* AddSuggestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14864172058511100778ED4 /* AddSuggestionRouter.swift */; };
 		F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */; };
+		F156A71E207A2AB100237F6E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F156A71D207A2AB100237F6E /* LoadingView.swift */; };
+		F156A720207A2B8C00237F6E /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F156A71F207A2B8C00237F6E /* LoadingView.xib */; };
 		F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */; };
 		F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1579293204B1D0100EFFEC0 /* DesignableView.swift */; };
 		F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F15792A4204B2E8B00EFFEC0 /* Localizable.strings */; };
 		F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15792A9204BE02800EFFEC0 /* UserStory.storyboard */; };
+		F17C09FC20789E4200FDBE29 /* HelpScenes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17C09FB20789E4200FDBE29 /* HelpScenes.storyboard */; };
+		F17C09FE2078A2B800FDBE29 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C09FD2078A2B800FDBE29 /* Help.swift */; };
+		F17C0A002078A55100FDBE29 /* HelpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C09FF2078A55100FDBE29 /* HelpInteractor.swift */; };
+		F17C0A022078A62100FDBE29 /* help.json in Resources */ = {isa = PBXBuildFile; fileRef = F17C0A012078A62000FDBE29 /* help.json */; };
+		F17C0A042078AC8900FDBE29 /* GeneralUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C0A032078AC8900FDBE29 /* GeneralUtils.swift */; };
+		F17C0A062078AF5700FDBE29 /* HelpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C0A052078AF5700FDBE29 /* HelpRouter.swift */; };
+		F17C0A0A2078C69900FDBE29 /* HelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17C0A092078C69900FDBE29 /* HelpPage.swift */; };
+		F17C0A1F20790EC000FDBE29 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17C0A1E20790EC000FDBE29 /* YTPlayerView.m */; };
+		F17C0A2120790EE200FDBE29 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F17C0A2020790EE200FDBE29 /* Assets.bundle */; };
 		F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19759CE2042DA3C00201147 /* ContactsInteractor.swift */; };
-		F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E7CB220395BF70072184C /* OnboardingPager.swift */; };
+		F19E7CB320395BF70072184C /* HelpScenePager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19E7CB220395BF70072184C /* HelpScenePager.swift */; };
 		F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F4DD62030527B00D95CCD /* AppDelegate.swift */; };
 		F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19F4DD82030527B00D95CCD /* VideoPlayerViewController.swift */; };
-		F19F4DDC2030527B00D95CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DDA2030527B00D95CCD /* Main.storyboard */; };
 		F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DDD2030527B00D95CCD /* Assets.xcassets */; };
 		F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */; };
 		F19F4DF72030CC3300D95CCD /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = F19F4DF62030CC3300D95CCD /* movie.mov */; };
@@ -89,24 +99,34 @@
 		F145621920715929007C60EB /* TAINaviagtionbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAINaviagtionbar.swift; sourceTree = "<group>"; };
 		F14864172058511100778ED4 /* AddSuggestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionRouter.swift; sourceTree = "<group>"; };
 		F148641B2058516200778ED4 /* AddSuggestionInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSuggestionInteractor.swift; sourceTree = "<group>"; };
+		F156A71D207A2AB100237F6E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F156A71F207A2B8C00237F6E /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		F157928F204AE63100EFFEC0 /* AddSuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuggestionViewController.swift; sourceTree = "<group>"; };
 		F1579293204B1D0100EFFEC0 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		F1579297204B2B2900EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
-		F1579298204B2B2900EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		F1579299204B2B2A00EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F157929A204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/VideoplayerScene.strings; sourceTree = "<group>"; };
-		F157929B204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		F157929C204B2B3400EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F15792A5204B2E8B00EFFEC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A7204B2EAC00EFFEC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A8204B2EAC00EFFEC0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F15792A9204BE02800EFFEC0 /* UserStory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserStory.storyboard; sourceTree = "<group>"; };
+		F17C09FB20789E4200FDBE29 /* HelpScenes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HelpScenes.storyboard; sourceTree = "<group>"; };
+		F17C09FD2078A2B800FDBE29 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		F17C09FF2078A55100FDBE29 /* HelpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpInteractor.swift; sourceTree = "<group>"; };
+		F17C0A012078A62000FDBE29 /* help.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = help.json; sourceTree = "<group>"; };
+		F17C0A032078AC8900FDBE29 /* GeneralUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralUtils.swift; sourceTree = "<group>"; };
+		F17C0A052078AF5700FDBE29 /* HelpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRouter.swift; sourceTree = "<group>"; };
+		F17C0A092078C69900FDBE29 /* HelpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPage.swift; sourceTree = "<group>"; };
+		F17C0A0E2078FF2D00FDBE29 /* Tagabout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tagabout-Bridging-Header.h"; sourceTree = "<group>"; };
+		F17C0A1D20790EC000FDBE29 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		F17C0A1E20790EC000FDBE29 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		F17C0A2020790EE200FDBE29 /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		F19759CE2042DA3C00201147 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
-		F19E7CB220395BF70072184C /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
+		F19E7CB220395BF70072184C /* HelpScenePager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScenePager.swift; sourceTree = "<group>"; };
 		F19F4DD32030527B00D95CCD /* Tagabout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tagabout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19F4DD62030527B00D95CCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19F4DD82030527B00D95CCD /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
-		F19F4DDB2030527B00D95CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F19F4DDD2030527B00D95CCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F19F4DE02030527B00D95CCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F19F4DE22030527B00D95CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -200,6 +220,7 @@
 				9E5CA98020557E1900FD8CEF /* Suggestions List */,
 				F157928E204AE60B00EFFEC0 /* Add Suggestion */,
 				9EDB96DA204AC56700AA9082 /* Login */,
+				F159D978203D133300C1FF55 /* HelpScenes */,
 				F15792A9204BE02800EFFEC0 /* UserStory.storyboard */,
 				F1E6EEAB205EDD8000F8C878 /* TabbarController.swift */,
 			);
@@ -223,6 +244,8 @@
 				F1579293204B1D0100EFFEC0 /* DesignableView.swift */,
 				F1E6EEAD20603B9700F8C878 /* Buttons.swift */,
 				F145621520713F34007C60EB /* FloatLabelTextView.swift */,
+				F156A71D207A2AB100237F6E /* LoadingView.swift */,
+				F156A71F207A2B8C00237F6E /* LoadingView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,18 +271,27 @@
 			path = "Add Suggestion";
 			sourceTree = "<group>";
 		};
-		F159D978203D133300C1FF55 /* Onboarding */ = {
+		F159D978203D133300C1FF55 /* HelpScenes */ = {
 			isa = PBXGroup;
 			children = (
-				F19E7CB220395BF70072184C /* OnboardingPager.swift */,
+				F17C0A012078A62000FDBE29 /* help.json */,
+				F19E7CB220395BF70072184C /* HelpScenePager.swift */,
+				F17C0A092078C69900FDBE29 /* HelpPage.swift */,
+				F17C0A052078AF5700FDBE29 /* HelpRouter.swift */,
+				F17C09FF2078A55100FDBE29 /* HelpInteractor.swift */,
+				F17C09FB20789E4200FDBE29 /* HelpScenes.storyboard */,
 			);
-			path = Onboarding;
+			path = HelpScenes;
 			sourceTree = "<group>";
 		};
 		F17FF1B62072BE2200AC4A4A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F17C0A2020790EE200FDBE29 /* Assets.bundle */,
+				F17C0A1D20790EC000FDBE29 /* YTPlayerView.h */,
+				F17C0A1E20790EC000FDBE29 /* YTPlayerView.m */,
 				9E152CFE2073EC1100B57DA5 /* Theme.swift */,
+				F17C0A032078AC8900FDBE29 /* GeneralUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -276,8 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				F1D26E60204A6C9A0049638F /* VideoPlayer */,
-				F19F4DDA2030527B00D95CCD /* Main.storyboard */,
-				F159D978203D133300C1FF55 /* Onboarding */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -314,6 +344,7 @@
 				F19F4DD62030527B00D95CCD /* AppDelegate.swift */,
 				F19E7CB120395BB90072184C /* ViewController */,
 				F19F4DDD2030527B00D95CCD /* Assets.xcassets */,
+				F17C0A0E2078FF2D00FDBE29 /* Tagabout-Bridging-Header.h */,
 				F19F4DF62030CC3300D95CCD /* movie.mov */,
 				F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */,
 				F19F4DE22030527B00D95CCD /* Info.plist */,
@@ -357,6 +388,7 @@
 				F1D26E65204AA3C00049638F /* User.swift */,
 				F1B49F0E2052440400B9B960 /* Suggestion.swift */,
 				9E592714206BFDCE00D58FF5 /* Suburb.swift */,
+				F17C09FD2078A2B800FDBE29 /* Help.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,6 +404,7 @@
 				F19F4DCF2030527B00D95CCD /* Sources */,
 				F19F4DD02030527B00D95CCD /* Frameworks */,
 				F19F4DD12030527B00D95CCD /* Resources */,
+				F156A71C2079E24B00237F6E /* Run Fabric Script */,
 				2C4EA38FD43A31784DE386BD /* [CP] Embed Pods Frameworks */,
 				18BE9FC38A3A9DED04CCC30D /* [CP] Copy Pods Resources */,
 			);
@@ -428,11 +461,14 @@
 				F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */,
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
 				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
+				F17C09FC20789E4200FDBE29 /* HelpScenes.storyboard in Resources */,
 				F19F4DF72030CC3300D95CCD /* movie.mov in Resources */,
 				F14562142070FDC8007C60EB /* TextFieldView.xib in Resources */,
 				9EC817E2205D3B2A00C3616D /* Logo.gif in Resources */,
+				F17C0A2120790EE200FDBE29 /* Assets.bundle in Resources */,
+				F17C0A022078A62100FDBE29 /* help.json in Resources */,
+				F156A720207A2B8C00237F6E /* LoadingView.xib in Resources */,
 				F19F4DDE2030527B00D95CCD /* Assets.xcassets in Resources */,
-				F19F4DDC2030527B00D95CCD /* Main.storyboard in Resources */,
 				F14562102070FDAA007C60EB /* DropdownView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,9 +482,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout-resources.sh",
+				"${PODS_ROOT}/youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -497,6 +536,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F156A71C2079E24B00237F6E /* Run Fabric Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Fabric Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 8d7e42aac15b647f54dc098c07d2511d44581f53 6c4a8339ac24999bc0eaee8a9867d36a31434bb85b5424f74e801bff049abcfc";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -511,10 +564,13 @@
 				9E5B934720667E3100696EB6 /* MyDetailsViewController.swift in Sources */,
 				9E5B934620667E3100696EB6 /* MyDetailsInteractor.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
+				F17C0A062078AF5700FDBE29 /* HelpRouter.swift in Sources */,
+				F156A71E207A2AB100237F6E /* LoadingView.swift in Sources */,
 				9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
 				F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
+				F17C0A002078A55100FDBE29 /* HelpInteractor.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
 				9E592715206BFDCE00D58FF5 /* Suburb.swift in Sources */,
 				9E82FFED204C1139005744DE /* SkyFloatingLabelTextFieldExtension.swift in Sources */,
@@ -525,6 +581,7 @@
 				F145621A20715929007C60EB /* TAINaviagtionbar.swift in Sources */,
 				9E5B934A2066979A00696EB6 /* AddLocationViewController.swift in Sources */,
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
+				F17C0A042078AC8900FDBE29 /* GeneralUtils.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
 				F145621720713F34007C60EB /* FloatLabelTextView.swift in Sources */,
 				9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */,
@@ -532,13 +589,16 @@
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */,
-				F19E7CB320395BF70072184C /* OnboardingPager.swift in Sources */,
+				F19E7CB320395BF70072184C /* HelpScenePager.swift in Sources */,
+				F17C0A0A2078C69900FDBE29 /* HelpPage.swift in Sources */,
 				9E152CFF2073EC1200B57DA5 /* Theme.swift in Sources */,
+				F17C0A1F20790EC000FDBE29 /* YTPlayerView.m in Sources */,
 				F1E6EEAE20603B9700F8C878 /* Buttons.swift in Sources */,
 				F1E6EEAC205EDD8000F8C878 /* TabbarController.swift in Sources */,
 				9E5B933D205EC10700696EB6 /* Category.swift in Sources */,
 				F1D26E68204AB1B60049638F /* API.swift in Sources */,
 				F145620F2070FDAA007C60EB /* DropdownView.swift in Sources */,
+				F17C09FE2078A2B800FDBE29 /* Help.swift in Sources */,
 				9E5B934C206697B400696EB6 /* MyDetailsRouter.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,
@@ -556,16 +616,6 @@
 				F15792A8204B2EAC00EFFEC0 /* ru */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		F19F4DDA2030527B00D95CCD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F19F4DDB2030527B00D95CCD /* Base */,
-				F1579298204B2B2900EFFEC0 /* en */,
-				F157929B204B2B3400EFFEC0 /* ru */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */ = {
@@ -623,7 +673,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -682,6 +733,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -708,12 +760,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R2V5X487E;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.tagaboutit.humanstrings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tagabout/Tagabout-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -727,12 +782,15 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2R2V5X487E;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.tagaboutit.humanstrings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tagabout/Tagabout-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

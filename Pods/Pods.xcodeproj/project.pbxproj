@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04038D606BFCFAB42CED57D35B32E89 /* DropDown.swift */; };
-		098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E445350C76A02AC904BB6EEBAE0BB /* DropDownCell.swift */; };
+		02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1200B797A2D212D188730ED15F09AFD3 /* DropDown.swift */; };
+		098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869108727A6C969B6963C2310B53192 /* DropDownCell.swift */; };
 		112EF46839B1997C7EECC17E31FFAB7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		20788DDA6B418C6C8C44E3525759A691 /* LabelSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C6437D9CD0713EE90503E78B8971D /* LabelSwitch.swift */; };
-		2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AE2C23068A4618BEC13F6C2604E740 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20788DDA6B418C6C8C44E3525759A691 /* LabelSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE1B86DE12CCD422C6DBEB11555F0E /* LabelSwitch.swift */; };
+		2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F162429C9A1C0DF36F12711672444D6 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E9CD6F441E6B30601549781F5DB2D12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		30CA0C03FB04CB0AC4B57280CEFBE767 /* LabelSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C88A66845CC04D6C7FD1D07311E256D /* LabelSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C8C8DE2DCC5EB1A70A8D96F87E1124 /* DropDownCell.xib */; };
-		37F3AC6B2112D8B601C1EE01BE2D503B /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F6716A2E064A9E3DB5FD95EF55028D /* SkyFloatingLabelTextField-dummy.m */; };
-		442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE676A9894C84CC805F640A32E125B0 /* DropDown+Appearance.swift */; };
-		55D1B43A1F8B5E0791E9D123994155AD /* UIFloatLabelTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A39A6CDD01B685A18F78081D24E61 /* UIFloatLabelTextView.m */; };
-		5E81AAA3879433D38E3F5F89FE73611E /* UIFloatLabelTextView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 718004F4EEBE64FEE8C1442B8C120F5F /* UIFloatLabelTextView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30CA0C03FB04CB0AC4B57280CEFBE767 /* LabelSwitch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 992CD8FFBB6C048892BE925FDFE9FE0D /* LabelSwitch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9C229E1E85581CBBBC382D96414282 /* DropDownCell.xib */; };
+		37F3AC6B2112D8B601C1EE01BE2D503B /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CF4760B93349D81154544221A46AA /* SkyFloatingLabelTextField-dummy.m */; };
+		442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912F52B3E506E3463F8D7C89B84C9D7D /* DropDown+Appearance.swift */; };
+		55D1B43A1F8B5E0791E9D123994155AD /* UIFloatLabelTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE459CF0DBAD5D29301D36063E52BCC5 /* UIFloatLabelTextView.m */; };
+		5E81AAA3879433D38E3F5F89FE73611E /* UIFloatLabelTextView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 366675BC1CB41FEE13D8AC504BD9CDFB /* UIFloatLabelTextView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C9A18FFBD7B6BD4CA548A50DF348E30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		83F60425E867139EE81B6B8EA66942EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9286BEF4DD74E709E95C16EC400A1A17 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075CBE5907CEEBA699C2CC2014F06CE /* UITextField+fixCaretPosition.swift */; };
+		9286BEF4DD74E709E95C16EC400A1A17 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F9575A847143E62D4957C793118E99 /* UITextField+fixCaretPosition.swift */; };
 		9C094A5A273AB57DFD19453A6238A4AD /* Pods-Tagabout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C2E60256262EF23810DCEEBF0C9EEC /* Pods-Tagabout-dummy.m */; };
-		9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF94FE64C1C7B9B5D93538B0EA34AB /* DPDKeyboardListener.swift */; };
-		A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FF193D16C704EBCDA9518A95D0CFBF /* DPDUIView+Extension.swift */; };
-		A61DBA60F895DD604C54626DC7E7F6EA /* UIFloatLabelTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 117F961B787FDC1027925C2C920AE0EB /* UIFloatLabelTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FF5702E6C3A226FF7BCD0443E3C00E /* DPDConstants.swift */; };
-		AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F43CB7F9AA61368C817E2FF42ED66E /* DropDown-dummy.m */; };
-		AD6AE506B0DBE619C501D2BA801E2414 /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA81DBD1D4391EA30D696D956EFFE7C1 /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567410F292B14F35892A94129F9C73F7 /* DPDKeyboardListener.swift */; };
+		A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0D7A458DA06A68B3BDAA065378376 /* DPDUIView+Extension.swift */; };
+		A61DBA60F895DD604C54626DC7E7F6EA /* UIFloatLabelTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = B14A6E7C7E066DDC120A572805D19CC9 /* UIFloatLabelTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439C5BE999BEBFFB4B4CDE458D476CCD /* DPDConstants.swift */; };
+		AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8490742E27135277ACCCAFA32ADD87A4 /* DropDown-dummy.m */; };
+		AD6AE506B0DBE619C501D2BA801E2414 /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD4F982E6D51B9C1F32F819B3915AF4 /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B792D28BE58C847056A36AAC202F7A9C /* Pods-Tagabout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 814B74075007ACC57DCCE76429EEE37A /* Pods-Tagabout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9EC1EF8B9F66D705CC1D263452EEBC8 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D6A551F5A17C2E550455407D6B317C /* SkyFloatingLabelTextField.swift */; };
-		CE8D7449D1DBD7564822DA7790F7A215 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB3F76DD70332E1EBF3D7D2706A06A /* SkyFloatingLabelTextFieldWithIcon.swift */; };
-		E28DC965411EDACE2A3FA38FB50250A1 /* UIFloatLabelTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF240511B839786D3E38F62C02C2C170 /* UIFloatLabelTextView-dummy.m */; };
-		E348315F3F13EE0E10F1DE475D15C7E4 /* LabelSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16249A16AE6E154789D37D5745BE5166 /* LabelSwitch-dummy.m */; };
-		F0CE8891B04078CE120B87848F30F518 /* LabelSwtichSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E443BE699471D1C659F9C1CAA6A33E58 /* LabelSwtichSetting.swift */; };
+		B9EC1EF8B9F66D705CC1D263452EEBC8 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D46447B66E18B154E8CCA78CDB74C45 /* SkyFloatingLabelTextField.swift */; };
+		CE8D7449D1DBD7564822DA7790F7A215 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C10D8922F58E06E3A0C74E66822F1E /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		E28DC965411EDACE2A3FA38FB50250A1 /* UIFloatLabelTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBBBAF65550ACD611BC0B229AE454A /* UIFloatLabelTextView-dummy.m */; };
+		E348315F3F13EE0E10F1DE475D15C7E4 /* LabelSwitch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D6EE1DDE520D9844659BF3183EEF18 /* LabelSwitch-dummy.m */; };
+		F0CE8891B04078CE120B87848F30F518 /* LabelSwtichSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91227D05EB8BB03DAD4E4245744A81B /* LabelSwtichSetting.swift */; };
 		F55BBA5C07C31011049B1E6FD71D624C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,60 +70,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		020FF29596AE6A07A6ADE158158E9AE9 /* LabelSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LabelSwitch.modulemap; sourceTree = "<group>"; };
-		0B45C7738A92089F9F1E727DBAF29F4A /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
-		0C6A39A6CDD01B685A18F78081D24E61 /* UIFloatLabelTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIFloatLabelTextView.m; path = UIFloatLabelTextView/UIFloatLabelTextView.m; sourceTree = "<group>"; };
-		0E49C42235B44514D0B051140EB6C5C7 /* UIFloatLabelTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIFloatLabelTextView.modulemap; sourceTree = "<group>"; };
-		0FAF94FE64C1C7B9B5D93538B0EA34AB /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		02F272A82C7469BDACAE0D3737EA16B2 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		04FBBBAF65550ACD611BC0B229AE454A /* UIFloatLabelTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFloatLabelTextView-dummy.m"; sourceTree = "<group>"; };
+		0EBE1B86DE12CCD422C6DBEB11555F0E /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
 		104202C4639B0B28442FB60C1038AEF0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		117F961B787FDC1027925C2C920AE0EB /* UIFloatLabelTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIFloatLabelTextView.h; path = UIFloatLabelTextView/UIFloatLabelTextView.h; sourceTree = "<group>"; };
-		16249A16AE6E154789D37D5745BE5166 /* LabelSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LabelSwitch-dummy.m"; sourceTree = "<group>"; };
-		33FF5702E6C3A226FF7BCD0443E3C00E /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		1200B797A2D212D188730ED15F09AFD3 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		1BE7F626AEA6B9185C6FE80DAE1A8E39 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		2AB8018233BCC549F7EF8D9254C7A370 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		32145DDAC0BC3B70B5650819ECD4D8B9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3466FAAF23D9B13A1A17AF825A97DEDC /* Pods-Tagabout-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tagabout-acknowledgements.markdown"; sourceTree = "<group>"; };
-		45F6716A2E064A9E3DB5FD95EF55028D /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
+		366675BC1CB41FEE13D8AC504BD9CDFB /* UIFloatLabelTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFloatLabelTextView-umbrella.h"; sourceTree = "<group>"; };
+		3F004B8ADF9FBE90E7684F24ABD4ABC8 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		439C5BE999BEBFFB4B4CDE458D476CCD /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
 		46A22AF60A49600C37949481E7E4473B /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58D6A551F5A17C2E550455407D6B317C /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
-		5ED155C88B8E7AEF9F840677B16D0C55 /* UIFloatLabelTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIFloatLabelTextView.xcconfig; sourceTree = "<group>"; };
-		60FF193D16C704EBCDA9518A95D0CFBF /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		4869108727A6C969B6963C2310B53192 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		48D6EE1DDE520D9844659BF3183EEF18 /* LabelSwitch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LabelSwitch-dummy.m"; sourceTree = "<group>"; };
+		567410F292B14F35892A94129F9C73F7 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		5D46447B66E18B154E8CCA78CDB74C45 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		5D9C229E1E85581CBBBC382D96414282 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		61230F649AE895375FD5CA2AF25D1599 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		65A79F84F75171813577E583F62AFEC5 /* Pods-Tagabout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tagabout.modulemap"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		66236DA9D9CC89659E4D7FA80DFFC8DC /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		67A66D702452136A8632A496C9003379 /* Pods-Tagabout-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tagabout-resources.sh"; sourceTree = "<group>"; };
+		67C9DB6CF7313C35E1A5EC6DCB918DB4 /* UIFloatLabelTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIFloatLabelTextView.xcconfig; sourceTree = "<group>"; };
+		68791E85E0A6F5ABB73C4A719C6F7E08 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		6BE292A8DD2C9D679FC756D78D99D0DC /* Pods_Tagabout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tagabout.framework; path = "Pods-Tagabout.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C88A66845CC04D6C7FD1D07311E256D /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
-		7075CBE5907CEEBA699C2CC2014F06CE /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+fixCaretPosition.swift"; path = "Sources/UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
-		718004F4EEBE64FEE8C1442B8C120F5F /* UIFloatLabelTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFloatLabelTextView-umbrella.h"; sourceTree = "<group>"; };
-		736E0C902DB3853EC367E09C980B069D /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
-		7436623FC3DDC38444A68464F8F07532 /* UIFloatLabelTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFloatLabelTextView-prefix.pch"; sourceTree = "<group>"; };
-		78F64938FA13782586FD1AD9C450D3D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C5CF4760B93349D81154544221A46AA /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
+		7F162429C9A1C0DF36F12711672444D6 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
 		7FA095165F26DB545E84AC6EC4AA1EE9 /* UIFloatLabelTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIFloatLabelTextView.framework; path = UIFloatLabelTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814B74075007ACC57DCCE76429EEE37A /* Pods-Tagabout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tagabout-umbrella.h"; sourceTree = "<group>"; };
-		874E445350C76A02AC904BB6EEBAE0BB /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		8490742E27135277ACCCAFA32ADD87A4 /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		912F52B3E506E3463F8D7C89B84C9D7D /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DAE79EB93571EB74588259251004CDB /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
-		A76FDA2FAB9DA62C02804254303B51FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		960639268A728E755B18DF10E8A46D9D /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
+		992CD8FFBB6C048892BE925FDFE9FE0D /* LabelSwitch-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-umbrella.h"; sourceTree = "<group>"; };
+		A0AC09C761F2F6087BB9AB575D7E0BDA /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
+		A2B657B7C768AEFA8FAC9C8B7E9685EA /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
+		A3F9575A847143E62D4957C793118E99 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+fixCaretPosition.swift"; path = "Sources/UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		AC0F1BC079CEFDFDEC7C0CDBABAE63DE /* UIFloatLabelTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIFloatLabelTextView-prefix.pch"; sourceTree = "<group>"; };
 		AC362CB25367FC07AFE84FD1CA0BDFB7 /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SkyFloatingLabelTextField.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14A6E7C7E066DDC120A572805D19CC9 /* UIFloatLabelTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIFloatLabelTextView.h; path = UIFloatLabelTextView/UIFloatLabelTextView.h; sourceTree = "<group>"; };
 		B18066A6A1AA7EF95CC8EF235D58B70D /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
-		B1AE2C23068A4618BEC13F6C2604E740 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		B1ABE82054ACDB32A6CC59BB30E66EA5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B265E1AD13904D65FC0FCFEFAE1165DF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		B2DA4D7F32E323C0736316A3A11CD150 /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
 		B3C2E60256262EF23810DCEEBF0C9EEC /* Pods-Tagabout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tagabout-dummy.m"; sourceTree = "<group>"; };
-		B934838D9771D00E0D8559005C8CEDB3 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
-		BA81DBD1D4391EA30D696D956EFFE7C1 /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
-		C04038D606BFCFAB42CED57D35B32E89 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
-		C2C8C8DE2DCC5EB1A70A8D96F87E1124 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
-		C713D9653934881EC95A795527E37468 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB0D7A458DA06A68B3BDAA065378376 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		BB3484E212599D6E99251B850A5A5F6D /* LabelSwitch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LabelSwitch.modulemap; sourceTree = "<group>"; };
+		BE6B803BA547E9D55E7C93B1264C4CD9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A5B823D68D4337F40B1B7146D96DF8 /* UIFloatLabelTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIFloatLabelTextView.modulemap; sourceTree = "<group>"; };
+		C550B37F0D3075D05066675DE2C8D7F3 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		C9A5BED3C820E6799AA996F200CA2571 /* LabelSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LabelSwitch.framework; path = LabelSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD8D235AF0978A371AA27F524DBE3BDD /* LabelSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-prefix.pch"; sourceTree = "<group>"; };
-		CF240511B839786D3E38F62C02C2C170 /* UIFloatLabelTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIFloatLabelTextView-dummy.m"; sourceTree = "<group>"; };
-		CFAB3F76DD70332E1EBF3D7D2706A06A /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
-		D0C690F93700206C1842521FDB69FD88 /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
+		CE459CF0DBAD5D29301D36063E52BCC5 /* UIFloatLabelTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIFloatLabelTextView.m; path = UIFloatLabelTextView/UIFloatLabelTextView.m; sourceTree = "<group>"; };
 		D10C584B84EC7E6A46176601D0C11217 /* Pods-Tagabout-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tagabout-frameworks.sh"; sourceTree = "<group>"; };
-		D1F43CB7F9AA61368C817E2FF42ED66E /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
-		E1E6CD4FAD6AEAA25BBEC79D17397F1F /* LabelSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.xcconfig; sourceTree = "<group>"; };
-		E443BE699471D1C659F9C1CAA6A33E58 /* LabelSwtichSetting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwtichSetting.swift; path = LabelSwitch/Classes/LabelSwtichSetting.swift; sourceTree = "<group>"; };
-		E5032D2EA953F2BD70A18D50A2A98006 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32F8643E5F67B24D4D4A47ABE920D71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D59F2B794505FD15557D4FDB72296295 /* LabelSwitch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LabelSwitch.xcconfig; sourceTree = "<group>"; };
+		D62390F6554309EE1300ABDFB7FC6F29 /* LabelSwitch-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LabelSwitch-prefix.pch"; sourceTree = "<group>"; };
+		D7CCF0AF1BFA937F536358CDDD299C21 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		E91227D05EB8BB03DAD4E4245744A81B /* LabelSwtichSetting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwtichSetting.swift; path = LabelSwitch/Classes/LabelSwtichSetting.swift; sourceTree = "<group>"; };
 		EAB9C9672F4BA5599E7E0E7E23D18344 /* Pods-Tagabout-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tagabout-acknowledgements.plist"; sourceTree = "<group>"; };
-		EAE562A4065BF9B8877BF44D36D6F712 /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
-		EFE676A9894C84CC805F640A32E125B0 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
-		F78C6437D9CD0713EE90503E78B8971D /* LabelSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSwitch.swift; path = LabelSwitch/Classes/LabelSwitch.swift; sourceTree = "<group>"; };
+		EEEA5B3B908025CB3DA9E5971DACB8C4 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		F090DA702C983546BF29B08801956388 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		F3A1F3DA9A012B9C440B50084EBDB670 /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
+		F8C10D8922F58E06E3A0C74E66822F1E /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		FAD4F982E6D51B9C1F32F819B3915AF4 /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
 		FB67FBF584E349D03991DB26827B5BEB /* Pods-Tagabout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tagabout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,59 +182,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A4FE4CF3A28FA24A420342B87E3BCC8 /* Support Files */ = {
+		0B46B54CC8B46B59DF71EEFDC47E6F3D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A76FDA2FAB9DA62C02804254303B51FE /* Info.plist */,
-				020FF29596AE6A07A6ADE158158E9AE9 /* LabelSwitch.modulemap */,
-				E1E6CD4FAD6AEAA25BBEC79D17397F1F /* LabelSwitch.xcconfig */,
-				16249A16AE6E154789D37D5745BE5166 /* LabelSwitch-dummy.m */,
-				CD8D235AF0978A371AA27F524DBE3BDD /* LabelSwitch-prefix.pch */,
-				6C88A66845CC04D6C7FD1D07311E256D /* LabelSwitch-umbrella.h */,
+				32145DDAC0BC3B70B5650819ECD4D8B9 /* Info.plist */,
+				A2B657B7C768AEFA8FAC9C8B7E9685EA /* SkyFloatingLabelTextField.modulemap */,
+				F3A1F3DA9A012B9C440B50084EBDB670 /* SkyFloatingLabelTextField.xcconfig */,
+				7C5CF4760B93349D81154544221A46AA /* SkyFloatingLabelTextField-dummy.m */,
+				A0AC09C761F2F6087BB9AB575D7E0BDA /* SkyFloatingLabelTextField-prefix.pch */,
+				FAD4F982E6D51B9C1F32F819B3915AF4 /* SkyFloatingLabelTextField-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/LabelSwitch";
+			path = "../Target Support Files/SkyFloatingLabelTextField";
 			sourceTree = "<group>";
 		};
-		23425E300F7A43108D6900700EC5BC4B /* Support Files */ = {
+		0EF606F43D6961D7C08D72947908A737 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				B934838D9771D00E0D8559005C8CEDB3 /* DropDown.modulemap */,
-				0B45C7738A92089F9F1E727DBAF29F4A /* DropDown.xcconfig */,
-				D1F43CB7F9AA61368C817E2FF42ED66E /* DropDown-dummy.m */,
-				9DAE79EB93571EB74588259251004CDB /* DropDown-prefix.pch */,
-				B1AE2C23068A4618BEC13F6C2604E740 /* DropDown-umbrella.h */,
-				78F64938FA13782586FD1AD9C450D3D7 /* Info.plist */,
+				1BE7F626AEA6B9185C6FE80DAE1A8E39 /* FABAttributes.h */,
+				02F272A82C7469BDACAE0D3737EA16B2 /* Fabric.h */,
+				4C5E0D64E0B659DE1B8F4072D28BEB08 /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/DropDown";
+			name = Fabric;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		46F24D4B1DCCFB95279669FB74801106 /* DropDown */ = {
+		1C3172568528CFF648D9EF8D66F20B9A /* LabelSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				33FF5702E6C3A226FF7BCD0443E3C00E /* DPDConstants.swift */,
-				0FAF94FE64C1C7B9B5D93538B0EA34AB /* DPDKeyboardListener.swift */,
-				60FF193D16C704EBCDA9518A95D0CFBF /* DPDUIView+Extension.swift */,
-				C04038D606BFCFAB42CED57D35B32E89 /* DropDown.swift */,
-				EFE676A9894C84CC805F640A32E125B0 /* DropDown+Appearance.swift */,
-				874E445350C76A02AC904BB6EEBAE0BB /* DropDownCell.swift */,
-				6F74DA75CA4262CA8B533A0163D95764 /* Resources */,
-				23425E300F7A43108D6900700EC5BC4B /* Support Files */,
+				0EBE1B86DE12CCD422C6DBEB11555F0E /* LabelSwitch.swift */,
+				E91227D05EB8BB03DAD4E4245744A81B /* LabelSwtichSetting.swift */,
+				E584E2702747D4D6F13CFF4D65AB59DB /* Support Files */,
 			);
-			name = DropDown;
-			path = DropDown;
+			name = LabelSwitch;
+			path = LabelSwitch;
 			sourceTree = "<group>";
 		};
-		4D1C965D045BB91F13BE4D9791F8C748 /* UIFloatLabelTextView */ = {
+		4C5E0D64E0B659DE1B8F4072D28BEB08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				117F961B787FDC1027925C2C920AE0EB /* UIFloatLabelTextView.h */,
-				0C6A39A6CDD01B685A18F78081D24E61 /* UIFloatLabelTextView.m */,
-				E4664E11420F52F87E032069A7453A32 /* Support Files */,
+				B265E1AD13904D65FC0FCFEFAE1165DF /* Fabric.framework */,
 			);
-			name = UIFloatLabelTextView;
-			path = UIFloatLabelTextView;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4E24C3E51212B0C4ABAAC9DD813E9E18 /* Targets Support Files */ = {
@@ -232,18 +232,6 @@
 				FA6A72F81E944B02E3952333F1AE653C /* Pods-Tagabout */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		58EEF9FD32C0D60B66F09F649D79BA89 /* SkyFloatingLabelTextField */ = {
-			isa = PBXGroup;
-			children = (
-				58D6A551F5A17C2E550455407D6B317C /* SkyFloatingLabelTextField.swift */,
-				CFAB3F76DD70332E1EBF3D7D2706A06A /* SkyFloatingLabelTextFieldWithIcon.swift */,
-				7075CBE5907CEEBA699C2CC2014F06CE /* UITextField+fixCaretPosition.swift */,
-				860875E4D7951DC532D640EAB5167832 /* Support Files */,
-			);
-			name = SkyFloatingLabelTextField;
-			path = SkyFloatingLabelTextField;
 			sourceTree = "<group>";
 		};
 		5C5D7E2E8E8BFCC9E394E0042C893FA0 /* Products */ = {
@@ -258,23 +246,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6F74DA75CA4262CA8B533A0163D95764 /* Resources */ = {
+		67728999CBD0EDFA70F1621577B8D7EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C2C8C8DE2DCC5EB1A70A8D96F87E1124 /* DropDownCell.xib */,
+				F090DA702C983546BF29B08801956388 /* Crashlytics.framework */,
 			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7AA3E4E9DFEAC89B1AAF6DED20FB707B /* LabelSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				F78C6437D9CD0713EE90503E78B8971D /* LabelSwitch.swift */,
-				E443BE699471D1C659F9C1CAA6A33E58 /* LabelSwtichSetting.swift */,
-				1A4FE4CF3A28FA24A420342B87E3BCC8 /* Support Files */,
-			);
-			name = LabelSwitch;
-			path = LabelSwitch;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -282,24 +259,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				C41174386DE6515D2DC41C096D8E3E0F /* Pods */,
+				F7D6826ECA3E1798FC9EA5FC7F8B99C3 /* Pods */,
 				5C5D7E2E8E8BFCC9E394E0042C893FA0 /* Products */,
 				4E24C3E51212B0C4ABAAC9DD813E9E18 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		860875E4D7951DC532D640EAB5167832 /* Support Files */ = {
+		B5D8B1E6BC6BF1F14613DCD49F491315 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C713D9653934881EC95A795527E37468 /* Info.plist */,
-				D0C690F93700206C1842521FDB69FD88 /* SkyFloatingLabelTextField.modulemap */,
-				736E0C902DB3853EC367E09C980B069D /* SkyFloatingLabelTextField.xcconfig */,
-				45F6716A2E064A9E3DB5FD95EF55028D /* SkyFloatingLabelTextField-dummy.m */,
-				EAE562A4065BF9B8877BF44D36D6F712 /* SkyFloatingLabelTextField-prefix.pch */,
-				BA81DBD1D4391EA30D696D956EFFE7C1 /* SkyFloatingLabelTextField-umbrella.h */,
+				960639268A728E755B18DF10E8A46D9D /* DropDown.modulemap */,
+				B2DA4D7F32E323C0736316A3A11CD150 /* DropDown.xcconfig */,
+				8490742E27135277ACCCAFA32ADD87A4 /* DropDown-dummy.m */,
+				2AB8018233BCC549F7EF8D9254C7A370 /* DropDown-prefix.pch */,
+				7F162429C9A1C0DF36F12711672444D6 /* DropDown-umbrella.h */,
+				B1ABE82054ACDB32A6CC59BB30E66EA5 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SkyFloatingLabelTextField";
+			path = "../Target Support Files/DropDown";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -310,15 +287,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C41174386DE6515D2DC41C096D8E3E0F /* Pods */ = {
+		C90620D5B1EB04C522A3F359F4C9E40B /* SkyFloatingLabelTextField */ = {
 			isa = PBXGroup;
 			children = (
-				46F24D4B1DCCFB95279669FB74801106 /* DropDown */,
-				7AA3E4E9DFEAC89B1AAF6DED20FB707B /* LabelSwitch */,
-				58EEF9FD32C0D60B66F09F649D79BA89 /* SkyFloatingLabelTextField */,
-				4D1C965D045BB91F13BE4D9791F8C748 /* UIFloatLabelTextView */,
+				5D46447B66E18B154E8CCA78CDB74C45 /* SkyFloatingLabelTextField.swift */,
+				F8C10D8922F58E06E3A0C74E66822F1E /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				A3F9575A847143E62D4957C793118E99 /* UITextField+fixCaretPosition.swift */,
+				0B46B54CC8B46B59DF71EEFDC47E6F3D /* Support Files */,
 			);
-			name = Pods;
+			name = SkyFloatingLabelTextField;
+			path = SkyFloatingLabelTextField;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -329,18 +307,85 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E4664E11420F52F87E032069A7453A32 /* Support Files */ = {
+		DE8322293369847A79BDDE03C5F4512F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E5032D2EA953F2BD70A18D50A2A98006 /* Info.plist */,
-				0E49C42235B44514D0B051140EB6C5C7 /* UIFloatLabelTextView.modulemap */,
-				5ED155C88B8E7AEF9F840677B16D0C55 /* UIFloatLabelTextView.xcconfig */,
-				CF240511B839786D3E38F62C02C2C170 /* UIFloatLabelTextView-dummy.m */,
-				7436623FC3DDC38444A68464F8F07532 /* UIFloatLabelTextView-prefix.pch */,
-				718004F4EEBE64FEE8C1442B8C120F5F /* UIFloatLabelTextView-umbrella.h */,
+				5D9C229E1E85581CBBBC382D96414282 /* DropDownCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E584E2702747D4D6F13CFF4D65AB59DB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D32F8643E5F67B24D4D4A47ABE920D71 /* Info.plist */,
+				BB3484E212599D6E99251B850A5A5F6D /* LabelSwitch.modulemap */,
+				D59F2B794505FD15557D4FDB72296295 /* LabelSwitch.xcconfig */,
+				48D6EE1DDE520D9844659BF3183EEF18 /* LabelSwitch-dummy.m */,
+				D62390F6554309EE1300ABDFB7FC6F29 /* LabelSwitch-prefix.pch */,
+				992CD8FFBB6C048892BE925FDFE9FE0D /* LabelSwitch-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LabelSwitch";
+			sourceTree = "<group>";
+		};
+		EE91CE6B89D888B019945389E3CEE64E /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				439C5BE999BEBFFB4B4CDE458D476CCD /* DPDConstants.swift */,
+				567410F292B14F35892A94129F9C73F7 /* DPDKeyboardListener.swift */,
+				BAB0D7A458DA06A68B3BDAA065378376 /* DPDUIView+Extension.swift */,
+				1200B797A2D212D188730ED15F09AFD3 /* DropDown.swift */,
+				912F52B3E506E3463F8D7C89B84C9D7D /* DropDown+Appearance.swift */,
+				4869108727A6C969B6963C2310B53192 /* DropDownCell.swift */,
+				DE8322293369847A79BDDE03C5F4512F /* Resources */,
+				B5D8B1E6BC6BF1F14613DCD49F491315 /* Support Files */,
+			);
+			name = DropDown;
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		EF05C874E5619EFE41B433133515D906 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE6B803BA547E9D55E7C93B1264C4CD9 /* Info.plist */,
+				C1A5B823D68D4337F40B1B7146D96DF8 /* UIFloatLabelTextView.modulemap */,
+				67C9DB6CF7313C35E1A5EC6DCB918DB4 /* UIFloatLabelTextView.xcconfig */,
+				04FBBBAF65550ACD611BC0B229AE454A /* UIFloatLabelTextView-dummy.m */,
+				AC0F1BC079CEFDFDEC7C0CDBABAE63DE /* UIFloatLabelTextView-prefix.pch */,
+				366675BC1CB41FEE13D8AC504BD9CDFB /* UIFloatLabelTextView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/UIFloatLabelTextView";
+			sourceTree = "<group>";
+		};
+		F7D6826ECA3E1798FC9EA5FC7F8B99C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8FC6236914FAAB7928F5DEE692A7A01 /* Crashlytics */,
+				EE91CE6B89D888B019945389E3CEE64E /* DropDown */,
+				0EF606F43D6961D7C08D72947908A737 /* Fabric */,
+				1C3172568528CFF648D9EF8D66F20B9A /* LabelSwitch */,
+				C90620D5B1EB04C522A3F359F4C9E40B /* SkyFloatingLabelTextField */,
+				FF572F9308C21BDFE2D54C4C139BDD55 /* UIFloatLabelTextView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8FC6236914FAAB7928F5DEE692A7A01 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				61230F649AE895375FD5CA2AF25D1599 /* ANSCompatibility.h */,
+				66236DA9D9CC89659E4D7FA80DFFC8DC /* Answers.h */,
+				68791E85E0A6F5ABB73C4A719C6F7E08 /* CLSAttributes.h */,
+				C550B37F0D3075D05066675DE2C8D7F3 /* CLSLogging.h */,
+				EEEA5B3B908025CB3DA9E5971DACB8C4 /* CLSReport.h */,
+				D7CCF0AF1BFA937F536358CDDD299C21 /* CLSStackFrame.h */,
+				3F004B8ADF9FBE90E7684F24ABD4ABC8 /* Crashlytics.h */,
+				67728999CBD0EDFA70F1621577B8D7EB /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		FA6A72F81E944B02E3952333F1AE653C /* Pods-Tagabout */ = {
@@ -359,6 +404,17 @@
 			);
 			name = "Pods-Tagabout";
 			path = "Target Support Files/Pods-Tagabout";
+			sourceTree = "<group>";
+		};
+		FF572F9308C21BDFE2D54C4C139BDD55 /* UIFloatLabelTextView */ = {
+			isa = PBXGroup;
+			children = (
+				B14A6E7C7E066DDC120A572805D19CC9 /* UIFloatLabelTextView.h */,
+				CE459CF0DBAD5D29301D36063E52BCC5 /* UIFloatLabelTextView.m */,
+				EF05C874E5619EFE41B433133515D906 /* Support Files */,
+			);
+			name = UIFloatLabelTextView;
+			path = UIFloatLabelTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,7 +680,7 @@
 /* Begin XCBuildConfiguration section */
 		00B62E884E5A1284D7DEAEDBA5811DBD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ED155C88B8E7AEF9F840677B16D0C55 /* UIFloatLabelTextView.xcconfig */;
+			baseConfigurationReference = 67C9DB6CF7313C35E1A5EC6DCB918DB4 /* UIFloatLabelTextView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -655,7 +711,7 @@
 		};
 		1C3F30409149F7A5765B16C93233CB54 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B45C7738A92089F9F1E727DBAF29F4A /* DropDown.xcconfig */;
+			baseConfigurationReference = B2DA4D7F32E323C0736316A3A11CD150 /* DropDown.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -687,7 +743,7 @@
 		};
 		221282BF0AA60D56CCB55E8AAE492421 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1E6CD4FAD6AEAA25BBEC79D17397F1F /* LabelSwitch.xcconfig */;
+			baseConfigurationReference = D59F2B794505FD15557D4FDB72296295 /* LabelSwitch.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -776,7 +832,7 @@
 		};
 		36AF927C3FA4C1699DABBD254FF31064 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5ED155C88B8E7AEF9F840677B16D0C55 /* UIFloatLabelTextView.xcconfig */;
+			baseConfigurationReference = 67C9DB6CF7313C35E1A5EC6DCB918DB4 /* UIFloatLabelTextView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -874,7 +930,7 @@
 		};
 		99F30834D5F0DE82F011B2005AC1533E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B45C7738A92089F9F1E727DBAF29F4A /* DropDown.xcconfig */;
+			baseConfigurationReference = B2DA4D7F32E323C0736316A3A11CD150 /* DropDown.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -905,7 +961,7 @@
 		};
 		9A2FD33B630D5E49639B0C494F6AB45A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 736E0C902DB3853EC367E09C980B069D /* SkyFloatingLabelTextField.xcconfig */;
+			baseConfigurationReference = F3A1F3DA9A012B9C440B50084EBDB670 /* SkyFloatingLabelTextField.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -936,7 +992,7 @@
 		};
 		A9C7F9CF48CCB39E365F7B38A57BED94 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1E6CD4FAD6AEAA25BBEC79D17397F1F /* LabelSwitch.xcconfig */;
+			baseConfigurationReference = D59F2B794505FD15557D4FDB72296295 /* LabelSwitch.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1031,7 +1087,7 @@
 		};
 		F2300A3402D87FF0A09872CEF94D78F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 736E0C902DB3853EC367E09C980B069D /* SkyFloatingLabelTextField.xcconfig */;
+			baseConfigurationReference = F3A1F3DA9A012B9C440B50084EBDB670 /* SkyFloatingLabelTextField.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

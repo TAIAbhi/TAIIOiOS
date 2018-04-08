@@ -38,6 +38,7 @@ class APIGateway{
                 do{
                     let data = try encoder.encode(loginData)
                     UserDefaults.standard.set(data, forKey: "loginData")
+                    GeneralUtils.addCrashlyticsUser()
                 }catch{}
             }
         }
@@ -54,9 +55,12 @@ class APIGateway{
     }
     public func doDataCall(request: URLRequest, completion: ((Data)->())?, onError: ((Error)->())?) -> URLSessionTask?{
         
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         let task = session.dataTask(with: request) { (data, response, error) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if let httpUrlResponse = response as? HTTPURLResponse
             {
+                
                 if let error = error, let onError = onError{
                     onError(error)
                     return

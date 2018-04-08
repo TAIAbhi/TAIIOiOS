@@ -665,11 +665,8 @@
                                     <constraint firstItem="3Uy-0z-fVF" firstAttribute="leading" secondItem="iWT-Pw-0nK" secondAttribute="trailing" constant="8" id="ThK-pF-XtP"/>
                                     <constraint firstItem="iWT-Pw-0nK" firstAttribute="height" secondItem="20X-5g-qpf" secondAttribute="height" id="UGk-5g-4Gf"/>
                                     <constraint firstItem="3Uy-0z-fVF" firstAttribute="leading" secondItem="iWT-Pw-0nK" secondAttribute="trailing" constant="8" id="bAm-UT-qC7"/>
-                                    <constraint firstItem="3Uy-0z-fVF" firstAttribute="baseline" secondItem="20X-5g-qpf" secondAttribute="baseline" id="dPp-Ts-mzs"/>
                                     <constraint firstItem="3Uy-0z-fVF" firstAttribute="firstBaseline" secondItem="iWT-Pw-0nK" secondAttribute="firstBaseline" id="ffo-CZ-gcO"/>
                                     <constraint firstItem="iWT-Pw-0nK" firstAttribute="width" secondItem="20X-5g-qpf" secondAttribute="width" id="ldr-hg-vgU"/>
-                                    <constraint firstItem="20X-5g-qpf" firstAttribute="baseline" secondItem="iWT-Pw-0nK" secondAttribute="baseline" id="or7-Kl-Vwf"/>
-                                    <constraint firstItem="3Uy-0z-fVF" firstAttribute="baseline" secondItem="iWT-Pw-0nK" secondAttribute="baseline" id="pHT-Z1-13P"/>
                                     <constraint firstItem="20X-5g-qpf" firstAttribute="firstBaseline" secondItem="iWT-Pw-0nK" secondAttribute="firstBaseline" id="x81-uH-8Fo"/>
                                     <constraint firstItem="20X-5g-qpf" firstAttribute="leading" secondItem="wqQ-Gq-gLM" secondAttribute="leading" constant="10" id="y46-JR-VY8"/>
                                     <constraint firstItem="3Uy-0z-fVF" firstAttribute="top" secondItem="20X-5g-qpf" secondAttribute="top" id="yGw-Zh-cSt"/>
@@ -679,7 +676,7 @@
                                 <rect key="frame" x="0.0" y="144" width="375" height="585"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="551" translatesAutoresizingMaskIntoConstraints="NO" id="1yJ-Od-XqI">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlx-9h-iG5" userLabel="category selected">
                                                 <rect key="frame" x="0.0" y="10" width="375" height="40"/>
@@ -731,10 +728,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u35-wZ-fqJ" userLabel="switchesView">
-                                                <rect key="frame" x="30" y="159" width="315" height="66"/>
+                                                <rect key="frame" x="30" y="159" width="315" height="50"/>
                                                 <subviews>
-                                                    <view tag="2" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keO-E2-151" customClass="LabelSwitch" customModule="LabelSwitch">
-                                                        <rect key="frame" x="208.33333333333337" y="8" width="106.66666666666663" height="58"/>
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keO-E2-151" customClass="LabelSwitch" customModule="LabelSwitch">
+                                                        <rect key="frame" x="208.33333333333334" y="8" width="106.66666666666666" height="42"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="lBackColor">
@@ -756,8 +753,8 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="lText" value="Single store"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view tag="1" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQE-33-PsH" customClass="LabelSwitch" customModule="LabelSwitch">
-                                                        <rect key="frame" x="0.0" y="8" width="106.66666666666667" height="58"/>
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQE-33-PsH" customClass="LabelSwitch" customModule="LabelSwitch">
+                                                        <rect key="frame" x="0.0" y="8" width="106.66666666666667" height="42"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="lBackColor">
@@ -791,7 +788,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSC-Kc-wui" customClass="TextFieldView" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="225" width="315" height="52"/>
+                                                <rect key="frame" x="30" y="209" width="315" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="Tp2-2j-HB0"/>
@@ -801,7 +798,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-pb-Zcy" customClass="DropDownView" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="277" width="315" height="52"/>
+                                                <rect key="frame" x="30" y="261" width="315" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="TCf-lP-kdg"/>
@@ -811,7 +808,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXW-lY-YvA" customClass="DropDownView" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="329" width="315" height="52"/>
+                                                <rect key="frame" x="30" y="313" width="315" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="fbL-yn-KQd"/>
@@ -821,7 +818,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQU-IB-V3B" userLabel="Details">
-                                                <rect key="frame" x="30" y="395" width="315" height="80"/>
+                                                <rect key="frame" x="30" y="379" width="315" height="80"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="always" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-U6-Sag" userLabel="txtDetails" customClass="FloatLabelTextView" customModule="Tagabout" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="80"/>
@@ -857,7 +854,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50Q-zd-hVN" customClass="TAIAction" customModule="Tagabout" customModuleProvider="target">
-                                                <rect key="frame" x="77.666666666666686" y="495" width="220" height="36"/>
+                                                <rect key="frame" x="77.666666666666686" y="479" width="220" height="36"/>
                                                 <color key="backgroundColor" red="0.12156862745098039" green="0.52549019607843139" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36" id="Q4m-cJ-D9Z"/>
@@ -910,11 +907,6 @@
                                     <constraint firstAttribute="trailing" secondItem="1yJ-Od-XqI" secondAttribute="trailing" id="raO-cr-jwC"/>
                                 </constraints>
                             </scrollView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U2h-sc-Kbk">
-                                <rect key="frame" x="169" y="390" width="37" height="37"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -923,8 +915,6 @@
                             <constraint firstItem="5PF-wE-I6r" firstAttribute="top" secondItem="lhU-Yl-7YV" secondAttribute="bottom" constant="40" id="5Lb-Oz-x17"/>
                             <constraint firstItem="uPM-85-wTh" firstAttribute="top" secondItem="wqQ-Gq-gLM" secondAttribute="bottom" id="FaW-Nr-NIZ"/>
                             <constraint firstItem="cW4-vC-Lev" firstAttribute="trailing" secondItem="5PF-wE-I6r" secondAttribute="trailing" constant="10" id="Ih4-mW-VDp"/>
-                            <constraint firstItem="U2h-sc-Kbk" firstAttribute="centerY" secondItem="cW4-vC-Lev" secondAttribute="centerY" id="Osm-rU-8aI"/>
-                            <constraint firstItem="U2h-sc-Kbk" firstAttribute="centerX" secondItem="cW4-vC-Lev" secondAttribute="centerX" id="P5B-tU-hg5"/>
                             <constraint firstAttribute="trailing" secondItem="wqQ-Gq-gLM" secondAttribute="trailing" id="RNR-zM-kQv"/>
                             <constraint firstItem="wqQ-Gq-gLM" firstAttribute="leading" secondItem="R8X-TM-07K" secondAttribute="leading" id="TrE-eu-WGk"/>
                             <constraint firstItem="wqQ-Gq-gLM" firstAttribute="top" secondItem="cW4-vC-Lev" secondAttribute="top" id="aUm-fw-PZK"/>
@@ -954,7 +944,6 @@
                         <outlet property="microCat2" destination="oXW-lY-YvA" id="xkG-Ur-lq0"/>
                         <outlet property="microCat2Height" destination="fbL-yn-KQd" id="8q1-lm-2r4"/>
                         <outlet property="name" destination="7S7-Xl-fmR" id="oK5-X5-Y59"/>
-                        <outlet property="processing" destination="U2h-sc-Kbk" id="9AD-8O-sZf"/>
                         <outlet property="scrollBarBottom" destination="53k-W1-VS1" id="hGE-cM-5Ny"/>
                         <outlet property="scrollView" destination="uPM-85-wTh" id="EQz-3A-xJq"/>
                         <outlet property="section1" destination="20X-5g-qpf" id="Pqa-Yq-Fss"/>

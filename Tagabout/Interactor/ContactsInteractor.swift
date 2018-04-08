@@ -76,7 +76,6 @@ struct ContactsInteractor{
                     completion(false)
                 }
             })
-        default:break
             
         }
     }

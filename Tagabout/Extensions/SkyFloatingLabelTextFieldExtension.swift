@@ -23,6 +23,7 @@ extension SkyFloatingLabelTextField {
         titleColor = Theme.blue
         // light gray
         lineColor = Theme.blue
+        disabledColor = Theme.blue
         // blue
         selectedLineColor = Theme.black
         selectedTitleColor = Theme.blue

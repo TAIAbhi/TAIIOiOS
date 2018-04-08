@@ -32,6 +32,7 @@ class TAISection: UIButton {
 }
 
 class TAIAction: UIButton{
+    var isBarButtonView = false
     override func awakeFromNib() {
         self.round(radius: 4.0)
         backgroundColor = Theme.blue
@@ -42,12 +43,11 @@ class TAIAction: UIButton{
     override var isEnabled: Bool{
         didSet{
             if !isEnabled {
-                backgroundColor = Theme.disabledAction
+                backgroundColor = isBarButtonView ? Theme.disabledActionWhite : Theme.disabledAction
             }else{
                 backgroundColor = Theme.blue
                 
             }
         }
     }
-    
 }

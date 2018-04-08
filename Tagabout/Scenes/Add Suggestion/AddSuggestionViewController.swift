@@ -39,6 +39,7 @@ class AddSuggestionViewController: UIViewController {
     var categories : [Category]?
     // fill contact details
     var selectedCategory : Category?
+    var selectedSubCategory : Subcategory?
     var microCategories : [MicroCategory]?
     var viewList : [AddSuggestionUIType]{
         get{
@@ -60,7 +61,6 @@ class AddSuggestionViewController: UIViewController {
     @IBOutlet weak var emptyStateLabel: UILabel!
     @IBOutlet weak var addButton: TAIAction!
     @IBOutlet weak var sectionView: UIView!
-    @IBOutlet weak var processing: UIActivityIndicatorView!
     @IBOutlet weak var section1: TAISection!
     @IBOutlet weak var section2: TAISection!
     @IBOutlet weak var section3: TAISection!
@@ -85,6 +85,8 @@ class AddSuggestionViewController: UIViewController {
     
     @IBOutlet weak var lblSelectedCategory: UILabel!
     
+    private var tabController : TabbarController?
+    
     private var locations: [Location]? {
         didSet {
             updateDataSourceForDropDown()
@@ -96,20 +98,20 @@ class AddSuggestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.processing.startAnimating()
+        
+        tabController = self.tabBarController as? TabbarController
+        
         self.sectionView.backgroundColor = Theme.grey
         self.emptyStateLabel.text = "Loading categories..."
         self.addButton.isEnabled = false
         DropDown.startListeningToKeyboard()
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(AddSuggestionViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         self.scrollView.isHidden = true
         
-       interactor.getCategories { [weak self] categories in
-        guard let strongSelf = self else{ return }
-            strongSelf.processing.stopAnimating()
+        tabController?.showThemedLoader(true)
+        interactor.getCategories { [weak self] categories in
+            guard let strongSelf = self else{ return }
+            strongSelf.tabController?.showThemedLoader(false)
             strongSelf.emptyStateLabel.text = "Select a category to continue."
             if let categories = categories{
                 strongSelf.categories = categories
@@ -141,15 +143,15 @@ class AddSuggestionViewController: UIViewController {
             guard let selectedCategory = selectedCategory,
                 let subcats = selectedCategory.subCategories,
                 subcats.count > 0  else{
-                self.lblSelectedCategory.text = "Suggestion"
-                if let previousSelected = self.previousSelectedSection{
-                    previousSelected.isSectionSelected = false
-                }
-                sender.isSectionSelected = true
-                self.previousSelectedSection = sender
-                self.configureForm()
-                self.scrollView.isHidden = false
-                return
+                    self.lblSelectedCategory.text = "Suggestion"
+                    if let previousSelected = self.previousSelectedSection{
+                        previousSelected.isSectionSelected = false
+                    }
+                    sender.isSectionSelected = true
+                    self.previousSelectedSection = sender
+                    self.configureForm(isMicroCatAvailable: false)
+                    self.scrollView.isHidden = false
+                    return
             }
             
             let dropDown = DropDown()
@@ -175,35 +177,25 @@ class AddSuggestionViewController: UIViewController {
                 }
                 sender.isSectionSelected = true
                 strongSelf.previousSelectedSection = sender
-                strongSelf.configureForm()
                 strongSelf.scrollView.isHidden = false
-                
                 if let isMicroCategoryAvailable = selectedCategory.isMicroCategoryAvailable, isMicroCategoryAvailable {
                     let selectedSubCat = subcats[index]
                     if let subCatId = selectedSubCat.subCatId {
                         // get micro categories for selected subcategory.
+                        strongSelf.tabController?.showThemedLoader(true)
                         strongSelf.interactor.getMicroCategoriesFor(subcategoryId: subCatId, completion: { (microCategories) in
+                            strongSelf.tabController?.showThemedLoader(false)
                             strongSelf.microCategories = microCategories
+                            strongSelf.configureForm(isMicroCatAvailable: true)
                         })
                     }
+                }else{
+                    strongSelf.configureForm(isMicroCatAvailable: false)
                 }
             }
             
         }
     }
-    
-//    @objc func keyboardWillShow(_ notification:Notification) {
-//
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-//            scrollBarBottom.constant = keyboardSize.height
-//        }
-//    }
-//    @objc func keyboardWillHide(_ notification:Notification) {
-//
-//        if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-//            scrollBarBottom.constant = 0
-//        }
-//    }
     @IBAction func addLocation(_ sender: UIButton) {
     }
     override func didReceiveMemoryWarning() {
@@ -214,7 +206,6 @@ class AddSuggestionViewController: UIViewController {
 
 extension AddSuggestionViewController{
     // drop down
-    
     
     func openMicroCatPickerFor(_ microCategories: [MicroCategory]?, withAnchor anchor: UITextField) {
         
@@ -248,31 +239,56 @@ extension AddSuggestionViewController{
     
     func validateAllMandatoryFields() {
         let isValidForm = name.isValid() && contact.isValid() && microCat1.isValid() && (details != nil)
-        
         self.addButton.isEnabled = true
     }
     
-    func configureForm(){
+    func configureForm(isMicroCatAvailable: Bool){
         guard let category = selectedCategory, let subCats = category.subCategories, subCats.count > 0 else { return }
         
         microCat1.ownerHeightConstraint = microCat1Height
         microCat2.ownerHeightConstraint = microCat2Height
-        if let isMicroCategoryAvailable = category.isMicroCategoryAvailable, isMicroCategoryAvailable {
-            microCat1.hide(false)
-            microCat1.hookDropdown(placeHolder: "Subcategory *", dataSource: nil, selectionCompletion: nil)
-            microCat2.hide(true)
+        microCat2.isOtherNeeded = true
+        if let microCategories = self.microCategories, isMicroCatAvailable{
+            microCat1.hide(true)
+            microCat1.textField.tag = 1001
+            microCat2.hide(false)
+            microCat2.textDelegate = self
+            microCat2.textField.tag = 1001
+            microCat1.textField.isEnabled = false
+            microCat2.hookDropdown(placeHolder: "Subcategory *", dataSource: microCategories.map({ (microCategory) -> String in
+                if let name = microCategory.name{
+                    return name.replacingOccurrences(of: " © ", with: "~")
+                }
+                return ""
+            }), selectionCompletion: {[weak self] (index, item) in
+                guard let strongSelf = self else { return }
+                strongSelf.microCat1.hide(false)
+                strongSelf.microCat2.textDelegate = self
+                let microCatComponents = item.components(separatedBy: "~")
+                if let microCatPart1 = microCatComponents.first{
+                    strongSelf.microCat1.textField.text = microCatPart1
+                }
+                if microCatComponents.count > 1 {
+                    let microCatPart2 = microCatComponents[1]
+                    strongSelf.microCat2.textField.text = microCatPart2
+                }
+            })
         }else{
             microCat1.hide(true)
             microCat1.hookDropdown(placeHolder: "", dataSource: nil, selectionCompletion: nil)
+            microCat2.hookDropdown(placeHolder: "", dataSource: nil, selectionCompletion: nil)
             microCat2.hide(true)
-
+            
         }
         name.placeholder = "Name (Individual or Company) *"
         name.isMandatory = true
+        name.textField.delegate = self
         contact.placeholder = "Contact number"
+        contact.textField.delegate = self
         details.layer.cornerRadius = 4
         details.layer.borderColor = Theme.blue.cgColor
         details.layer.borderWidth = 0.9
+        details.delegate = self
         details.contentInset = UIEdgeInsets.init(top: 5, left: 8, bottom: 5, right: 8)
         details.titleFont = Theme.avenirTitle!
         location.placeholder = "Location (Mumbai only) *"
@@ -283,7 +299,25 @@ extension AddSuggestionViewController{
 }
 
 
-extension AddSuggestionViewController : UITextFieldDelegate{
+extension AddSuggestionViewController : UITextFieldDelegate, DropDownViewTextDelegate, UITextViewDelegate{
+    func dropDownSearchPrefix(_ textField : UITextField) -> String {
+        if textField.tag == 1001 {
+            return microCat1.textField.text ?? ""
+        }
+        return ""
+    }
+    
+    func dropDownTextFieldDidBeginEditing(_ textField: UITextField) {
+        scrollView.contentInset = UIEdgeInsetsMake(0, 0, 251, 0)
+        if textField.tag == 1001 {
+            scrollView.scrollToView(view: contact, animated: true)
+        }
+    }
+    
+    func dropDownTextFieldDidEndEditing(_ textField: UITextField) {
+        scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         scrollView.contentInset = UIEdgeInsetsMake(0, 0, 251, 0)
         if textField == location.textField{
@@ -329,7 +363,7 @@ extension AddSuggestionViewController : UITextFieldDelegate{
     // TextView
     func textViewDidBeginEditing(_ textView: UITextView) {
         scrollView.contentInset = UIEdgeInsetsMake(0, 0, 251, 0)
-        scrollView.scrollRectToVisible(CGRect(x: 1, y: 600, width: 100, height: 1), animated: true)
+        scrollView.scrollToView(view: contact, animated: true)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -352,6 +386,7 @@ extension AddSuggestionViewController {
         dropDown.shadowOpacity = 0.2
         dropDown.bottomOffset = CGPoint(x: 0, y:60)
         dropDown.dismissMode = .automatic
+        dropDown.direction = .bottom
     }
     
     func updateDataSourceForDropDown() {

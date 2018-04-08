@@ -8,14 +8,19 @@
 
 import UIKit
 import DropDown
+import Crashlytics
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    public var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        Fabric.with([Crashlytics.self])
+        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
@@ -25,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         if let _ = APIGateway.shared.authToken,
             let vc: UINavigationController = storyBoard.instantiateViewController(withIdentifier: "parentNavigation") as? UINavigationController {
+            GeneralUtils.addCrashlyticsUser()
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
-
         } else {
             if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
                 window?.rootViewController = UINavigationController.init(rootViewController: vc)

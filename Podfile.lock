@@ -1,21 +1,28 @@
 PODS:
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
   - DropDown (2.0.2)
+  - Fabric (1.7.6)
   - LabelSwitch (0.1.1)
   - SkyFloatingLabelTextField (3.4.0)
   - UIFloatLabelTextView (1.0.10)
 
 DEPENDENCIES:
+  - Crashlytics
   - DropDown
+  - Fabric
   - LabelSwitch
   - SkyFloatingLabelTextField
   - UIFloatLabelTextView
 
 SPEC CHECKSUMS:
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   DropDown: 75562633a203f57a917021b4edb96c76f293b0ec
+  Fabric: f8d42c893bb187326a7968b62abe55c36a987a46
   LabelSwitch: 4329b57315bacc361f729d41514711251223db08
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   UIFloatLabelTextView: 96b7c5a18739fd1af8fd9480f7943d75a7547e4d
 
-PODFILE CHECKSUM: a1417f8a7b5bd68f7e426fa3ea39497277bf5c97
+PODFILE CHECKSUM: 5886764eb9068d3b38bdd1135d374582ecba688e
 
 COCOAPODS: 1.4.0

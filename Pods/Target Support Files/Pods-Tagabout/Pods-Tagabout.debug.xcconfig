@@ -1,9 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DropDown" "${PODS_CONFIGURATION_BUILD_DIR}/LabelSwitch" "${PODS_CONFIGURATION_BUILD_DIR}/SkyFloatingLabelTextField" "${PODS_CONFIGURATION_BUILD_DIR}/UIFloatLabelTextView"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DropDown" "${PODS_CONFIGURATION_BUILD_DIR}/LabelSwitch" "${PODS_CONFIGURATION_BUILD_DIR}/SkyFloatingLabelTextField" "${PODS_CONFIGURATION_BUILD_DIR}/UIFloatLabelTextView" "${PODS_ROOT}/Crashlytics/iOS" "${PODS_ROOT}/Fabric/iOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Crashlytics" "${PODS_ROOT}/Headers/Public/Fabric"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DropDown/DropDown.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LabelSwitch/LabelSwitch.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/UIFloatLabelTextView/UIFloatLabelTextView.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "DropDown" -framework "LabelSwitch" -framework "SkyFloatingLabelTextField" -framework "UIFloatLabelTextView"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DropDown/DropDown.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/LabelSwitch/LabelSwitch.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/UIFloatLabelTextView/UIFloatLabelTextView.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics" -isystem "${PODS_ROOT}/Headers/Public/Fabric"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "Crashlytics" -framework "DropDown" -framework "Fabric" -framework "LabelSwitch" -framework "Security" -framework "SkyFloatingLabelTextField" -framework "SystemConfiguration" -framework "UIFloatLabelTextView" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
