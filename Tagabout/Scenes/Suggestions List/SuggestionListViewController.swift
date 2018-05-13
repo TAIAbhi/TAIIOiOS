@@ -8,10 +8,12 @@
 
 import UIKit
 import DropDown
+import LabelSwitch
 
 class SuggestionListViewController: UIViewController {
 
     lazy var interactor = SuggestionListInteractor()
+    lazy var router = SuggestionListRouter(with: self)
     var hangoutsCategory: Category? {
         didSet {
             hangoutsButton.setTitle(hangoutsCategory?.name?.uppercased(), for: .normal)
@@ -27,31 +29,35 @@ class SuggestionListViewController: UIViewController {
             shoppingButton.setTitle(shoppingCategory?.name?.uppercased(), for: .normal)
         }
     }
-    
     lazy var tableViewDataSource = SuggestionListTableViewDataSource()
+    lazy var filter = SuggestionFilter()
+    lazy var suggestions = [Suggestion]()
     
     @IBOutlet weak var hangoutsButton: UIButton!
     @IBOutlet weak var servicesButton: UIButton!
     @IBOutlet weak var shoppingButton: UIButton!
     @IBOutlet weak var suggestionsTableView: UITableView!
+    @IBOutlet weak var sugesstionsTypeSwitch: LabelSwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "My Suggestions"
         
+        sugesstionsTypeSwitch.delegate = self
+        
         interactor.fetchSuggestionCategories { [weak self] (categories) in
             guard let strongSelf = self else{ return }
             strongSelf.updateCategoryButtons(categories)
+            guard let cat = categories.first else { return }
+            if let catId = cat.catId, let subCat = cat.subCategories?.first, let subCatId = subCat.subCatId {
+                strongSelf.filter.setCat(catId, andSubCat: subCatId)
+                strongSelf.fetchSuggestions()
+            }
         }
         
         suggestionsTableView.dataSource = tableViewDataSource
         suggestionsTableView.tableFooterView = UIView()
-        
-        interactor.fetchAllMySuggestions { [weak self] (suggestions) in
-            guard let strongSelf = self else{ return }
-            strongSelf.setTableViewData(suggestions)
-        }
     }
     
     // MARK: IBActions
@@ -73,9 +79,23 @@ class SuggestionListViewController: UIViewController {
         }
     }
     
-    func setTableViewData(_ suggestions: [Suggestion]) {
-        self.tableViewDataSource.setData(suggestions)
-        self.suggestionsTableView.reloadSections(IndexSet(integer: 0), with: .fade)
+    @IBAction func filtersButtonTapped(_ sender: Any) {
+        router.presentFilters()
+    }
+    
+    func fetchSuggestions() {
+        interactor.fetchSuggestionsWithFilter(filter) { [weak self] (suggestions) in
+            guard let strongSelf = self else { return }
+            if strongSelf.filter.pageNumber > 1 {
+                strongSelf.suggestions.append(contentsOf: suggestions)
+                // think about realoading sections
+            } else {
+                strongSelf.suggestions = suggestions
+                strongSelf.tableViewDataSource.setData(suggestions)
+                strongSelf.suggestionsTableView.setContentOffset(.zero, animated: false)
+                strongSelf.suggestionsTableView.reloadSections(IndexSet(integer: 0), with: .fade)
+            }
+        }
     }
 }
 
@@ -124,12 +144,28 @@ extension SuggestionListViewController {
             guard let strongSelf = self else{ return }
             let selectedSubCat = subCats[index]
             if let catId = selectedSubCat.catId, let subCatId = selectedSubCat.subCatId {
-                strongSelf.interactor.fetchSuggestionsFor(category: catId, and: subCatId, with: { (suggestions) in
-                    strongSelf.setTableViewData(suggestions)
-                })
+                strongSelf.filter.setCat(catId, andSubCat: subCatId)
+                strongSelf.fetchSuggestions()
             }
         }
         
         dropDown.show()
     }
+    
+}
+
+extension SuggestionListViewController: LabelSwitchDelegate {
+    func switchChangeToState(_ state: SwitchState, control: LabelSwitch) {
+        filter.toggleGetAll()
+        fetchSuggestions()
+    }
+}
+
+// MARK: Tableview delegate
+extension SuggestionListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
