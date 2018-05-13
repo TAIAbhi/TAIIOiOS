@@ -42,18 +42,8 @@ class SuggestionListInteractor {
         
     }
     
-    func fetchAllMySuggestions(_ completion:  (([Suggestion])->Void)?) {
-        let url = API.getURL(to: "getsuggestion")
-        fetchSuggestionsForUrl(url, with: completion)
-    }
-    
-    func fetchAllSuggestions(_ completion:  (([Suggestion])->Void)?) {
-        let url = API.getURL(to: "getsuggestion", queryParams: ["getall": "1"])
-        fetchSuggestionsForUrl(url, with: completion)
-    }
-    
-    func fetchSuggestionsFor(category: Int, and subCategory: Int, with completion:  (([Suggestion])->Void)?) {
-        let url = API.getURL(to: "getsuggestion", queryParams: ["catId": "\(category)", "subCatId": "\(subCategory)"])
+    func fetchSuggestionsWithFilter(_ filter: SuggestionFilter, completion:  (([Suggestion])->Void)?) {
+        let url = API.getURL(to: "getsuggestion", queryParams: filter.toDict())
         fetchSuggestionsForUrl(url, with: completion)
     }
     

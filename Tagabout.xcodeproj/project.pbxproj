@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
 		9E152CFF2073EC1200B57DA5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152CFE2073EC1100B57DA5 /* Theme.swift */; };
+		9E152D012077DB0100B57DA5 /* SuggestionsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */; };
+		9E152D03207898BC00B57DA5 /* SuggestionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152D02207898BC00B57DA5 /* SuggestionListRouter.swift */; };
+		9E152D05207950EB00B57DA5 /* SuggestionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152D04207950EB00B57DA5 /* SuggestionFilter.swift */; };
 		9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592712206BFC7100D58FF5 /* AddLocationInteractor.swift */; };
 		9E592715206BFDCE00D58FF5 /* Suburb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E592714206BFDCE00D58FF5 /* Suburb.swift */; };
 		9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */; };
@@ -61,6 +64,9 @@
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
 		9E152CFE2073EC1100B57DA5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsFilterViewController.swift; sourceTree = "<group>"; };
+		9E152D02207898BC00B57DA5 /* SuggestionListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListRouter.swift; sourceTree = "<group>"; };
+		9E152D04207950EB00B57DA5 /* SuggestionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionFilter.swift; sourceTree = "<group>"; };
 		9E592712206BFC7100D58FF5 /* AddLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationInteractor.swift; sourceTree = "<group>"; };
 		9E592714206BFDCE00D58FF5 /* Suburb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suburb.swift; sourceTree = "<group>"; };
 		9E5B9337205E909800696EB6 /* SuggestionListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionListTableViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +183,8 @@
 				9E5B9338205E909900696EB6 /* SuggestionListTableViewDataSource.swift */,
 				9E5CA98120557E5C00FD8CEF /* SuggestionListViewController.swift */,
 				9E5CA985205587BA00FD8CEF /* SuggestionListInteractor.swift */,
+				9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */,
+				9E152D02207898BC00B57DA5 /* SuggestionListRouter.swift */,
 			);
 			path = "Suggestions List";
 			sourceTree = "<group>";
@@ -357,6 +365,7 @@
 				F1D26E65204AA3C00049638F /* User.swift */,
 				F1B49F0E2052440400B9B960 /* Suggestion.swift */,
 				9E592714206BFDCE00D58FF5 /* Suburb.swift */,
+				9E152D04207950EB00B57DA5 /* SuggestionFilter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -507,9 +516,11 @@
 				F14864182058511100778ED4 /* AddSuggestionRouter.swift in Sources */,
 				9E5CA986205587BA00FD8CEF /* SuggestionListInteractor.swift in Sources */,
 				F1579291204AE63100EFFEC0 /* AddSuggestionViewController.swift in Sources */,
+				9E152D05207950EB00B57DA5 /* SuggestionFilter.swift in Sources */,
 				F14562132070FDC8007C60EB /* TextFieldView.swift in Sources */,
 				9E5B934720667E3100696EB6 /* MyDetailsViewController.swift in Sources */,
 				9E5B934620667E3100696EB6 /* MyDetailsInteractor.swift in Sources */,
+				9E152D03207898BC00B57DA5 /* SuggestionListRouter.swift in Sources */,
 				F1B49F0F2052440400B9B960 /* Suggestion.swift in Sources */,
 				9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
@@ -527,6 +538,7 @@
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
 				F145621720713F34007C60EB /* FloatLabelTextView.swift in Sources */,
+				9E152D012077DB0100B57DA5 /* SuggestionsFilterViewController.swift in Sources */,
 				9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
