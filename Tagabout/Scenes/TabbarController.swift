@@ -48,7 +48,6 @@ class TabbarController : UITabBarController{
         let topBar : CGFloat = UIApplication.shared.statusBarFrame.height + (self.navigationController?.navigationBar.bounds.size.height)!
         LoadingInteractor.shared.viewFrame = CGRect.init(x: 0, y: topBar, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height - topBar - self.tabBar.bounds.size.height)
         LoadingInteractor.shared.color = UIColor.init(white: 0, alpha: 0.4)
-        
         if shouldShowLoader {
             LoadingInteractor.shared.show()
         }else{
