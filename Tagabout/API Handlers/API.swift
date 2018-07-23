@@ -10,7 +10,7 @@ import UIKit
 
 struct API{
     static let baseURL = "http://tagaboutit.com/api/"
-    static let devURL = "http://devapitai.us-east-1.elasticbeanstalk.com/api/";
+    static let devURL = "http://stringsconnected.com/api/";
     static func getURL(to relativePath : String, queryParams: [String : String]? = nil) -> URL{
         var urlComponent = URLComponents.init(string: "\(devURL)\(relativePath)")
         if let queryParams = queryParams{
