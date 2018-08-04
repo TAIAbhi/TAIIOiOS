@@ -44,6 +44,14 @@ class APIGateway{
         }
     }
     
+    func shouldShowVideo() -> Bool{
+        if self.loginData?.loginDetail?.skipVideo == true {
+            return false
+        }else{
+            return self.loginData?.loginDetail?.showVideo ?? true
+        }
+    }
+    
     public var authToken : String?{
         get{
             if let loginData = loginData, let authToken = loginData.authToken{

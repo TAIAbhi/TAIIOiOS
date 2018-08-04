@@ -19,8 +19,7 @@ class TabbarController : UITabBarController{
     public var themedLoader : LoadingInteractor?
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.setupLogo()
-        
+        self.navigationController?.navigationBar.setupLogo()        
         self.navigationItem.rightBarButtonItems = [getnotificationButton(), getCallButton()]
         super.viewDidLoad()
         helpButton?.isEnabled = false

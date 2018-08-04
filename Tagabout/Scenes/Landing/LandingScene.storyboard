@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cfR-8Q-rDU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="L2F-0N-Rqf">
+            <objects>
+                <viewController storyboardIdentifier="LandingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ryg-Yh-mxd" customClass="LandingViewController" customModule="Tagabout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cIu-lp-lUg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9N-M7-4vs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ZvJ-cN-hY8"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-dS-GUJ">
+                                <rect key="frame" x="148" y="136" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.57254901960000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="bDR-Q6-7iB"/>
+                                    <constraint firstAttribute="height" constant="80" id="yzO-w2-3kF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hangoutaction:" destination="Ryg-Yh-mxd" eventType="touchUpInside" id="EpA-4W-Db4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVj-ZO-hJq">
+                                <rect key="frame" x="271" y="251" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.57254901960000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="38r-Cz-nI1"/>
+                                    <constraint firstAttribute="height" constant="80" id="4gE-V8-zwI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionShopping:" destination="Ryg-Yh-mxd" eventType="touchUpInside" id="f3T-rR-blZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKe-9B-1Ma">
+                                <rect key="frame" x="24" y="251" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.57254901960000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="pTV-sB-xzt"/>
+                                    <constraint firstAttribute="height" constant="80" id="yDY-nT-GJt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionService:" destination="Ryg-Yh-mxd" eventType="touchUpInside" id="tH4-eG-4Hw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L3T-dS-GUJ" firstAttribute="centerX" secondItem="cIu-lp-lUg" secondAttribute="centerX" id="0mn-o7-aUp"/>
+                            <constraint firstItem="MKe-9B-1Ma" firstAttribute="top" secondItem="S9N-M7-4vs" secondAttribute="bottom" constant="142" id="E6t-c1-LzY"/>
+                            <constraint firstItem="S9N-M7-4vs" firstAttribute="leading" secondItem="kz5-pm-VpD" secondAttribute="leading" id="GwF-9E-cdQ"/>
+                            <constraint firstItem="S9N-M7-4vs" firstAttribute="top" secondItem="kz5-pm-VpD" secondAttribute="top" id="Nhe-iN-xfY"/>
+                            <constraint firstItem="S9N-M7-4vs" firstAttribute="trailing" secondItem="kz5-pm-VpD" secondAttribute="trailing" id="Rb4-xM-8dJ"/>
+                            <constraint firstItem="rVj-ZO-hJq" firstAttribute="centerY" secondItem="MKe-9B-1Ma" secondAttribute="centerY" id="eUW-qz-l7I"/>
+                            <constraint firstItem="MKe-9B-1Ma" firstAttribute="centerX" secondItem="cIu-lp-lUg" secondAttribute="centerX" constant="-123.5" id="r0U-f8-AwS"/>
+                            <constraint firstItem="rVj-ZO-hJq" firstAttribute="centerX" secondItem="cIu-lp-lUg" secondAttribute="centerX" constant="123.5" id="reP-nA-6Ql"/>
+                            <constraint firstItem="L3T-dS-GUJ" firstAttribute="top" secondItem="S9N-M7-4vs" secondAttribute="bottom" constant="27" id="uYs-Mj-8dq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kz5-pm-VpD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9t5-RC-62j"/>
+                    <connections>
+                        <outlet property="hangoutButton" destination="L3T-dS-GUJ" id="hbY-ss-IZG"/>
+                        <outlet property="serviceButton" destination="MKe-9B-1Ma" id="GoZ-va-Pss"/>
+                        <outlet property="shoppingButton" destination="rVj-ZO-hJq" id="UqQ-Jz-eAh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABX-JJ-9uS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="-408.84557721139436"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fCf-yY-4xP">
+            <objects>
+                <navigationController storyboardIdentifier="NavLandingViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cfR-8Q-rDU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eSh-ft-Czk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ryg-Yh-mxd" kind="relationship" relationship="rootViewController" id="m9a-pg-6Kk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ap-Je-gEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.20000000000005" y="-408.84557721139436"/>
+        </scene>
+    </scenes>
+</document>

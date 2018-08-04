@@ -20,7 +20,9 @@ class LoginInteractor {
                     let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
                     let loginData = try decoder.decode(LoginData.self, from: data)
                     APIGateway.shared.loginData = loginData
-                }catch{}
+                }catch{
+                    
+                }
                 if let completion = completion{ completion(true) }
             }else{
                 if let completion = completion{ completion(false) }

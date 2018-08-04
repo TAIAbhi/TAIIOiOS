@@ -28,17 +28,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            window?.rootViewController = UINavigationController.init(rootViewController: vc)
 //            window?.makeKeyAndVisible()
 //        }
-        if let _ = APIGateway.shared.authToken,
-            let vc: UINavigationController = storyBoard.instantiateViewController(withIdentifier: "parentNavigation") as? UINavigationController {
+        
+        if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+            window?.rootViewController = UINavigationController.init(rootViewController: vc)
+            
+        }
+        /*
+        if let _ = APIGateway.shared.authToken{
             GeneralUtils.addCrashlyticsUser()
-            window?.rootViewController = vc
-            window?.makeKeyAndVisible()
+            window?.rootViewController = UINavigationController.init(rootViewController: LandingViewController.landingViewController())
+//            window?.makeKeyAndVisible()
         } else {
             if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
                 window?.rootViewController = UINavigationController.init(rootViewController: vc)
-                window?.makeKeyAndVisible()
+                
             }
         }
+         */
         
         DropDown.appearance().textColor = UIColor(white: 0.1, alpha: 1)
         DropDown.appearance().textFont = UIFont.init(name: "Avenir", size: 16.0)!
@@ -52,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent
         
         // Override point for customization after application launch.
+        window?.makeKeyAndVisible()
         return true
     }
 

@@ -83,7 +83,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>LaunchScreen</string>
+	<string>LandingScene</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -101,5 +101,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Always use your current location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Always use your current location</string>
 </dict>
 </plist>

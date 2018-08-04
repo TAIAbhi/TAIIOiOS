@@ -35,4 +35,13 @@ class LoginRouter {
             }, completion: nil)
         }
     }
+    
+    func navigateToIntroView(){
+        self.loginController?.navigationController?.pushViewController(IntroViewController.introViewController(), animated: true)
+    }
+    func navigateToLandingView(){
+        self.loginController?.navigationController?.pushViewController(LandingViewController.landingViewController(), animated: true)
+    }
+    
+    
 }
