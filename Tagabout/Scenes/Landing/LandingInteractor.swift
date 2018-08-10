@@ -74,11 +74,16 @@ class LandingInteractor {
         }
     }
     
-    func fetchSectionsCategoryWithCount(forBindFilter bindFilter:BindFilter, forCity city:City,  withSuccessHandler completion: (([CategoryCountData])->())?) {
+    func fetchSectionsCategoryWithCount(forBindFilter bindFilter:BindFilter? = nil, forCity city:City,  withSuccessHandler completion: (([CategoryCountData])->())?) {
 //        http://stringsconnected.com/api/getsectioncategorywithcount?&areaCode=NWP&cityId=2
         
-        if let _ = APIGateway.shared.loginData?.loginDetail?.contactId, let cityID = city.cityId, let areaCode = bindFilter.ddValue{
-            let loginURL = API.getURL(to: "getsectioncategorywithcount", queryParams: ["uniqueCount":"true","areaCode":"\(areaCode)","cityId":"\(cityID)"])
+        if let _ = APIGateway.shared.loginData?.loginDetail?.contactId, let cityID = city.cityId{
+            var params = ["uniqueCount":"true","cityId":"\(cityID)"]
+            if let areaCode = bindFilter?.ddValue{
+                params["areaCode"] = "\(areaCode)"
+            }
+            
+            var loginURL = API.getURL(to: "getsectioncategorywithcount", queryParams: params)
             let request = URLRequest.init(url: loginURL)
             
             let sessionTask : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in

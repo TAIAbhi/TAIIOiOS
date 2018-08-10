@@ -47,6 +47,9 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="actionSuburbSelect:" destination="Ryg-Yh-mxd" eventType="touchUpInside" id="uo7-jx-SiQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

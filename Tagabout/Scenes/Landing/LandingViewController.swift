@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import DropDown
 
 class LandingViewController: ViewController,CLLocationManagerDelegate {
 
@@ -28,6 +29,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     var hangoutDatasource = [CategoryCountData]()
     var servicesDatasource = [CategoryCountData]()
     var shoppingDatasource = [CategoryCountData]()
+    var subUrbDropDown = [BindFilter]()
     
     var cityDatasource = [City]()
     var bindFilterCategoriesDatasource = [BindFilter]()
@@ -77,17 +79,24 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     func fetchCategoriesWithCount(){
         
             if let bindFilter = self.bindFilterCategoriesDatasource.filter( { $0.isSelected! == true }).first, let city = self.currentCity{
+                self.subUrbDropDown = self.bindFilterCategoriesDatasource.filter( { $0.cityId! == city.cityId!})
                 self.suburbButton.setTitle("\(bindFilter.ddText!)", for: .normal)
-                self.landingInteractor.fetchSectionsCategoryWithCount(forBindFilter: bindFilter, forCity: city) { (success) in
-                    self.categoryCountDatasource = success
-                    self.hangoutDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 1})
-                    self.servicesDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 2})
-                    self.shoppingDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 3})
-                    threadOnMain {
-                        self.refreshView()
-                    }
-                }
+                self.fetchCategories(forbindFilter: bindFilter, city: city)
             }
+    }
+    
+    
+    func fetchCategories(forbindFilter bindFilter:BindFilter?, city:City){
+        
+        self.landingInteractor.fetchSectionsCategoryWithCount(forBindFilter: bindFilter, forCity: city) { (success) in
+            self.categoryCountDatasource = success
+            self.hangoutDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 1})
+            self.servicesDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 2})
+            self.shoppingDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 3})
+            threadOnMain {
+                self.refreshView()
+            }
+        }
     }
     
     func refreshView(){
@@ -126,6 +135,34 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
         
     }
 
+    @IBAction func actionSuburbSelect(_ sender: UIButton) {
+        
+        guard self.subUrbDropDown.count > 0 else {
+            return
+        }
+        let dropDown = DropDown()
+        var datasource = [String]()
+        datasource.append("All")
+        datasource.append(contentsOf: subUrbDropDown.map({$0.ddText!}))
+        dropDown.dataSource = datasource
+        dropDown.shadowRadius = 1
+        dropDown.shadowOpacity = 0.2
+        dropDown.bottomOffset = CGPoint(x: 0, y:(sender.bounds.size.height + 5))
+        dropDown.dismissMode = .automatic
+        dropDown.show()
+        dropDown.anchorView = sender
+        dropDown.selectionAction = { index, ddText in
+            if let city = self.currentCity {
+                if ddText == "All" {
+                    self.fetchCategories(forbindFilter: nil, city: city)
+                }else{
+                    self.fetchCategories(forbindFilter: self.bindFilterCategoriesDatasource.filter( { $0.ddText! == ddText }).first, city: city)
+                }
+            }
+            sender.setTitle(ddText, for: .normal)            
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -137,8 +174,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
         currentLocation = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         
         if locations.last != nil {
-            print("Found User's location: \(String(describing: location))")
-            print("Latitude: \(location?.coordinate.latitude) Longitude: \(location?.coordinate.longitude)")
+            
             let geocoder = CLGeocoder()
             geocoder.reverseGeocodeLocation(location!) { (placemarks, error) in
                 if (error != nil){
