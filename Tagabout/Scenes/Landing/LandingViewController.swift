@@ -16,12 +16,30 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     @IBOutlet var hangoutSwipeGesture: UISwipeGestureRecognizer!
     @IBOutlet var serviceSwipeGesture: UISwipeGestureRecognizer!
     
+    @IBOutlet weak var suburbButton: UIButton!
+    @IBOutlet weak var cityButton: UIButton!
+    @IBOutlet weak var shoppingCOunt: UILabel!
     @IBOutlet var shoppingButton: UIButton!
     @IBOutlet var hangoutButton: UIButton!
     @IBOutlet var serviceButton: UIButton!
     
+    @IBOutlet weak var servicesCount: UILabel!
+    @IBOutlet weak var hangoutCount: UILabel!
+    var hangoutDatasource = [CategoryCountData]()
+    var servicesDatasource = [CategoryCountData]()
+    var shoppingDatasource = [CategoryCountData]()
+    
+    var cityDatasource = [City]()
+    var bindFilterCategoriesDatasource = [BindFilter]()
+    var categoryCountDatasource = [CategoryCountData]()
+    var currentBindFilter : BindFilter?
+    var currentCity : City?
+    var currentPlacemark:CLPlacemark?
+    var currentLocation : CLLocationCoordinate2D?
+    
     var locationManager: CLLocationManager = CLLocationManager()
     private lazy var landingRouter = LandingRouter(with: self)
+    private lazy var landingInteractor = LandingInteractor()
 
     
     
@@ -34,11 +52,51 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
-        self.getCurrentLocation()
+        
         self.setupNavigationBar()
         self.addSwipe(shoppingButton)
         self.addSwipe(hangoutButton)
         self.addSwipe(serviceButton)
+        
+        landingInteractor.fetchCity { (success) in
+            self.cityDatasource = success
+            self.getCurrentLocation()
+        }
+    }
+    
+    func fetcCategories(){
+        if self.currentPlacemark != nil, let city = self.cityDatasource.filter({ $0.cityName! == self.currentPlacemark?.locality! }).first{
+            self.currentCity = city
+            self.landingInteractor.fetchCategories(forPlacemark: self.currentPlacemark!, forCity: city, withSuccessHandler: { (bindFilterCategories) in
+                    self.bindFilterCategoriesDatasource = bindFilterCategories
+                    self.fetchCategoriesWithCount()
+            })
+        }
+    }
+    
+    func fetchCategoriesWithCount(){
+        
+            if let bindFilter = self.bindFilterCategoriesDatasource.filter( { $0.isSelected! == true }).first, let city = self.currentCity{
+                self.suburbButton.setTitle("\(bindFilter.ddText!)", for: .normal)
+                self.landingInteractor.fetchSectionsCategoryWithCount(forBindFilter: bindFilter, forCity: city) { (success) in
+                    self.categoryCountDatasource = success
+                    self.hangoutDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 1})
+                    self.servicesDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 2})
+                    self.shoppingDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 3})
+                    threadOnMain {
+                        self.refreshView()
+                    }
+                }
+            }
+    }
+    
+    func refreshView(){
+        hangoutCount.isHidden = hangoutDatasource.count < 0
+        servicesCount.isHidden = servicesDatasource.count < 0
+        shoppingCOunt.isHidden = shoppingDatasource.count < 0
+        hangoutCount.text = "\(hangoutDatasource.count)"
+        servicesCount.text = "\(servicesDatasource.count)"
+        shoppingCOunt.text = "\(shoppingDatasource.count)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,9 +105,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     }
     
     func getCurrentLocation() {
-        
         self.getLocationAccess()
-        
     }
     
     func getLocationAccess(){
@@ -78,7 +134,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        currentLocation = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
         
         if locations.last != nil {
             print("Found User's location: \(String(describing: location))")
@@ -89,17 +145,15 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
                     print("error in reverseGeocode")
                     return
                 }
-                let placemark = placemarks! as [CLPlacemark]
-                if placemark.count>0{
-                    let placemark = placemarks![0]
-                    print(placemark.locality!)
-                    print(placemark.name)
-                    print(placemark.addressDictionary)
-                    print(placemark.subAdministrativeArea)
-                    print(placemark.subLocality)
-                    print(placemark.administrativeArea!)
-                    print(placemark.country!)
-                    
+                
+                if let placemarks = placemarks , placemarks.count > 0 , let currentPlacemark = placemarks.first{
+                    self.currentPlacemark = currentPlacemark
+                    if self.cityDatasource.count > 0, let city = self.cityDatasource.filter({ $0.cityName! == self.currentPlacemark?.locality! }).first{
+                        self.currentCity = city
+                        let cityName = self.currentCity?.cityName
+                        self.cityButton.setTitle("  \(cityName!)  ", for: .normal)
+                        self.fetcCategories()
+                    }
                 }
             }
         }

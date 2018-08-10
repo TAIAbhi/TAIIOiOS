@@ -17,16 +17,35 @@ struct LoginData : Codable{
 }
 
 struct LoginDetails: Codable {
-    var sourceId : Int?
     var contactId : Int?
+    var contactName : String?
+    var mobile : String?
+    var platform : Int?
     var role : Int?
     var skipVideo : Bool?
     var showVideo : Bool?
-    var videoUrl : String?
-    var contactName : String?
+    var sourceId : Int?
+    var sourceImage: String?
     var sourceName : String?
-    var mobile : String?
-    var sourceType : String?
+    var videoUrl : String?
+    var sourceType : Int?
+    var sourceTypeText : String?
+    
+    // swift 4 decoder was not working -- can't help it -- no time
+    init(dict: [String: Any]) {
+        if let contactId = dict["contactId"] as? Int { self.contactId = contactId }
+        if let contactName = dict["contactName"] as? String { self.contactName = contactName }
+        if let mobile = dict["mobile"] as? String { self.mobile = mobile }
+        
+        if let platform = dict["platform"] as? Int { self.platform = platform }
+        if let role = dict["role"] as? Int { self.role = role }
+        if let skipVideo = dict["skipVideo"] as? Bool { self.skipVideo = skipVideo }
+        if let showVideo = dict["showVideo"] as? Bool { self.showVideo = showVideo }
+        if let sourceId = dict["sourceId"] as? Int { self.sourceId = sourceId }
+        if let sourceType = dict["sourceType"] as? Int { self.sourceType = sourceType }
+        if let sourceImage = dict["sourceImage"] as? String { self.sourceImage = sourceImage }            
+        if let sourceTypeText = dict["sourceTypeText"] as? String { self.sourceTypeText = sourceTypeText }
+    }
 }
 
 struct User: Codable {

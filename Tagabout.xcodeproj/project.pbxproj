@@ -8,15 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		256165A6E486A130F265FC02 /* Pods_Tagabout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A287BAD6745B21EE8EF7499F /* Pods_Tagabout.framework */; };
+		7F282D9E2115EEED00D3FAFD /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F282D9D2115EEED00D3FAFD /* Async.swift */; };
+		7F282DA02115F7BB00D3FAFD /* BindFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F282D9F2115F7BB00D3FAFD /* BindFilter.swift */; };
 		7F2873CF21157651002C7D03 /* IntroRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2873CE21157651002C7D03 /* IntroRouter.swift */; };
 		7F2873D1211586BA002C7D03 /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2873D0211586BA002C7D03 /* LandingRouter.swift */; };
+		7F2873D3211595B8002C7D03 /* LandingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2873D2211595B8002C7D03 /* LandingInteractor.swift */; };
+		7F2873D521159772002C7D03 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2873D421159772002C7D03 /* City.swift */; };
 		7F3AAB4A21147FA400948F70 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3AAB4921147FA400948F70 /* MapKit.framework */; };
+		7F47EB1F211B695A0079C7DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F47EB1E211B69590079C7DE /* GoogleService-Info.plist */; };
+		7F47EB22211B6BB60079C7DE /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47EB21211B6BB50079C7DE /* PushNotificationManager.swift */; };
+		7F47EB24211B6E600079C7DE /* TAIUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F47EB23211B6E600079C7DE /* TAIUserDefaults.swift */; };
 		7F4C52892113847D0049B1B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C52882113847D0049B1B1 /* ViewController.swift */; };
 		7F4C528B211384960049B1B1 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C528A211384960049B1B1 /* LandingViewController.swift */; };
 		7F4C528D211384AA0049B1B1 /* LandingScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4C528C211384AA0049B1B1 /* LandingScene.storyboard */; };
 		7F4C528F2113896C0049B1B1 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C528E2113896C0049B1B1 /* UIView+Addition.swift */; };
 		7F4C529221138D680049B1B1 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C529121138D680049B1B1 /* IntroViewController.swift */; };
 		7F4C529421138E030049B1B1 /* AppStoyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C529321138E030049B1B1 /* AppStoyboard.swift */; };
+		7FF16A15211CBAB300B63E46 /* CategoryCountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF16A14211CBAB300B63E46 /* CategoryCountData.swift */; };
 		9E152CFF2073EC1200B57DA5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152CFE2073EC1100B57DA5 /* Theme.swift */; };
 		9E152D012077DB0100B57DA5 /* SuggestionsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */; };
 		9E152D03207898BC00B57DA5 /* SuggestionListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152D02207898BC00B57DA5 /* SuggestionListRouter.swift */; };
@@ -82,15 +90,24 @@
 
 /* Begin PBXFileReference section */
 		038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tagabout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout.release.xcconfig"; sourceTree = "<group>"; };
+		7F282D9D2115EEED00D3FAFD /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		7F282D9F2115F7BB00D3FAFD /* BindFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindFilter.swift; sourceTree = "<group>"; };
 		7F2873CE21157651002C7D03 /* IntroRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroRouter.swift; sourceTree = "<group>"; };
 		7F2873D0211586BA002C7D03 /* LandingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRouter.swift; sourceTree = "<group>"; };
+		7F2873D2211595B8002C7D03 /* LandingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingInteractor.swift; sourceTree = "<group>"; };
+		7F2873D421159772002C7D03 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		7F3AAB4921147FA400948F70 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7F47EB1E211B69590079C7DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F47EB20211B6AC80079C7DE /* Tagabout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tagabout.entitlements; sourceTree = "<group>"; };
+		7F47EB21211B6BB50079C7DE /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		7F47EB23211B6E600079C7DE /* TAIUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAIUserDefaults.swift; sourceTree = "<group>"; };
 		7F4C52882113847D0049B1B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F4C528A211384960049B1B1 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		7F4C528C211384AA0049B1B1 /* LandingScene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LandingScene.storyboard; sourceTree = "<group>"; };
 		7F4C528E2113896C0049B1B1 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
 		7F4C529121138D680049B1B1 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		7F4C529321138E030049B1B1 /* AppStoyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoyboard.swift; sourceTree = "<group>"; };
+		7FF16A14211CBAB300B63E46 /* CategoryCountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCountData.swift; sourceTree = "<group>"; };
 		9E152CFE2073EC1100B57DA5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsFilterViewController.swift; sourceTree = "<group>"; };
 		9E152D02207898BC00B57DA5 /* SuggestionListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionListRouter.swift; sourceTree = "<group>"; };
@@ -192,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				7F4C528A211384960049B1B1 /* LandingViewController.swift */,
+				7F2873D2211595B8002C7D03 /* LandingInteractor.swift */,
 				7F2873D0211586BA002C7D03 /* LandingRouter.swift */,
 				7F4C528C211384AA0049B1B1 /* LandingScene.storyboard */,
 			);
@@ -343,6 +361,8 @@
 				9E152CFE2073EC1100B57DA5 /* Theme.swift */,
 				F17C0A032078AC8900FDBE29 /* GeneralUtils.swift */,
 				7F4C529321138E030049B1B1 /* AppStoyboard.swift */,
+				7F282D9D2115EEED00D3FAFD /* Async.swift */,
+				7F47EB23211B6E600079C7DE /* TAIUserDefaults.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -384,6 +404,7 @@
 		F19F4DD52030527B00D95CCD /* Tagabout */ = {
 			isa = PBXGroup;
 			children = (
+				7F47EB20211B6AC80079C7DE /* Tagabout.entitlements */,
 				F17FF1B62072BE2200AC4A4A /* Utils */,
 				9E82FFEB204C1100005744DE /* Extensions */,
 				9EDB96DF204AD10600AA9082 /* Views */,
@@ -393,6 +414,7 @@
 				F1D26E4D204922520049638F /* Constants */,
 				F19759CD2042D8F400201147 /* Interactor */,
 				F19F4DD62030527B00D95CCD /* AppDelegate.swift */,
+				7F47EB21211B6BB50079C7DE /* PushNotificationManager.swift */,
 				7F4C52882113847D0049B1B1 /* ViewController.swift */,
 				F19E7CB120395BB90072184C /* ViewController */,
 				F19F4DDD2030527B00D95CCD /* Assets.xcassets */,
@@ -400,6 +422,7 @@
 				F19F4DF62030CC3300D95CCD /* movie.mov */,
 				F19F4DDF2030527B00D95CCD /* LaunchScreen.storyboard */,
 				F19F4DE22030527B00D95CCD /* Info.plist */,
+				7F47EB1E211B69590079C7DE /* GoogleService-Info.plist */,
 				F15792A4204B2E8B00EFFEC0 /* Localizable.strings */,
 				9EC817E1205D3B2A00C3616D /* Logo.gif */,
 			);
@@ -442,6 +465,9 @@
 				9E592714206BFDCE00D58FF5 /* Suburb.swift */,
 				F17C09FD2078A2B800FDBE29 /* Help.swift */,
 				9E152D04207950EB00B57DA5 /* SuggestionFilter.swift */,
+				7F2873D421159772002C7D03 /* City.swift */,
+				7F282D9F2115F7BB00D3FAFD /* BindFilter.swift */,
+				7FF16A14211CBAB300B63E46 /* CategoryCountData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -459,7 +485,6 @@
 				F19F4DD12030527B00D95CCD /* Resources */,
 				F156A71C2079E24B00237F6E /* Run Fabric Script */,
 				2C4EA38FD43A31784DE386BD /* [CP] Embed Pods Frameworks */,
-				18BE9FC38A3A9DED04CCC30D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -482,7 +507,15 @@
 				TargetAttributes = {
 					F19F4DD22030527B00D95CCD = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -512,6 +545,7 @@
 			files = (
 				F19F4DE12030527B00D95CCD /* LaunchScreen.storyboard in Resources */,
 				F15792AA204BE02800EFFEC0 /* UserStory.storyboard in Resources */,
+				7F47EB1F211B695A0079C7DE /* GoogleService-Info.plist in Resources */,
 				F1D26E59204A6B7A0049638F /* VideoplayerScene.storyboard in Resources */,
 				F15792A6204B2E8B00EFFEC0 /* Localizable.strings in Resources */,
 				F17C09FC20789E4200FDBE29 /* HelpScenes.storyboard in Resources */,
@@ -530,24 +564,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18BE9FC38A3A9DED04CCC30D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout-resources.sh",
-				"${PODS_ROOT}/youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2C4EA38FD43A31784DE386BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,16 +572,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tagabout/Pods-Tagabout-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/LabelSwitch/LabelSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/UIFloatLabelTextView/UIFloatLabelTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LabelSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIFloatLabelTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -627,7 +649,10 @@
 				F156A71E207A2AB100237F6E /* LoadingView.swift in Sources */,
 				9E5B933A205E909900696EB6 /* SuggestionListTableViewDataSource.swift in Sources */,
 				F19F4DD92030527B00D95CCD /* VideoPlayerViewController.swift in Sources */,
+				7F282D9E2115EEED00D3FAFD /* Async.swift in Sources */,
+				7FF16A15211CBAB300B63E46 /* CategoryCountData.swift in Sources */,
 				F148641C2058516200778ED4 /* AddSuggestionInteractor.swift in Sources */,
+				7F2873D521159772002C7D03 /* City.swift in Sources */,
 				F1D26E4F2049229E0049638F /* UILocalizationConstants.swift in Sources */,
 				F17C0A002078A55100FDBE29 /* HelpInteractor.swift in Sources */,
 				F1579294204B1D0100EFFEC0 /* DesignableView.swift in Sources */,
@@ -637,6 +662,7 @@
 				7F4C529421138E030049B1B1 /* AppStoyboard.swift in Sources */,
 				9EC817DE205D345800C3616D /* iOSDevCenters+GIF.swift in Sources */,
 				F19759CF2042DA3C00201147 /* ContactsInteractor.swift in Sources */,
+				7F2873D3211595B8002C7D03 /* LandingInteractor.swift in Sources */,
 				9EC950582072508E00A0014F /* Util.swift in Sources */,
 				9E5CA98420557FED00FD8CEF /* LoginRouter.swift in Sources */,
 				F145621A20715929007C60EB /* TAINaviagtionbar.swift in Sources */,
@@ -645,10 +671,13 @@
 				F1D26E6A204AB39A0049638F /* APIManager.swift in Sources */,
 				F17C0A042078AC8900FDBE29 /* GeneralUtils.swift in Sources */,
 				9E82FFEF204C3C01005744DE /* LoginInteractor.swift in Sources */,
+				7F282DA02115F7BB00D3FAFD /* BindFilter.swift in Sources */,
 				F145621720713F34007C60EB /* FloatLabelTextView.swift in Sources */,
 				9E152D012077DB0100B57DA5 /* SuggestionsFilterViewController.swift in Sources */,
 				9E592713206BFC7200D58FF5 /* AddLocationInteractor.swift in Sources */,
 				F1D26E63204A9F0F0049638F /* APIGateway.swift in Sources */,
+				7F47EB24211B6E600079C7DE /* TAIUserDefaults.swift in Sources */,
+				7F47EB22211B6BB60079C7DE /* PushNotificationManager.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */,
@@ -821,9 +850,10 @@
 			baseConfigurationReference = BD493753F71774E1090BF7F6 /* Pods-Tagabout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tagabout/Tagabout.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 74M8Y5BWK9;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -843,9 +873,10 @@
 			baseConfigurationReference = 038F2174C9807E397B7A357B /* Pods-Tagabout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tagabout/Tagabout.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 74M8Y5BWK9;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Tagabout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

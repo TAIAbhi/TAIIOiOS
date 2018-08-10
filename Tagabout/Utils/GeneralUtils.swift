@@ -54,6 +54,12 @@ struct GeneralUtils {
         }
         return jsonResult ?? NSDictionary.init()
     }
+    static func deviceUdid() -> String{
+        if let UUIDValue = UIDevice.current.identifierForVendor{
+            return UUIDValue.uuidString
+        }
+        return ""
+    }
 }
 extension UIScrollView {
     

@@ -40,8 +40,11 @@ class LoginRouter {
         self.loginController?.navigationController?.pushViewController(IntroViewController.introViewController(), animated: true)
     }
     func navigateToLandingView(){
-        self.loginController?.navigationController?.pushViewController(LandingViewController.landingViewController(), animated: true)
+        if let window = UIApplication.shared.keyWindow {
+            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromRight, animations: {
+                window.rootViewController = LandingViewController.landingViewController()
+            }, completion: nil)
+        }
     }
-    
-    
+        
 }

@@ -48,12 +48,20 @@ class LoginViewController: UIViewController {
         interactor.loginUserWithMobile(mobile, andPassword: password) { [weak self] (didLogin) in
             guard let strongSelf = self else{ return }
             if didLogin {
+                strongSelf.interactor.registerDevice(withSuccessHandler: { success in
+                    
+                })
+                
+                
                 if APIGateway.shared.shouldShowVideo() == true {
                     // Show Intro
                     strongSelf.loginRouter.navigateToIntroView()
                 }else{
                     // Show Landing
-                    strongSelf.loginRouter.navigateToLandingView()
+                    threadOnMain {
+                        strongSelf.loginRouter.navigateToLandingView()
+                    }
+                    
                 }
                 
             } else {
