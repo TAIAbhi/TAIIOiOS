@@ -19,10 +19,8 @@ class LandingRouter{
     
     func navigateToTabbar(){
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
-        if let navTabVC = storyBoard.instantiateViewController(withIdentifier: "parentNavigation") as? UINavigationController, let window = UIApplication.shared.keyWindow {
-            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromRight, animations: {
-                window.rootViewController = navTabVC
-            }, completion: nil)
+        if let tabVC = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController{
+            self.landingViewController.navigationController?.pushViewController(tabVC, animated: true)
         }
     }
     

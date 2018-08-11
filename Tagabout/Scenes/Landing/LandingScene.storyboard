@@ -64,15 +64,15 @@
                                     <constraint firstAttribute="height" constant="45" id="ZvJ-cN-hY8"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-dS-GUJ">
-                                <rect key="frame" x="148" y="136" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.57254901960000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-dS-GUJ">
+                                <rect key="frame" x="147.5" y="136" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.6470588235294118" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="bDR-Q6-7iB"/>
                                     <constraint firstAttribute="height" constant="80" id="yzO-w2-3kF"/>
                                 </constraints>
-                                <state key="normal" title="Hangout">
+                                <state key="normal" image="hangout-w">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -84,15 +84,15 @@
                                     <action selector="hangoutaction:" destination="Ryg-Yh-mxd" eventType="touchUpInside" id="EpA-4W-Db4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVj-ZO-hJq">
-                                <rect key="frame" x="271" y="251" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.57254901960000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVj-ZO-hJq">
+                                <rect key="frame" x="271.5" y="251" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.37647058823529411" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="38r-Cz-nI1"/>
                                     <constraint firstAttribute="height" constant="80" id="4gE-V8-zwI"/>
                                 </constraints>
-                                <state key="normal" title="Shopping">
+                                <state key="normal" image="shopping-w">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -105,14 +105,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKe-9B-1Ma">
-                                <rect key="frame" x="24" y="251" width="80" height="80"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.57254901960000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="24.5" y="251" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.22352941176470587" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="pTV-sB-xzt"/>
                                     <constraint firstAttribute="height" constant="80" id="yDY-nT-GJt"/>
                                 </constraints>
-                                <state key="normal" title="Services">
+                                <state key="normal" image="service-w">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -125,7 +125,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu6-pB-ua7">
-                                <rect key="frame" x="202" y="131" width="25" height="25"/>
+                                <rect key="frame" x="201" y="130.5" width="25" height="25"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="FOv-l7-43l"/>
@@ -141,7 +141,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q0-aj-7wt">
-                                <rect key="frame" x="325" y="246" width="25" height="25"/>
+                                <rect key="frame" x="325" y="245.5" width="25" height="25"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="A2f-63-xg8"/>
@@ -157,7 +157,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1s-87-icr">
-                                <rect key="frame" x="78" y="246" width="25" height="25"/>
+                                <rect key="frame" x="78" y="245.5" width="25" height="25"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="0rm-HK-Ll1"/>
@@ -228,4 +228,9 @@
             <point key="canvasLocation" x="-599.20000000000005" y="-408.84557721139436"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hangout-w" width="27" height="27"/>
+        <image name="service-w" width="27" height="27"/>
+        <image name="shopping-w" width="27" height="27"/>
+    </resources>
 </document>

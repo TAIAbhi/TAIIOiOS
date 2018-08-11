@@ -159,7 +159,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
                     self.fetchCategories(forbindFilter: self.bindFilterCategoriesDatasource.filter( { $0.ddText! == ddText }).first, city: city)
                 }
             }
-            sender.setTitle(ddText, for: .normal)            
+            sender.setTitle(ddText, for: .normal)
         }
         
     }
@@ -226,59 +226,46 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     
 
     @objc func hangoutSwipeGesture(_ sender: UISwipeGestureRecognizer) {
+        self.userSwipe(forGesture: sender, button: hangoutButton, datasource: hangoutDatasource)
+    }
+    
+    func userSwipe(forGesture sender:UISwipeGestureRecognizer, button:UIButton,datasource:[CategoryCountData]){
+        var dropDownDatasource = [String]()
+        let dropDown = DropDown()
+        
         switch sender.direction {
         case UISwipeGestureRecognizerDirection.down:
-            print("down")
+            dropDownDatasource.append("All")
+            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
             break
         case UISwipeGestureRecognizerDirection.left:
-            print("left")
+            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
             break
         case UISwipeGestureRecognizerDirection.right:
-            print("right")
+            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
             break
         case UISwipeGestureRecognizerDirection.up:
-            print("up")
+            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
             break
         default: break
-            
+        }
+        dropDown.dataSource = dropDownDatasource
+        dropDown.shadowRadius = 1
+        dropDown.shadowOpacity = 0.2
+        dropDown.bottomOffset = CGPoint(x: 0, y:(button.bounds.size.height + 5))
+        dropDown.dismissMode = .automatic
+        dropDown.show()
+        dropDown.anchorView = button
+        dropDown.selectionAction = { index, ddText in
+//            Selected City and Subarea, categoryId, SubCategoryId
         }
     }
     
     @objc func shoppingSwipeGesture(_ sender: UISwipeGestureRecognizer) {
-        switch sender.direction {
-        case UISwipeGestureRecognizerDirection.down:
-            print("down")
-            break
-        case UISwipeGestureRecognizerDirection.left:
-            print("left")
-            break
-        case UISwipeGestureRecognizerDirection.right:
-            print("right")
-            break
-        case UISwipeGestureRecognizerDirection.up:
-            print("up")
-            break
-        default: break
-            
-        }
+       self.userSwipe(forGesture: sender, button: shoppingButton, datasource: shoppingDatasource)
     }
     @objc func serviceSwipeGesture(_ sender: UISwipeGestureRecognizer) {
-        switch sender.direction {
-        case UISwipeGestureRecognizerDirection.down:
-            print("down")
-            break
-        case UISwipeGestureRecognizerDirection.left:
-            print("left")
-            break
-        case UISwipeGestureRecognizerDirection.right:
-            print("right")
-            break
-        case UISwipeGestureRecognizerDirection.up:
-            print("up")
-            break
-        default: break
-            
-        }
+        self.userSwipe(forGesture: sender, button: serviceButton, datasource: servicesDatasource)
     }
     
     func addSwipe(_ sender:UIButton) {
