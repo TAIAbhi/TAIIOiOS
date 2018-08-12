@@ -53,6 +53,7 @@ struct User: Codable {
     var contact: String?
     var contactComments: String?
     var contactId: Int?
+    var platform: Int?
     var contactLevelUnderstanding: String?
     var contactNumber: String?
     var isContactDetailsAdded: Bool?
@@ -62,6 +63,7 @@ struct User: Codable {
     var notification: String?
     var source: String?
     var sourceId: Int?
+    var allowProvideSuggestion:Int?
     
     // swift 4 decoder was not working -- can't help it -- no time
     init(dict: [String: Any]) {
@@ -77,6 +79,8 @@ struct User: Codable {
         if let notification = dict["notification"] as? String { self.notification = notification }
         if let source = dict["source"] as? String { self.source = source }
         if let sourceId = dict["sourceId"] as? Int { self.sourceId = sourceId }
+        if let platform = dict["platform"] as? Int { self.platform = platform }
+        if let allowProvideSuggestion = dict["allowProvideSuggestion"] as? Int { self.allowProvideSuggestion = allowProvideSuggestion }
         
     }
 }

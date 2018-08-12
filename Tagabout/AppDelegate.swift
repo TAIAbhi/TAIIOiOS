@@ -34,14 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            window?.makeKeyAndVisible()
 //        }
         
-        if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-            window?.rootViewController = UINavigationController.init(rootViewController: vc)
-            
-        }
-        /*
+        
+        
         if let _ = APIGateway.shared.authToken{
             GeneralUtils.addCrashlyticsUser()
-            window?.rootViewController = UINavigationController.init(rootViewController: LandingViewController.landingViewController())
+            window?.rootViewController =  LandingViewController.landingViewController()
 //            window?.makeKeyAndVisible()
         } else {
             if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
@@ -49,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             }
         }
-         */
+        
         
         UIApplication.shared.setMinimumBackgroundFetchInterval(30)
         

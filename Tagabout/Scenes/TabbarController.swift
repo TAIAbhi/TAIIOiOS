@@ -13,6 +13,15 @@ import DropDown
 
 class TabbarController : UITabBarController{
     
+    
+    static func tabBarController(withSelectedIndex index:Int) -> TabbarController{
+        let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
+        let tabVC = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as! TabbarController
+        tabVC.selectedIndex = index
+        return tabVC
+    }
+    
+    
     var helpBarList: [Help]?
     var helpButton : UIButton?
     private var helpDropDown : DropDown?

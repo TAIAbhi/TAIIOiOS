@@ -295,5 +295,8 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     @IBAction func actionShopping(_ sender: UIButton) {
         landingRouter.navigateToTabbar()
     }
+    @IBAction func mydetailsClicked(_ sender: UIButton) {
+        landingRouter.navigateToTabbarMydetails()
+    }
     
 }

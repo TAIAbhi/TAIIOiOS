@@ -18,10 +18,12 @@ class LandingRouter{
     }
     
     func navigateToTabbar(){
-        let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
-        if let tabVC = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController{
-            self.landingViewController.navigationController?.pushViewController(tabVC, animated: true)
-        }
+        self.landingViewController.navigationController?.pushViewController(TabbarController.tabBarController(withSelectedIndex: 0), animated: true)
+        
+    }
+    
+    func navigateToTabbarMydetails(){
+        self.landingViewController.navigationController?.pushViewController(TabbarController.tabBarController(withSelectedIndex: 2), animated: true)
     }
     
     

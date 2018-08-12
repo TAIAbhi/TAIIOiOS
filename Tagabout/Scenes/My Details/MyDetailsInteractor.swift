@@ -43,4 +43,19 @@ struct MyDetailsInteractor {
             completion(false)
         })
     }
+    
+    func addContactDetailsWithData(_ data: [String: Any], completion: @escaping ((Bool)->Void)) {
+        let url = API.getURL(to: "me")
+        let request = URLRequest.init(url: url)
+        
+        _ = APIManager.doPost(request: request, body: data, completion: { (response) in
+            if let json = response, let action = json["action"] as? String, action.lowercased() == "success" {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }, onError: { (error) in
+            completion(false)
+        })                        
+    }
 }

@@ -24,6 +24,8 @@
 		7F4C528F2113896C0049B1B1 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C528E2113896C0049B1B1 /* UIView+Addition.swift */; };
 		7F4C529221138D680049B1B1 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C529121138D680049B1B1 /* IntroViewController.swift */; };
 		7F4C529421138E030049B1B1 /* AppStoyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C529321138E030049B1B1 /* AppStoyboard.swift */; };
+		7F70BEE4211F1F4D001590A1 /* AddContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70BEE3211F1F4D001590A1 /* AddContactTableViewController.swift */; };
+		7F70BEE6211F2C75001590A1 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70BEE5211F2C75001590A1 /* ContactListTableViewController.swift */; };
 		7FF16A15211CBAB300B63E46 /* CategoryCountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF16A14211CBAB300B63E46 /* CategoryCountData.swift */; };
 		9E152CFF2073EC1200B57DA5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152CFE2073EC1100B57DA5 /* Theme.swift */; };
 		9E152D012077DB0100B57DA5 /* SuggestionsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */; };
@@ -107,6 +109,8 @@
 		7F4C528E2113896C0049B1B1 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
 		7F4C529121138D680049B1B1 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		7F4C529321138E030049B1B1 /* AppStoyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoyboard.swift; sourceTree = "<group>"; };
+		7F70BEE3211F1F4D001590A1 /* AddContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactTableViewController.swift; sourceTree = "<group>"; };
+		7F70BEE5211F2C75001590A1 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		7FF16A14211CBAB300B63E46 /* CategoryCountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCountData.swift; sourceTree = "<group>"; };
 		9E152CFE2073EC1100B57DA5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsFilterViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +229,15 @@
 			path = IntroScreen;
 			sourceTree = "<group>";
 		};
+		7F70BEE2211F1F31001590A1 /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				7F70BEE3211F1F4D001590A1 /* AddContactTableViewController.swift */,
+				7F70BEE5211F2C75001590A1 /* ContactListTableViewController.swift */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
 		80D00088B9F7ABFDEC651A39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +298,7 @@
 				7F4C5287211384460049B1B1 /* Landing */,
 				9E5B93482066976E00696EB6 /* Add Location */,
 				9E5B934320667E3100696EB6 /* My Details */,
+				7F70BEE2211F1F31001590A1 /* AddContact */,
 				9E5CA98020557E1900FD8CEF /* Suggestions List */,
 				F157928E204AE60B00EFFEC0 /* Add Suggestion */,
 				9EDB96DA204AC56700AA9082 /* Login */,
@@ -679,6 +693,7 @@
 				7F47EB24211B6E600079C7DE /* TAIUserDefaults.swift in Sources */,
 				7F47EB22211B6BB60079C7DE /* PushNotificationManager.swift in Sources */,
 				9E5CA98220557E5C00FD8CEF /* SuggestionListViewController.swift in Sources */,
+				7F70BEE6211F2C75001590A1 /* ContactListTableViewController.swift in Sources */,
 				F19F4DD72030527B00D95CCD /* AppDelegate.swift in Sources */,
 				9E5B9339205E909900696EB6 /* SuggestionListTableViewCell.swift in Sources */,
 				F19E7CB320395BF70072184C /* HelpScenePager.swift in Sources */,
@@ -695,6 +710,7 @@
 				9E5B934C206697B400696EB6 /* MyDetailsRouter.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,
+				7F70BEE4211F1F4D001590A1 /* AddContactTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

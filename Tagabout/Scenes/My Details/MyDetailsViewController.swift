@@ -12,6 +12,9 @@ import DropDown
 
 class MyDetailsViewController: UIViewController {
     
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var detailsUpdatedButton: UIButton!
+    @IBOutlet weak var allowProvideSuggestionButton: UIButton!
     private let interactor = MyDetailsInteractor()
     private let locationInteractor = AddLocationInteractor()
     private lazy var router = MyDetailsRouter(with: self)
@@ -25,6 +28,14 @@ class MyDetailsViewController: UIViewController {
                 location2Label.text = user.location2 ?? ""
                 location3Label.text = user.location3 ?? ""
                 detailsTextArea.text = user.contactComments ?? ""
+                detailsUpdatedButton.isSelected =  (user.isContactDetailsAdded?.hashValue ?? 0) == 0 ? false : true
+                allowProvideSuggestionButton.isSelected = (user.allowProvideSuggestion?.hashValue ?? 0) == 0 ? false : true
+                if detailsUpdatedButton.isSelected {
+                    detailsUpdatedButton.setTitleColor(UIColor.green, for: .normal)
+                }
+                if allowProvideSuggestionButton.isSelected {
+                    allowProvideSuggestionButton.setTitleColor(UIColor.green, for: .normal)
+                }                
                 detailsTextArea.layoutSubviews()
             }
         }
@@ -47,6 +58,12 @@ class MyDetailsViewController: UIViewController {
     @IBOutlet weak var detailsTextArea: FloatLabelTextView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var getRole:Int{
+        if let loginDetail = APIGateway.shared.loginData?.loginDetail, let role = loginDetail.role{
+            return role
+        }
+        return 1
+    }
     
     
     override func viewDidLoad() {
@@ -57,13 +74,21 @@ class MyDetailsViewController: UIViewController {
         detailsTextArea.layer.borderWidth = 2
         detailsTextArea.contentInset = UIEdgeInsets.init(top: 5, left: 8, bottom: 5, right: 8)
         detailsTextArea.titleFont = Theme.avenirTitle!
-        interactor.fetchMyDetails { [weak self] (user) in
-            guard let strongSelf = self else{ return }
-            strongSelf.user = user
+        self.fetchMydetails()
+        
+        if getRole == 1 {
+            addButton.isHidden = true
         }
         
         let rightButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(MyDetailsViewController.openAddLocation))
         self.navigationItem.rightBarButtonItem = rightButton
+    }
+    
+    func fetchMydetails(){
+        interactor.fetchMyDetails { [weak self] (user) in
+            guard let strongSelf = self else{ return }
+            strongSelf.user = user
+        }
     }
     
     @IBAction func onUpdateButtonClick(_ sender: UIButton) {
@@ -81,13 +106,47 @@ class MyDetailsViewController: UIViewController {
             postData["comments"] = comments
         }
         if let contactId = user?.contactId {
-            postData["contactId"] = contactId
+            postData["contactid"] = contactId
         }
+        
+        if let contactName = nameLabel.text {
+            postData["contactName"] = contactName
+        }
+        
+        if let contactNumber = contactNumberLabel.text {
+            postData["contactNumber"] = contactNumber
+        }
+        
+        postData["contactLevelUnderstanding"] = "\(3)"
+        postData["notification"] = "\(3)"
+        postData["platform"] = "\(1)"
+        postData["isContactDetailsAdded"] = detailsUpdatedButton.isSelected == true ? "true" : "false"
+        postData["allowProvideSuggestion"] = allowProvideSuggestionButton.isSelected  == true ? "true" : "false"
+        
         interactor.updateMyDetailsWithData(postData) { (done) in
-            print(done)
+            self.fetchMydetails()
+        }
+    }
+    @IBAction func allowProvideSuggestions(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            sender.setTitleColor(UIColor.green, for: .normal)
+        }else{
+            sender.setTitleColor(UIColor.blue, for: .normal)
         }
     }
     
+    @IBAction func actionDetailsUpdated(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            sender.setTitleColor(UIColor.green, for: .normal)
+        }else{
+            sender.setTitleColor(UIColor.blue, for: .normal)
+        }
+    }
+    @IBAction func actionAddContact(_ sender: UIButton) {
+        router.showAddContactsViewController(foruser: user)
+    }
     @objc func openAddLocation() {
         router.presentAddLocationViewController()
     }
@@ -172,7 +231,7 @@ extension MyDetailsViewController {
         
         // The view to which the drop down will appear on
         dropDown.anchorView = textField
-        dropDown.topOffset = CGPoint(x: 0, y:64)
+//        dropDown.topOffset = CGPoint(x: 0, y:64)
         dropDown.shadowRadius = 1
         dropDown.shadowOpacity = 0.2
         dropDown.bottomOffset = CGPoint(x: 0, y:48)
@@ -186,8 +245,8 @@ extension MyDetailsViewController {
         guard let locations = locations else { return }
         if textField.text?.trimmingCharacters(in: .whitespaces) != ""{
             dropDown.dataSource = locations.map({ (location) in
-                if let name = location.locSuburb {
-                    return name
+                if let name = location.locationName, let suburb = location.suburb {
+                    return "\(name) - \(suburb)"
                 }
                 return ""
             })
@@ -197,7 +256,9 @@ extension MyDetailsViewController {
         
         dropDown.selectionAction = { (index: Int, item: String) in
             let selectedLocation = locations[index]
-            textField.text = selectedLocation.locSuburb
+            if let locationName = selectedLocation.locationName, let suburb = selectedLocation.suburb {
+                textField.text = "\(locationName) - \(suburb)"
+            }
         }
         
         dropDown.show()
