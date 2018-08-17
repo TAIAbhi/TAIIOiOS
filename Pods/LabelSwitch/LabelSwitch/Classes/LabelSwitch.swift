@@ -47,7 +47,14 @@ open class LabelSwitch: UIView {
     private var rightUIState = TextTypeUIState()
     
     public weak var delegate: LabelSwitchDelegate?
-    public var curState: SwitchState
+    public var curState: SwitchState{
+        didSet{
+            switch curState {
+            case .L: updateUIState(leftUIState)
+            case .R: updateUIState(rightUIState)
+            }            
+        }
+    }
     
     @IBInspectable var lBackColor: UIColor = .white {
         didSet{

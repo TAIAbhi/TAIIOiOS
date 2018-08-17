@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
         loginButton.layer.masksToBounds = true
         
         // Logo gif
+        
         logoImageView.image = UIImage.gifImageWithName("Logo")
     }
 
@@ -47,7 +48,22 @@ class LoginViewController: UIViewController {
         interactor.loginUserWithMobile(mobile, andPassword: password) { [weak self] (didLogin) in
             guard let strongSelf = self else{ return }
             if didLogin {
-                strongSelf.loginRouter.openTabbar()
+                strongSelf.interactor.registerDevice(withSuccessHandler: { success in
+                    
+                })
+                
+                
+                if APIGateway.shared.shouldShowVideo() == true {
+                    // Show Intro
+                    strongSelf.loginRouter.navigateToIntroView()
+                }else{
+                    // Show Landing
+                    threadOnMain {
+                        strongSelf.loginRouter.navigateToLandingView()
+                    }
+                    
+                }
+                
             } else {
                 print("Login failed")
             }

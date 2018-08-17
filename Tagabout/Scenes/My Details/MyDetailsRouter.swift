@@ -21,6 +21,10 @@ struct MyDetailsRouter {
         viewController?.performSegue(withIdentifier: "MyDetailsToAddLocation", sender: nil)
     }
     
+    func showAddContactsViewController(foruser user:User?){
+        self.viewController?.navigationController?.pushViewController(AddContactTableViewController.addContactTableViewController(byUser: user!), animated: true)
+    }
+    
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MyDetailsToAddLocation", let vc = segue.destination as? AddLocationViewController {
             vc.delegate = viewController

@@ -5,6 +5,8 @@ platform :ios, '9.0'
 target 'Tagabout' do
     use_frameworks!
     pod 'SkyFloatingLabelTextField'
+    pod 'Firebase/Core'
+    pod 'FirebaseMessaging'
     pod 'DropDown'
     pod 'UIFloatLabelTextView'
     pod 'LabelSwitch'

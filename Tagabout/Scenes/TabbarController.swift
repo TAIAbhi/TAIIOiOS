@@ -13,14 +13,22 @@ import DropDown
 
 class TabbarController : UITabBarController{
     
+    
+    static func tabBarController(withSelectedIndex index:Int) -> TabbarController{
+        let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
+        let tabVC = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as! TabbarController
+        tabVC.selectedIndex = index
+        return tabVC
+    }
+    
+    
     var helpBarList: [Help]?
     var helpButton : UIButton?
     private var helpDropDown : DropDown?
     public var themedLoader : LoadingInteractor?
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.setupLogo()
-        
+        self.navigationController?.navigationBar.setupLogo()        
         self.navigationItem.rightBarButtonItems = [getnotificationButton(), getCallButton()]
         super.viewDidLoad()
         helpButton?.isEnabled = false

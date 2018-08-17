@@ -10,10 +10,13 @@ import UIKit
 import DropDown
 import SkyFloatingLabelTextField
 import LabelSwitch
+import Contacts
+import ContactsUI
 
 
 
-class AddSuggestionViewController: UIViewController {
+
+class AddSuggestionViewController: UIViewController, CNContactPickerDelegate {
     
     enum AddSuggestionUIType : Int{
         case subCategory
@@ -84,6 +87,8 @@ class AddSuggestionViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var lblSelectedCategory: UILabel!
+    private var locationId : Int?
+    private var selectedMicroCategoryName : String?
     
     private var tabController : TabbarController?
     
@@ -103,10 +108,12 @@ class AddSuggestionViewController: UIViewController {
         
         self.sectionView.backgroundColor = Theme.grey
         self.emptyStateLabel.text = "Loading categories..."
-        self.addButton.isEnabled = false
+//        self.addButton.isEnabled = false
         DropDown.startListeningToKeyboard()
         
         self.scrollView.isHidden = true
+        isLocal.delegate = self
+        isAChain.delegate = self
         
         tabController?.showThemedLoader(true)
         interactor.getCategories { [weak self] categories in
@@ -149,11 +156,16 @@ class AddSuggestionViewController: UIViewController {
                     }
                     sender.isSectionSelected = true
                     self.previousSelectedSection = sender
-                    self.configureForm(isMicroCatAvailable: false)
+                    
                     self.scrollView.isHidden = false
                     return
             }
             
+//            if tag == 0 {
+//                self.configureForm(isMicroCatAvailable: false)
+//            }else{
+//                self.configureForm(isMicroCatAvailable: true)
+//            }
             let dropDown = DropDown()
             dropDown.dataSource = subcats.map{ $0.name ?? "" }
             dropDown.shadowRadius = 1
@@ -175,24 +187,72 @@ class AddSuggestionViewController: UIViewController {
                 if let previousSelected = strongSelf.previousSelectedSection{
                     previousSelected.isSectionSelected = false
                 }
+                strongSelf.isLocal.curState = (selectedSubCat.isLocal)! == true ? .L : .R
                 sender.isSectionSelected = true
                 strongSelf.previousSelectedSection = sender
                 strongSelf.scrollView.isHidden = false
-                if let isMicroCategoryAvailable = selectedCategory.isMicroCategoryAvailable, isMicroCategoryAvailable {
-                    let selectedSubCat = subcats[index]
-                    if let subCatId = selectedSubCat.subCatId {
+//                if let isMicroCategoryAvailable = selectedCategory.isMicroCategoryAvailable, isMicroCategoryAvailable {
+//                    let selectedSubCat = subcats[index]
+                    if let subCatId = selectedSubCat.subCatId{
                         // get micro categories for selected subcategory.
                         strongSelf.tabController?.showThemedLoader(true)
                         strongSelf.interactor.getMicroCategoriesFor(subcategoryId: subCatId, completion: { (microCategories) in
                             strongSelf.tabController?.showThemedLoader(false)
                             strongSelf.microCategories = microCategories
-                            strongSelf.configureForm(isMicroCatAvailable: true)
+                            if let microCategories = microCategories, microCategories.count > 0{
+                                strongSelf.configureForm(isMicroCatAvailable: true)
+                            }else{
+                                strongSelf.configureForm(isMicroCatAvailable: false)
+                            }
                         })
                     }
-                }else{
-                    strongSelf.configureForm(isMicroCatAvailable: false)
-                }
             }
+            
+        }
+    }
+    @IBAction func addSuggestion(_ sender: Any) {
+        
+        guard name.isValid() && (details.text.count > 5) else {
+            
+            return
+        }
+        
+        var postParam =  [String:Any]()
+        if let contactID = APIGateway.shared.loginData?.loginDetail?.contactId{
+            postParam["contactId"] = contactID
+            postParam["sourceId"] = contactID
+        }
+        if let catId = selectedCategory?.catId {
+            postParam["catId"] = catId
+        }
+        
+        if let subCategoryId = selectedSubCategory?.subCatId{
+            postParam["subCategoryId"] = subCategoryId
+        }
+        if let microCategory = selectedMicroCategoryName{
+            postParam["microcategory"] = microCategory
+        }
+        
+        postParam["businessName"] = name.textField.text
+        if let local = selectedSubCategory?.isLocal{
+            postParam["citiLevelBusiness"] = local == true ? "true" : "false"
+        }
+//         = )! == true ? "true" : "false"
+        postParam["businessContact"] = contact.textField.text
+        postParam["location"] = location.textField.text
+        postParam["comments"] = details.text
+        postParam["isAChain"] = isAChain.curState == .L ? "true" : "false"
+        postParam["platForm"] = "1"
+        postParam["city"] = "1"
+//        postParam["usedTagSuggetion"] = "false"
+//        postParam["requestID"] = "1"
+        if let locID = locationId{
+            postParam["locationId"] = "\(locID)"
+        }
+        
+        postParam["areaShortCode"] = "HAR"
+        
+        interactor.postSuggestion(forparams: postParam) { (success) in
             
         }
     }
@@ -201,6 +261,44 @@ class AddSuggestionViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func addContact(_ sender: UIButton) {
+        let contactsPicker = CNContactPickerViewController()
+        contactsPicker.isEditing = true
+        
+        contactsPicker.delegate = self
+        self.present(contactsPicker, animated: true, completion: nil)
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        let fetchName = contact.givenName
+        _ = contact.phoneNumbers
+        var phoneNo = ""
+        for number in contact.phoneNumbers{
+            if contact.givenName.count > 0 && number.value.stringValue.count > 8{
+                var numString = number.value.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+                // print("\(numString) - \(numString.letterize().count)")
+                numString = numString.replacingOccurrences(of: "(", with: "")
+                numString = numString.replacingOccurrences(of: ")", with: "")
+                numString = numString.replacingOccurrences(of: "-", with: "")
+                numString = numString.replacingOccurrences(of: " ", with: "")
+                numString = numString.replacingOccurrences(of: "\u{00a0}", with: "")
+                
+                //print("\(numString) - \(numString.letterize().count)")
+                phoneNo = numString
+                
+                print("contact details are \(contact.givenName) \(numString) ")
+                break
+            }
+        }
+        
+        
+        self.contact.textField.text = phoneNo
+        
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contactProperty: CNContactProperty) {
+        
     }
 }
 
@@ -238,8 +336,13 @@ extension AddSuggestionViewController{
 extension AddSuggestionViewController{
     
     func validateAllMandatoryFields() {
-        let isValidForm = name.isValid() && contact.isValid() && microCat1.isValid() && (details != nil)
-        self.addButton.isEnabled = true
+        let isValidForm = name.isValid() && contact.isValid() && microCat1.isValid() && (details.text.count > 5)
+        if isValidForm {
+            self.addButton.isEnabled = true
+        }else{
+            self.addButton.isEnabled = false
+        }
+        
     }
     
     func configureForm(isMicroCatAvailable: Bool){
@@ -256,6 +359,7 @@ extension AddSuggestionViewController{
             microCat2.textField.tag = 1001
             microCat1.textField.isEnabled = false
             microCat2.hookDropdown(placeHolder: "Subcategory *", dataSource: microCategories.map({ (microCategory) -> String in
+                self.selectedMicroCategoryName = microCategory.name
                 if let name = microCategory.name{
                     return name.replacingOccurrences(of: " © ", with: "~")
                 }
@@ -291,7 +395,13 @@ extension AddSuggestionViewController{
         details.delegate = self
         details.contentInset = UIEdgeInsets.init(top: 5, left: 8, bottom: 5, right: 8)
         details.titleFont = Theme.avenirTitle!
-        location.placeholder = "Location (Mumbai only) *"
+        location.placeholder = "Location *"
+
+//        print( isLocal.curState.hashValue)
+//        isLocal.curState = .L
+//        print( isLocal.curState.hashValue)
+//        isLocal.curState = .R
+//        print( isLocal.curState.hashValue)
         location.isMandatory = true
         location.textField.delegate = self
         
@@ -316,6 +426,7 @@ extension AddSuggestionViewController : UITextFieldDelegate, DropDownViewTextDel
     
     func dropDownTextFieldDidEndEditing(_ textField: UITextField) {
         scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+//        validateAllMandatoryFields()
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -326,15 +437,16 @@ extension AddSuggestionViewController : UITextFieldDelegate, DropDownViewTextDel
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let query = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
-        
-        if query.trimmingCharacters(in: .whitespaces) != ""{
-            locationInteractor.fetchLocationFromQuery(query) { [weak self] (locations) in
-                guard let strongSelf = self else{ return }
-                strongSelf.locations = locations
+        if textField == location.textField{
+            let query = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
+            
+            if query.trimmingCharacters(in: .whitespaces) != ""{
+                locationInteractor.fetchLocationFromQuery(query) { [weak self] (locations) in
+                    guard let strongSelf = self else{ return }
+                    strongSelf.locations = locations
+                }
             }
         }
-        
         return true
     }
     
@@ -358,6 +470,7 @@ extension AddSuggestionViewController : UITextFieldDelegate, DropDownViewTextDel
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        
     }
     
     // TextView
@@ -367,6 +480,7 @@ extension AddSuggestionViewController : UITextFieldDelegate, DropDownViewTextDel
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
+        
         scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
     }
 }
@@ -395,8 +509,11 @@ extension AddSuggestionViewController {
         guard let locations = locations else { return }
         if location.textField.text?.trimmingCharacters(in: .whitespaces) != ""{
             dropDown.dataSource = locations.map({ (location) in
-                if let name = location.locSuburb {
-                    return name
+                if let name = location.locationName, let suburb = location.suburb{
+                    if name.count > 0 {
+                        return "\(name) - \(suburb)"
+                    }
+                    return "\(suburb)"
                 }
                 return ""
             })
@@ -410,9 +527,18 @@ extension AddSuggestionViewController {
             }
             let selectedLocation = locations[index]
             strongSelf.location.textField.text = selectedLocation.locSuburb
+            strongSelf.locationId = selectedLocation.locationId
         }
         
         dropDown.show()
     }
+    
+}
+
+extension AddSuggestionViewController : LabelSwitchDelegate{
+    func switchChangeToState(_ state: SwitchState, control: LabelSwitch) {
+        
+    }
+    
     
 }

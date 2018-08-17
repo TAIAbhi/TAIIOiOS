@@ -35,4 +35,16 @@ class LoginRouter {
             }, completion: nil)
         }
     }
+    
+    func navigateToIntroView(){
+        self.loginController?.navigationController?.pushViewController(IntroViewController.introViewController(), animated: true)
+    }
+    func navigateToLandingView(){
+        if let window = UIApplication.shared.keyWindow {
+            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromRight, animations: {
+                window.rootViewController = LandingViewController.landingViewController()
+            }, completion: nil)
+        }
+    }
+        
 }
