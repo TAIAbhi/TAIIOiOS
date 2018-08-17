@@ -421,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBK-NA-kLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1151.2" y="731.5270935960591"/>
+            <point key="canvasLocation" x="-2536" y="620"/>
         </scene>
         <!--Suggestions Filter View Controller-->
         <scene sceneID="4vd-FM-5tB">
@@ -1373,7 +1373,7 @@
                                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="lText" value="Local"/>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="rText" value="Pan"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="rText" value="City"/>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                                 <real key="value" value="14"/>
                                                             </userDefinedRuntimeAttribute>
@@ -1400,6 +1400,14 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="TextFieldView"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-Wj-aCO">
+                                                <rect key="frame" x="368" y="230" width="30" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="addContact:" destination="bVi-6m-iNx" eventType="touchUpInside" id="3rX-a8-0iy"/>
+                                                </connections>
+                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOI-pb-Zcy" customClass="DropDownView" customModule="Tagabout" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="277" width="354" height="52"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1467,6 +1475,9 @@
                                                 <state key="normal" title="ADD SUGGGESTION">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addSuggestion:" destination="bVi-6m-iNx" eventType="touchUpInside" id="upk-Zp-h8p"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1474,6 +1485,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Fki-xK-4j2" secondAttribute="trailing" constant="30" id="13T-cS-Bk6"/>
                                             <constraint firstItem="u35-wZ-fqJ" firstAttribute="leading" secondItem="1yJ-Od-XqI" secondAttribute="leading" constant="30" id="2rA-bl-iDf"/>
                                             <constraint firstItem="BSC-Kc-wui" firstAttribute="leading" secondItem="1yJ-Od-XqI" secondAttribute="leading" constant="30" id="30T-PO-PMv"/>
+                                            <constraint firstAttribute="trailing" secondItem="S4A-Wj-aCO" secondAttribute="trailing" constant="16" id="4Og-cd-zIY"/>
                                             <constraint firstItem="QQU-IB-V3B" firstAttribute="leading" secondItem="1yJ-Od-XqI" secondAttribute="leading" constant="30" id="5ft-cG-LUY"/>
                                             <constraint firstItem="oXW-lY-YvA" firstAttribute="leading" secondItem="1yJ-Od-XqI" secondAttribute="leading" constant="30" id="6ph-NP-clZ"/>
                                             <constraint firstItem="Fki-xK-4j2" firstAttribute="top" secondItem="7S7-Xl-fmR" secondAttribute="bottom" id="8Mw-wJ-SuM"/>
@@ -1490,6 +1502,7 @@
                                             <constraint firstAttribute="trailing" secondItem="QQU-IB-V3B" secondAttribute="trailing" constant="30" id="YX7-zY-Skp"/>
                                             <constraint firstItem="xlx-9h-iG5" firstAttribute="top" secondItem="1yJ-Od-XqI" secondAttribute="top" constant="10" id="apn-AF-6zO"/>
                                             <constraint firstAttribute="trailing" secondItem="HOI-pb-Zcy" secondAttribute="trailing" constant="30" id="b8h-Ye-7CG"/>
+                                            <constraint firstItem="S4A-Wj-aCO" firstAttribute="centerY" secondItem="BSC-Kc-wui" secondAttribute="centerY" id="gyQ-5F-ct7"/>
                                             <constraint firstItem="HOI-pb-Zcy" firstAttribute="leading" secondItem="1yJ-Od-XqI" secondAttribute="leading" constant="30" id="kkL-z8-IBU"/>
                                             <constraint firstItem="50Q-zd-hVN" firstAttribute="top" secondItem="QQU-IB-V3B" secondAttribute="bottom" constant="20" id="mW4-TU-GQF"/>
                                             <constraint firstItem="oXW-lY-YvA" firstAttribute="top" secondItem="HOI-pb-Zcy" secondAttribute="bottom" id="miH-48-1yP"/>
@@ -1557,7 +1570,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RdX-g6-2Ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1151" y="-569"/>
+            <point key="canvasLocation" x="-1152.1739130434783" y="-569.02173913043487"/>
         </scene>
         <!--Add Suggestion-->
         <scene sceneID="fJz-ay-jK4">

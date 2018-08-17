@@ -13,7 +13,7 @@ struct Category: Codable {
     var name : String?
     var isMicroCategoryAvailable : Bool?
     var subCategories: [Subcategory]?
-    var isLocal : Bool?
+    var isLocal : Int?
     
 }
 
@@ -23,6 +23,7 @@ struct Subcategory: Codable {
     var name : String?
     var microCategoryToolTip : String?
     var commentsToolTip : String?
+    var isLocal : Bool?
     
 }
 

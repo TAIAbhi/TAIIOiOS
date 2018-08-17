@@ -13,6 +13,10 @@ struct AddSuggestionInteractor{
     func getCategories(completion: (([Category]?)->())?){
         let categoriesURL = API.getURL(to: "categories")
         let request = URLRequest.init(url: categoriesURL)
+//        api/categories/{isRequest=isRequest}/{cityId=cityId}/{areaShortCode=areaShortCode}/{location=location}
+//        let param = ["isRequest"]
+        
+        
         let _ : URLSessionTask? = APIManager.doGet(request: request, completion: { (response) in
             if let json = response, let action = json["action"] as? String, action == "success", let data = json["data"] as? [[String : Any]] {
                 // save auth token to gateway for future use.
@@ -23,7 +27,9 @@ struct AddSuggestionInteractor{
                         let data = try JSONSerialization.data(withJSONObject: d, options: .prettyPrinted)
                         let cat = try decoder.decode(Category.self, from: data)
                         allCategories.append(cat)
-                    } catch { }
+                    } catch {
+                        print("Error in Categories")
+                    }
                 }
                 if let completion = completion{ completion(allCategories) }
             }else{
@@ -72,4 +78,35 @@ struct AddSuggestionInteractor{
             print("error suggestion")
         }
     }
+    
+    
+    func postSuggestion(forparams params:[String:Any], completion: ((Bool)->())?){
+        
+        
+        let microCategoriesURL = API.getURL(to: "suggestion")
+        let request = URLRequest.init(url: microCategoriesURL)
+        let _ : URLSessionTask? = APIManager.doPost(request: request, body: params, completion: { (response) in
+            if let json = response, let action = json["action"] as? String, action == "success", let data = json["data"] as? [[String : Any]] {
+                // save auth token to gateway for future use.
+                var allMicroCategories : [MicroCategory] = [MicroCategory]()
+                let decoder = JSONDecoder()
+                for d in data {
+                    do {
+                        let data = try JSONSerialization.data(withJSONObject: d, options: .prettyPrinted)
+                        let microCat = try decoder.decode(MicroCategory.self, from: data)
+                        allMicroCategories.append(microCat)
+                    } catch { }
+                }
+                if let completion = completion{ completion(true)}
+            }else{
+                if let completion = completion{ completion(false) }
+            }
+        }) { (error) in
+            print("Error getting micro categories \(error.localizedDescription)")
+            if let completion = completion{ completion(true) }
+        }
+    }
+    
 }
+
+
