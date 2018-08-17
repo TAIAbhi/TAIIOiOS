@@ -253,7 +253,11 @@ class AddSuggestionViewController: UIViewController, CNContactPickerDelegate {
         postParam["areaShortCode"] = "HAR"
         
         interactor.postSuggestion(forparams: postParam) { (success) in
-            
+            let alert = UIAlertController(title: "Success", message: "Added Suggestion Succesfully", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                self.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     @IBAction func addLocation(_ sender: UIButton) {
