@@ -13,6 +13,8 @@ class SuggestionListTableViewDataSource: NSObject, UITableViewDataSource {
     
     private var suggestions: [Suggestion]?
     
+    var editHandler:((Suggestion) -> ())!
+    
     func setData(_ data: [Suggestion]) {
         suggestions = data
     }
@@ -29,7 +31,11 @@ class SuggestionListTableViewDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SuggestionCell") as? SuggestionListTableViewCell
         
         cell?.suggestion = suggestions?[indexPath.row]
-        
+        cell?.editHandler = { suggestion in
+            if self.editHandler != nil {
+                self.editHandler(suggestion)
+            }
+        }
         return cell!
     }
     

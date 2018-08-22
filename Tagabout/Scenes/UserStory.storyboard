@@ -371,8 +371,19 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gt-ob-OhO">
+                                                    <rect key="frame" x="374" y="8" width="32" height="34"/>
+                                                    <state key="normal" title="Edit">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="editAction:" destination="icb-Ns-6DQ" eventType="touchUpInside" id="CNy-kQ-gZ5"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="6gt-ob-OhO" secondAttribute="trailing" constant="8" id="4qH-nS-wIO"/>
+                                                <constraint firstItem="6gt-ob-OhO" firstAttribute="top" secondItem="oLX-Ld-57o" secondAttribute="top" constant="8" id="52C-FK-H8O"/>
                                                 <constraint firstItem="QO0-ks-yxa" firstAttribute="leading" secondItem="bwA-9M-aM9" secondAttribute="leading" id="7XI-wo-RjY"/>
                                                 <constraint firstItem="02O-BO-jji" firstAttribute="leading" secondItem="MXe-cb-7gm" secondAttribute="leading" id="ICU-Ft-U0N"/>
                                                 <constraint firstItem="MXe-cb-7gm" firstAttribute="top" secondItem="oLX-Ld-57o" secondAttribute="top" constant="8" id="J12-l5-dj7"/>
@@ -387,6 +398,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentsLabel" destination="QO0-ks-yxa" id="7U3-mk-uGy"/>
+                                            <outlet property="editbutton" destination="6gt-ob-OhO" id="4it-8y-UwT"/>
                                             <outlet property="locationLabel" destination="02O-BO-jji" id="QPf-ec-vF4"/>
                                             <outlet property="phoneNumberLabel" destination="bwA-9M-aM9" id="ZvP-3f-PzB"/>
                                             <outlet property="titleLabel" destination="MXe-cb-7gm" id="E3z-sN-hif"/>
