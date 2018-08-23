@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="height" constant="45" id="ZvJ-cN-hY8"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-dS-GUJ">
+                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-dS-GUJ">
                                 <rect key="frame" x="147.5" y="136" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.6470588235294118" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -84,7 +84,7 @@
                                     <action selector="hangoutaction:" destination="Ryg-Yh-mxd" eventType="touchUpInside" id="EpA-4W-Db4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVj-ZO-hJq">
+                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVj-ZO-hJq">
                                 <rect key="frame" x="271.5" y="251" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.37647058823529411" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -104,7 +104,7 @@
                                     <action selector="actionShopping:" destination="Ryg-Yh-mxd" eventType="touchUpInside" id="f3T-rR-blZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKe-9B-1Ma">
+                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKe-9B-1Ma">
                                 <rect key="frame" x="24.5" y="251" width="80" height="80"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.22352941176470587" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>

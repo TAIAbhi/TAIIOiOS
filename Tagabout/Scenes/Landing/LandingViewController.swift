@@ -44,7 +44,8 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     private lazy var landingInteractor = LandingInteractor()
     var dismissView:((SuggestionFilter,[CategoryCountData],[CategoryCountData],[CategoryCountData]) ->())!
     var myDetailsHandler:(() ->())!
-    
+    var downDismisHandler:((SuggestionFilter,[CategoryCountData],[CategoryCountData],[CategoryCountData]) ->())!
+    var rightDismissHandler:((Int) -> ())!
     
     static func landingViewController() -> LandingViewController{
         return  LandingViewController.instantiate(fromAppStoryboard: .LandingScene)
@@ -106,9 +107,17 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
         hangoutCount.isHidden = hangoutDatasource.count < 0
         servicesCount.isHidden = servicesDatasource.count < 0
         shoppingCOunt.isHidden = shoppingDatasource.count < 0
-        hangoutCount.text = "\(hangoutDatasource.count)"
-        servicesCount.text = "\(servicesDatasource.count)"
-        shoppingCOunt.text = "\(shoppingDatasource.count)"
+        if let hangoutItem = hangoutDatasource.filter({ $0.categoryName == "0"}).first, let count = hangoutItem.suggCount{
+            hangoutCount.text = "\(count)"
+        }
+        
+        if let serviceItem = servicesDatasource.filter({ $0.categoryName == "0"}).first, let count = serviceItem.suggCount{
+            servicesCount.text = "\(count)"
+        }
+        if let shoppingItem = shoppingDatasource.filter({ $0.categoryName == "0"}).first, let count = shoppingItem.suggCount{
+            shoppingCOunt.text = "\(count)"
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -231,45 +240,73 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     @objc func hangoutSwipeGesture(_ sender: UISwipeGestureRecognizer) {
         self.userSwipe(forGesture: sender, button: hangoutButton, datasource: hangoutDatasource)
     }
+    @objc func shoppingSwipeGesture(_ sender: UISwipeGestureRecognizer) {
+        self.userSwipe(forGesture: sender, button: shoppingButton, datasource: shoppingDatasource)
+    }
+    @objc func serviceSwipeGesture(_ sender: UISwipeGestureRecognizer) {
+        self.userSwipe(forGesture: sender, button: serviceButton, datasource: servicesDatasource)
+    }
     
     func userSwipe(forGesture sender:UISwipeGestureRecognizer, button:UIButton,datasource:[CategoryCountData]){
         var dropDownDatasource = [String]()
-        let dropDown = DropDown()
-        
-        switch sender.direction {
-        case UISwipeGestureRecognizerDirection.down:
-            dropDownDatasource.append("All")
-            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
-            break
-        case UISwipeGestureRecognizerDirection.left:
-            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
-            break
-        case UISwipeGestureRecognizerDirection.right:
-            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
-            break
-        case UISwipeGestureRecognizerDirection.up:
-            dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! + "(\($0.suggCount!))" }))
-            break
-        default: break
+        if  sender.direction == UISwipeGestureRecognizerDirection.right{
+            if self.rightDismissHandler != nil, let cityId = self.currentCity?.cityId {
+                self.rightDismissHandler(cityId)
+            }
+            self.dismiss(animated: true, completion: nil)
+            return
         }
+        
+        let dropDown = DropDown()
+        dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! == "0" ? "All" + " (\($0.suggCount!))" : $0.categoryName! + " (\($0.suggCount!))"}))
+        
         dropDown.dataSource = dropDownDatasource
         dropDown.shadowRadius = 1
         dropDown.shadowOpacity = 0.2
         dropDown.bottomOffset = CGPoint(x: 0, y:(button.bounds.size.height + 5))
         dropDown.dismissMode = .automatic
-        dropDown.show()
+        
         dropDown.anchorView = button
+        
+        
+        dropDown.show()
         dropDown.selectionAction = { index, ddText in
-//            Selected City and Subarea, categoryId, SubCategoryId
+            switch sender.direction {
+            case UISwipeGestureRecognizerDirection.down:
+                
+                if self.downDismisHandler != nil {
+                    var filter =  self.suggestionFilter(button.tag)
+                    let selectedCategories = datasource[index]
+                    filter.catId = selectedCategories.catId
+                    filter.subCatId = selectedCategories.subCatId
+                    filter.pageNumber = 1
+                    filter.isLocal = selectedCategories.isLocal
+                    self.downDismisHandler(filter,self.hangoutDatasource,self.servicesDatasource,self.shoppingDatasource)
+                }
+                self.dismiss(animated: true, completion: nil)
+                break
+            case UISwipeGestureRecognizerDirection.left:
+                
+                break
+            case UISwipeGestureRecognizerDirection.right:
+                if self.rightDismissHandler != nil, let cityId = self.currentCity?.cityId {
+                    self.rightDismissHandler(cityId)
+                }
+                self.dismiss(animated: true, completion: nil)
+                break
+            case UISwipeGestureRecognizerDirection.up:
+                
+                break
+            default: break
+            }
         }
+        
+        
+        
+        
     }
     
-    @objc func shoppingSwipeGesture(_ sender: UISwipeGestureRecognizer) {
-       self.userSwipe(forGesture: sender, button: shoppingButton, datasource: shoppingDatasource)
-    }
-    @objc func serviceSwipeGesture(_ sender: UISwipeGestureRecognizer) {
-        self.userSwipe(forGesture: sender, button: serviceButton, datasource: servicesDatasource)
-    }
+    
     
     func addSwipe(_ sender:UIButton) {
         let directions: [UISwipeGestureRecognizerDirection] = [.right, .left, .up, .down]
@@ -290,7 +327,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     
     @IBAction func hangoutaction(_ sender: UIButton) {
         if dismissView != nil {
-            dismissView(suggestionFilter(1),hangoutDatasource,servicesDatasource,shoppingDatasource)
+//            dismissView(suggestionFilter(1),hangoutDatasource,servicesDatasource,shoppingDatasource)
         }
         dismiss(animated: true) {
             
@@ -299,7 +336,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     
     @IBAction func actionService(_ sender: UIButton) {
         if dismissView != nil {
-            dismissView(suggestionFilter(2),hangoutDatasource,servicesDatasource,shoppingDatasource)
+//            dismissView(suggestionFilter(2),hangoutDatasource,servicesDatasource,shoppingDatasource)
         }
         dismiss(animated: true) {
             
@@ -307,8 +344,8 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     }
     @IBAction func actionShopping(_ sender: UIButton) {
         if dismissView != nil {
-            dismissView(suggestionFilter(3),hangoutDatasource,servicesDatasource,shoppingDatasource)
-        }        
+//            dismissView(suggestionFilter(3),hangoutDatasource,servicesDatasource,shoppingDatasource)
+        }
         dismiss(animated: true) {
             
         }
