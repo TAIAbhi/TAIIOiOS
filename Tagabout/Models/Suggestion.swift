@@ -40,5 +40,9 @@ struct Location : Codable {
     var locSuburb: String?
 }
 
-
+struct PageInfo:Codable {
+    var noOfRecord : Int?
+    var pageNumber : Int?
+    var pageSize : Int?
+}
 

@@ -14,21 +14,35 @@ import DropDown
 class TabbarController : UITabBarController{
     
     
-    static func tabBarController(withSelectedIndex index:Int) -> TabbarController{
+    static func tabBarController(withSelectedIndex index:Int, city:City, bindfilter:BindFilter, filter:SuggestionFilter) -> TabbarController{
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
         let tabVC = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as! TabbarController
         tabVC.selectedIndex = index
+        tabVC.currentCity = city
+        tabVC.currentBindFilter = bindfilter
+        tabVC.currentFilter = filter
         return tabVC
     }
     
+    static func navTabBarController() -> UINavigationController{
+        let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
+        return storyBoard.instantiateViewController(withIdentifier: "parentNavigation") as! UINavigationController
+        
+    }
     
     var helpBarList: [Help]?
     var helpButton : UIButton?
+    var currentCity : City!
+    var currentBindFilter:BindFilter!
+    var currentFilter:SuggestionFilter!
+    var landingViewController = LandingViewController.landingViewController()
+    
+    
     private var helpDropDown : DropDown?
     public var themedLoader : LoadingInteractor?
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.setupLogo()        
+        self.navigationItem.leftBarButtonItem = setupLogo()
         self.navigationItem.rightBarButtonItems = [getnotificationButton(), getCallButton()]
         super.viewDidLoad()
         helpButton?.isEnabled = false
@@ -37,6 +51,12 @@ class TabbarController : UITabBarController{
             strongSelf.helpBarList = helpArray
             strongSelf.helpButton?.isEnabled = true
         }
+        
+        self.present(UINavigationController(rootViewController: landingViewController), animated: true) {
+            
+        }
+        
+        
     }
     
     @objc func barButtonClicked(sender: UIButton){
@@ -88,6 +108,21 @@ class TabbarController : UITabBarController{
             }
         }
         helpDropDown?.show()
+    }
+    
+    func setupLogo() -> UIBarButtonItem{
+        let button = UIButton.init(type: .custom)
+        button.setImage(#imageLiteral(resourceName: "head_blue"), for: UIControlState.normal)
+        button.addTarget(self, action:#selector(logoButtonTapped(_:)), for:.touchUpInside)
+        button.frame = CGRect.init(x: 0, y: 0, width: 184, height: 44) //CGRectMake(0, 0, 30, 30)
+        let barButton = UIBarButtonItem.init(customView: button)
+        return barButton
+    }
+    
+    @objc func logoButtonTapped(_ sender:UIButton){
+        self.present(UINavigationController(rootViewController: landingViewController), animated: true) {
+            
+        }
     }
     
     func openHelpScenes(for index: Int){

@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var logoTappedHandler:(() -> ())!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,8 +32,24 @@ class ViewController: UIViewController {
     }
 
     func setupNavigationBar(){
-        self.navigationController?.navigationBar.setupLogo()
+        self.navigationItem.leftBarButtonItem = setupLogo()
         self.navigationItem.rightBarButtonItems = [getnotificationButton(), getCallButton()]
+    }
+    
+    
+    func setupLogo() -> UIBarButtonItem{
+        let button = UIButton.init(type: .custom)
+        button.setImage(#imageLiteral(resourceName: "head_blue"), for: UIControlState.normal)
+        button.addTarget(self, action:#selector(logoButtonTapped(_:)), for:.touchUpInside)
+        button.frame = CGRect.init(x: 0, y: 0, width: 184, height: 44) //CGRectMake(0, 0, 30, 30)
+        let barButton = UIBarButtonItem.init(customView: button)
+        return barButton
+    }
+    
+    @objc func logoButtonTapped(_ sender:UIButton){
+        if logoTappedHandler != nil {
+            logoTappedHandler!()
+        }
     }
     
     func getCallButton() -> UIBarButtonItem{
@@ -43,7 +60,6 @@ class ViewController: UIViewController {
         button.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30) //CGRectMake(0, 0, 30, 30)
         let barButton = UIBarButtonItem.init(customView: button)
         return barButton
-        
     }
     func getnotificationButton() -> UIBarButtonItem{
         let button = TAIAction.init(type: .custom)

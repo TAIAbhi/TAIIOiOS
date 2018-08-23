@@ -42,12 +42,14 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     var locationManager: CLLocationManager = CLLocationManager()
     private lazy var landingRouter = LandingRouter(with: self)
     private lazy var landingInteractor = LandingInteractor()
-
+    var dismissView:((SuggestionFilter,[CategoryCountData],[CategoryCountData],[CategoryCountData]) ->())!
+    var myDetailsHandler:(() ->())!
     
     
-    static func landingViewController() -> UINavigationController{
-        return UINavigationController(rootViewController: LandingViewController.instantiate(fromAppStoryboard: .LandingScene))
+    static func landingViewController() -> LandingViewController{
+        return  LandingViewController.instantiate(fromAppStoryboard: .LandingScene)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +58,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
         
         
         self.setupNavigationBar()
+        
         self.addSwipe(shoppingButton)
         self.addSwipe(hangoutButton)
         self.addSwipe(serviceButton)
@@ -87,7 +90,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     
     
     func fetchCategories(forbindFilter bindFilter:BindFilter?, city:City){
-        
+        currentBindFilter = bindFilter
         self.landingInteractor.fetchSectionsCategoryWithCount(forBindFilter: bindFilter, forCity: city) { (success) in
             self.categoryCountDatasource = success
             self.hangoutDatasource = self.categoryCountDatasource.filter( {$0.catId!  == 1})
@@ -286,17 +289,46 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     }
     
     @IBAction func hangoutaction(_ sender: UIButton) {
-        landingRouter.navigateToTabbar()
+        if dismissView != nil {
+            dismissView(suggestionFilter(1),hangoutDatasource,servicesDatasource,shoppingDatasource)
+        }
+        dismiss(animated: true) {
+            
+        }
     }
     
     @IBAction func actionService(_ sender: UIButton) {
-        landingRouter.navigateToTabbar()
+        if dismissView != nil {
+            dismissView(suggestionFilter(2),hangoutDatasource,servicesDatasource,shoppingDatasource)
+        }
+        dismiss(animated: true) {
+            
+        }
     }
     @IBAction func actionShopping(_ sender: UIButton) {
-        landingRouter.navigateToTabbar()
+        if dismissView != nil {
+            dismissView(suggestionFilter(3),hangoutDatasource,servicesDatasource,shoppingDatasource)
+        }        
+        dismiss(animated: true) {
+            
+        }
     }
     @IBAction func mydetailsClicked(_ sender: UIButton) {
-        landingRouter.navigateToTabbarMydetails()
+        if myDetailsHandler != nil {
+            myDetailsHandler()
+        }
+        
     }
+    
+    func suggestionFilter(_ catId:Int) -> SuggestionFilter{
+        var filter = SuggestionFilter()
+        filter.catId = catId
+        filter.cityId = currentCity?.cityId
+        filter.areaShortCode = currentBindFilter?.ddValue
+        filter.contactId = APIGateway.shared.loginData?.loginDetail?.contactId
+        return filter
+    }
+    
+    
     
 }

@@ -20,4 +20,8 @@ struct SuggestionListRouter {
     func presentFilters() {
         viewController?.performSegue(withIdentifier: "SuggestionListToFilterSuggestion", sender: nil)
     }
+    
+    func selectTabBar(){
+        viewController?.tabBarController?.selectedIndex = 1
+    }
 }

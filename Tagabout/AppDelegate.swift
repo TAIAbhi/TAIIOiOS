@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let _ = APIGateway.shared.authToken{
             GeneralUtils.addCrashlyticsUser()
-            window?.rootViewController =  LandingViewController.landingViewController()
+            window?.rootViewController =  TabbarController.navTabBarController()
 //            window?.makeKeyAndVisible()
         } else {
             if let vc :LoginViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {

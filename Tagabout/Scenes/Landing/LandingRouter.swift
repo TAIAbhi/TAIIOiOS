@@ -17,13 +17,13 @@ class LandingRouter{
         self.landingViewController = landingViewController
     }
     
-    func navigateToTabbar(){
-        self.landingViewController.navigationController?.pushViewController(TabbarController.tabBarController(withSelectedIndex: 0), animated: true)
+    func navigateToTabbar(_ city:City, bindFilter:BindFilter, filter:SuggestionFilter){
+        self.landingViewController.navigationController?.pushViewController(TabbarController.tabBarController(withSelectedIndex: 0, city: city, bindfilter: bindFilter, filter: filter), animated: true)
         
     }
     
-    func navigateToTabbarMydetails(){
-        self.landingViewController.navigationController?.pushViewController(TabbarController.tabBarController(withSelectedIndex: 2), animated: true)
+    func navigateToTabbarMydetails(_ city:City, bindFilter:BindFilter, filter:SuggestionFilter){
+        self.landingViewController.navigationController?.pushViewController(TabbarController.tabBarController(withSelectedIndex: 2, city: city,bindfilter: bindFilter, filter: filter), animated: true)
     }
     
     func navigateToAddSuggestion(){
