@@ -117,6 +117,10 @@ class SuggestionListViewController: UIViewController {
                 })
             }
             
+            tabVC.landingViewController.leftDismissHandler = { cityId in
+                    self.router.showRequestSuggestion(forCityId: cityId)
+            }
+            
         }
         
         

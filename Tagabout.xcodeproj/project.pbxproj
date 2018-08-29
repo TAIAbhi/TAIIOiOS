@@ -26,6 +26,7 @@
 		7F4C529421138E030049B1B1 /* AppStoyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C529321138E030049B1B1 /* AppStoyboard.swift */; };
 		7F70BEE4211F1F4D001590A1 /* AddContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70BEE3211F1F4D001590A1 /* AddContactTableViewController.swift */; };
 		7F70BEE6211F2C75001590A1 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70BEE5211F2C75001590A1 /* ContactListTableViewController.swift */; };
+		7FC5B56E2135BD5B008E4AF4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC5B56D2135BD5A008E4AF4 /* WebViewController.swift */; };
 		7FF16A15211CBAB300B63E46 /* CategoryCountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF16A14211CBAB300B63E46 /* CategoryCountData.swift */; };
 		9E152CFF2073EC1200B57DA5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152CFE2073EC1100B57DA5 /* Theme.swift */; };
 		9E152D012077DB0100B57DA5 /* SuggestionsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */; };
@@ -111,6 +112,7 @@
 		7F4C529321138E030049B1B1 /* AppStoyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoyboard.swift; sourceTree = "<group>"; };
 		7F70BEE3211F1F4D001590A1 /* AddContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactTableViewController.swift; sourceTree = "<group>"; };
 		7F70BEE5211F2C75001590A1 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
+		7FC5B56D2135BD5A008E4AF4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7FF16A14211CBAB300B63E46 /* CategoryCountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCountData.swift; sourceTree = "<group>"; };
 		9E152CFE2073EC1100B57DA5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9E152D002077DB0100B57DA5 /* SuggestionsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsFilterViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,14 @@
 			path = AddContact;
 			sourceTree = "<group>";
 		};
+		7FC5B56C2135BD29008E4AF4 /* RequestSuggestion */ = {
+			isa = PBXGroup;
+			children = (
+				7FC5B56D2135BD5A008E4AF4 /* WebViewController.swift */,
+			);
+			path = RequestSuggestion;
+			sourceTree = "<group>";
+		};
 		80D00088B9F7ABFDEC651A39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		9EDB96D9204AC55400AA9082 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7FC5B56C2135BD29008E4AF4 /* RequestSuggestion */,
 				7F4C529021138D4F0049B1B1 /* IntroScreen */,
 				7F4C5287211384460049B1B1 /* Landing */,
 				9E5B93482066976E00696EB6 /* Add Location */,
@@ -710,6 +721,7 @@
 				9E5B934C206697B400696EB6 /* MyDetailsRouter.swift in Sources */,
 				9EDB96DD204AC5F100AA9082 /* LoginViewController.swift in Sources */,
 				F1D26E66204AA3C00049638F /* User.swift in Sources */,
+				7FC5B56E2135BD5B008E4AF4 /* WebViewController.swift in Sources */,
 				7F70BEE4211F1F4D001590A1 /* AddContactTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

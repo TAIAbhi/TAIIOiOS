@@ -46,6 +46,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     var myDetailsHandler:(() ->())!
     var downDismisHandler:((SuggestionFilter,[CategoryCountData],[CategoryCountData],[CategoryCountData]) ->())!
     var rightDismissHandler:((Int) -> ())!
+    var leftDismissHandler:((Int) -> ())!
     
     static func landingViewController() -> LandingViewController{
         return  LandingViewController.instantiate(fromAppStoryboard: .LandingScene)
@@ -256,6 +257,18 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
             self.dismiss(animated: true, completion: nil)
             return
         }
+        if  sender.direction == UISwipeGestureRecognizerDirection.left{
+            if self.leftDismissHandler != nil, let cityId = self.currentCity?.cityId {
+                self.leftDismissHandler(cityId)
+                
+            }
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
+        
+        
+        
+        
         
         let dropDown = DropDown()
         dropDownDatasource.append(contentsOf: datasource.map({$0.categoryName! == "0" ? "All" + " (\($0.suggCount!))" : $0.categoryName! + " (\($0.suggCount!))"}))
@@ -286,7 +299,10 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
                 self.dismiss(animated: true, completion: nil)
                 break
             case UISwipeGestureRecognizerDirection.left:
-                
+                if self.leftDismissHandler != nil, let cityId = self.currentCity?.cityId {
+                    self.leftDismissHandler(cityId)
+                }
+                self.dismiss(animated: true, completion: nil)
                 break
             case UISwipeGestureRecognizerDirection.right:
                 if self.rightDismissHandler != nil, let cityId = self.currentCity?.cityId {
