@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
                 }else{
                     // Show Landing
                     threadOnMain {
-                        strongSelf.loginRouter.navigateToLandingView()
+                        strongSelf.loginRouter.openTabbar()
                     }
                     
                 }

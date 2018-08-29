@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.102457"
+            timestampString = "557258546.60683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,7 +234,7 @@
                   moduleName = "Tagabout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/arunjangid/Arun/TAIIOiOS/Tagabout/Scenes/AddContact/AddContactTableViewController.swift"
-                  timestampString = "557172953.608264"
+                  timestampString = "557258546.942825"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "231"
@@ -249,7 +249,7 @@
                   moduleName = "Tagabout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/arunjangid/Arun/TAIIOiOS/Tagabout/Scenes/AddContact/AddContactTableViewController.swift"
-                  timestampString = "557172953.60987"
+                  timestampString = "557258546.9445961"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "232"
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.5915281"
+            timestampString = "557258546.60761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.592044"
+            timestampString = "557258546.607963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.592453"
+            timestampString = "557258546.608216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
@@ -330,28 +330,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.592798"
+            timestampString = "557258546.608471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
             landmarkName = "validateAllMandatoryFields()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.593133"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
-            landmarkName = "configureForm(isMicroCatAvailable:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -362,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.593455"
+            timestampString = "557258546.608698"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "402"
+            endingLineNumber = "402"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -378,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.593776"
+            timestampString = "557258546.608934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "483"
-            endingLineNumber = "483"
+            startingLineNumber = "546"
+            endingLineNumber = "546"
             landmarkName = "textViewDidBeginEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,27 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.594087"
+            timestampString = "557258546.60919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "414"
-            endingLineNumber = "414"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.59445"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "addSuggestion(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,27 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.59483"
+            timestampString = "557258546.609431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
-            landmarkName = "addSuggestion(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.595088"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "doCategorySelection(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -458,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.595412"
+            timestampString = "557258546.609668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "540"
-            endingLineNumber = "540"
+            startingLineNumber = "603"
+            endingLineNumber = "603"
             landmarkName = "AddSuggestionViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -538,7 +490,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListTableViewCell.swift"
-            timestampString = "556745533.188693"
+            timestampString = "557254654.8823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -550,15 +502,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
-            timestampString = "556656608.5963219"
+            timestampString = "557258546.6099581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "doCategorySelection(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -634,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.597724"
+            timestampString = "557258546.610281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "openSubCatPickerFor(_:withAnchor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -650,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.597792"
+            timestampString = "557258546.610343"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "openSubCatPickerFor(_:withAnchor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,11 +618,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.105858"
+            timestampString = "557258546.610399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "329"
-            endingLineNumber = "329"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
             landmarkName = "addSwipe(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -682,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.106833"
+            timestampString = "557258546.610677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "fetcCategories()"
             landmarkType = "7">
          </BreakpointContent>
@@ -698,11 +650,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.1076289"
+            timestampString = "557258546.6109101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "fetchCategoriesWithCount()"
             landmarkType = "7">
          </BreakpointContent>
@@ -714,11 +666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.108454"
+            timestampString = "557258546.611146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "fetchCategories(forbindFilter:city:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -730,7 +682,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/TabbarController.swift"
-            timestampString = "556660438.3196059"
+            timestampString = "557258546.611397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -746,7 +698,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/TabbarController.swift"
-            timestampString = "556660438.319667"
+            timestampString = "557258546.611441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -774,31 +726,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.599298"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.599376"
+            timestampString = "557258546.611521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "fetchSuggestions()"
             landmarkType = "7">
             <Locations>
@@ -874,11 +810,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.599466"
+            timestampString = "557258546.6116"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "fetchSuggestions()"
             landmarkType = "7">
          </BreakpointContent>
@@ -906,11 +842,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.599533"
+            timestampString = "557258546.611653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "fetchSuggestions()"
             landmarkType = "7">
          </BreakpointContent>
@@ -922,11 +858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.599611"
+            timestampString = "557258546.611694"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "fetchSuggestions()"
             landmarkType = "7">
          </BreakpointContent>
@@ -966,15 +902,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.109665"
+            timestampString = "557258546.61177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
             landmarkName = "userSwipe(forGesture:button:datasource:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1002,27 +938,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.600093"
+            timestampString = "557258546.612012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.600143"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "openSubCatPickerFor(_:withAnchor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1034,11 +954,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tagabout/Scenes/Suggestions List/SuggestionListViewController.swift"
-            timestampString = "557172880.60022"
+            timestampString = "557258546.612065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "299"
-            endingLineNumber = "299"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "openSubCatPickerFor(_:withAnchor:)"
             landmarkType = "7">
             <Locations>
@@ -1050,11 +970,11 @@
                   moduleName = "Tagabout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/arunjangid/Arun/TAIIOiOS/Tagabout/Scenes/Suggestions%20List/SuggestionListViewController.swift"
-                  timestampString = "557172953.676137"
+                  timestampString = "557258546.987944"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "299"
-                  endingLineNumber = "299"
+                  startingLineNumber = "315"
+                  endingLineNumber = "315"
                   offsetFromSymbolStart = "826">
                </Location>
                <Location
@@ -1065,12 +985,252 @@
                   moduleName = "Tagabout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/arunjangid/Arun/TAIIOiOS/Tagabout/Scenes/Suggestions%20List/SuggestionListViewController.swift"
-                  timestampString = "557172953.677736"
+                  timestampString = "557258546.9897521"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "299"
-                  endingLineNumber = "299"
+                  startingLineNumber = "315"
+                  endingLineNumber = "315"
                   offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
+            timestampString = "557258546.612106"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
+            timestampString = "557258546.612334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
+            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
+            timestampString = "557258546.612596"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
+            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
+            timestampString = "557258546.612837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
+            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
+            timestampString = "557258546.6131361"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
+            timestampString = "557258546.613462"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
+            timestampString = "557258546.613694"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258546.614053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258546.614459"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "doCategorySelection(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258546.614861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "doCategorySelection(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258546.6151741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "doCategorySelection(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258546.615414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "doCategorySelection(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258592.305917"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "doCategorySelectionFromLanding(sender:filter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tagabout.AddSuggestionViewController.doCategorySelectionFromLanding(sender: Tagabout.TAISection, filter: Tagabout.SuggestionFilter) -&gt; ()"
+                  moduleName = "Tagabout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunjangid/Arun/TAIIOiOS/Tagabout/Scenes/Add%20Suggestion/AddSuggestionViewController.swift"
+                  timestampString = "557258592.524941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "180"
+                  endingLineNumber = "180"
+                  offsetFromSymbolStart = "1237">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Tagabout.Subcategory) -&gt; Swift.Bool in Tagabout.AddSuggestionViewController.doCategorySelectionFromLanding(sender: Tagabout.TAISection, filter: Tagabout.SuggestionFilter) -&gt; ()"
+                  moduleName = "Tagabout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arunjangid/Arun/TAIIOiOS/Tagabout/Scenes/Add%20Suggestion/AddSuggestionViewController.swift"
+                  timestampString = "557258592.527694"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "180"
+                  endingLineNumber = "180"
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1081,13 +1241,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.110595"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258613.411536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
-            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "doCategorySelectionFromLanding(sender:filter:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1097,45 +1257,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.111398"
+            filePath = "Tagabout/Scenes/Add Suggestion/AddSuggestionViewController.swift"
+            timestampString = "557258636.4247791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
-            landmarkName = "userSwipe(forGesture:button:datasource:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.112231"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
-            landmarkName = "userSwipe(forGesture:button:datasource:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Tagabout/Scenes/Landing/LandingViewController.swift"
-            timestampString = "557253926.113874"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
-            landmarkName = "userSwipe(forGesture:button:datasource:)"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "doCategorySelectionFromLanding(sender:filter:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

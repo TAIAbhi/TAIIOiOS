@@ -26,7 +26,7 @@ class TabbarController : UITabBarController{
     
     static func navTabBarController() -> UINavigationController{
         let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
-        return storyBoard.instantiateViewController(withIdentifier: "parentNavigation") as! UINavigationController
+        return storyBoard.instantiateViewController(withIdentifier: "ParentNavigation") as! UINavigationController
         
     }
     
@@ -55,6 +55,8 @@ class TabbarController : UITabBarController{
         self.present(UINavigationController(rootViewController: landingViewController), animated: true) {
             
         }
+        
+        
         
         
     }

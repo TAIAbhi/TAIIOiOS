@@ -70,10 +70,21 @@ class SuggestionListViewController: UIViewController {
         
         sugesstionsTypeSwitch.delegate = self
         
+        self.swipeActionFromLandingScreen()
         
+        suggestionsTableView.dataSource = tableViewDataSource
+        suggestionsTableView.tableFooterView = UIView()
+        tableViewDataSource.editHandler = { suggestion in
+            self.routerEditSuggestion(suggestion)
+        }
+    }
+    
+    
+    func swipeActionFromLandingScreen(){
         if (self.tabBarController?.isKind(of: TabbarController.self))!{
             let tabVC = self.tabBarController as! TabbarController
             tabVC.landingViewController.dismissView = { filter, hangoutDatasource, serviceDatasource, shoppingdatasource in
+                self.tabBarController?.selectedIndex = 0
                 self.isProvideSuggestion = false
                 self.filter = filter
                 self.hangoutDatasource = hangoutDatasource
@@ -88,6 +99,7 @@ class SuggestionListViewController: UIViewController {
             }
             
             tabVC.landingViewController.downDismisHandler = { filter, hangoutDatasource, serviceDatasource, shoppingdatasource in
+                self.tabBarController?.selectedIndex = 0
                 self.isProvideSuggestion = false
                 self.filter = filter
                 self.hangoutDatasource = hangoutDatasource
@@ -103,6 +115,7 @@ class SuggestionListViewController: UIViewController {
             }
             
             tabVC.landingViewController.rightDismissHandler = { cityId in
+                self.tabBarController?.selectedIndex = 0
                 self.suggestions.removeAll()
                 self.interactor.getCategories(forCityId: cityId, completion: { (category) in
                     self.isProvideSuggestion = true
@@ -117,21 +130,24 @@ class SuggestionListViewController: UIViewController {
                 })
             }
             
-            tabVC.landingViewController.leftDismissHandler = { cityId in
-                    self.router.showRequestSuggestion(forCityId: cityId)
+            tabVC.landingViewController.topDismissHandler = { selectedFilter in
+                self.tabBarController?.selectedIndex = 1
+                if let viewController  = self.tabBarController?.viewControllers?[1] as? AddSuggestionViewController{
+                    if viewController.topDismissHandler != nil {
+                        viewController.topDismissHandler(selectedFilter)
+                    }
+                    
+                }
+                
             }
             
+            
+            tabVC.landingViewController.leftDismissHandler = { cityId in
+                self.router.showRequestSuggestion(forCityId: cityId)
+            }
         }
-        
-        
-        
-        suggestionsTableView.dataSource = tableViewDataSource
-        suggestionsTableView.tableFooterView = UIView()
-        tableViewDataSource.editHandler = { suggestion in
-            self.routerEditSuggestion(suggestion)
-        }
+
     }
-    
     
     
     // MARK: IBActions

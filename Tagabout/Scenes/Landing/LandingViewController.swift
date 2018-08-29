@@ -47,6 +47,7 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
     var downDismisHandler:((SuggestionFilter,[CategoryCountData],[CategoryCountData],[CategoryCountData]) ->())!
     var rightDismissHandler:((Int) -> ())!
     var leftDismissHandler:((Int) -> ())!
+    var topDismissHandler:((SuggestionFilter) -> ())!
     
     static func landingViewController() -> LandingViewController{
         return  LandingViewController.instantiate(fromAppStoryboard: .LandingScene)
@@ -311,7 +312,16 @@ class LandingViewController: ViewController,CLLocationManagerDelegate {
                 self.dismiss(animated: true, completion: nil)
                 break
             case UISwipeGestureRecognizerDirection.up:
-                
+                if self.topDismissHandler != nil {
+                    var filter =  self.suggestionFilter(button.tag)
+                    let selectedCategories = datasource[index]
+                    filter.catId = selectedCategories.catId
+                    filter.subCatId = selectedCategories.subCatId
+                    filter.pageNumber = 1
+                    filter.isLocal = selectedCategories.isLocal
+                    self.topDismissHandler(filter)
+                }
+                self.dismiss(animated: true, completion: nil)
                 break
             default: break
             }
