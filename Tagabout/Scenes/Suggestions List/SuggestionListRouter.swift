@@ -24,4 +24,8 @@ struct SuggestionListRouter {
     func selectTabBar(){
         viewController?.tabBarController?.selectedIndex = 1
     }
+    
+    func showRequestSuggestion(forCityId cityid:Int){
+        viewController?.navigationController?.pushViewController(WebViewController.webViewController(forCityId: cityid), animated: true)
+    }
 }

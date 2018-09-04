@@ -75,4 +75,10 @@ struct SuggestionFilter {
         self.businessName = businessName
         self.location = location
     }
+    
+    mutating func setCat(_ cat: Int, andSubCat subCat: Int){
+        catId = cat
+        subCatId = subCat
+        pageNumber = 1
+    }
 }

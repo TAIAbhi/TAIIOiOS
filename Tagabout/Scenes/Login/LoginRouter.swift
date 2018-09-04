@@ -17,10 +17,9 @@ class LoginRouter {
     }
     
     func openTabbar(){
-        let storyBoard = UIStoryboard.init(name: "UserStory", bundle: Bundle.main)
-        if let tabVC: TabbarController = storyBoard.instantiateViewController(withIdentifier: "TabbarController") as? TabbarController, let window = UIApplication.shared.keyWindow {
+        if  let window = UIApplication.shared.keyWindow {
             UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromRight, animations: {
-                window.rootViewController = tabVC
+                window.rootViewController = TabbarController.navTabBarController()
             }, completion: nil)
         }
     }

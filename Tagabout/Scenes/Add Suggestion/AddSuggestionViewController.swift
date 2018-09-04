@@ -78,7 +78,7 @@ class AddSuggestionViewController: UIViewController, CNContactPickerDelegate {
     @IBOutlet weak var isLocal: LabelSwitch!
     
     @IBOutlet weak var isAChain: LabelSwitch!
-    
+    var topDismissHandler:((SuggestionFilter) -> ())!
     @IBOutlet weak var name: TextFieldView!
     @IBOutlet weak var contact: TextFieldView!
     @IBOutlet weak var location: TextFieldView!
@@ -129,6 +129,16 @@ class AddSuggestionViewController: UIViewController, CNContactPickerDelegate {
                 }
             }
         }
+        
+        topDismissHandler = { selectedFilter in
+            if selectedFilter.catId == 1 {
+                self.doCategorySelectionFromLanding(sender: self.section1, filter: selectedFilter)
+            }else if selectedFilter.catId == 2{
+               self.doCategorySelectionFromLanding(sender: self.section2, filter: selectedFilter)
+            }else{
+               self.doCategorySelectionFromLanding(sender: self.section3, filter: selectedFilter)
+            }
+        }
     }
     
     
@@ -139,6 +149,59 @@ class AddSuggestionViewController: UIViewController, CNContactPickerDelegate {
         self.microCat2.textField.text = ""
         self.contact.textField.text = ""
         self.details.text = ""
+    }
+    
+    func doCategorySelectionFromLanding(sender : TAISection, filter:SuggestionFilter){
+        self.view.endEditing(true)
+        clearAll()
+        if let categories = categories, categories.count >= 3{
+            let tag = sender.tag
+            selectedCategory = categories[tag]
+            guard let selectedCategory = selectedCategory,
+                let subcats = selectedCategory.subCategories,
+                subcats.count > 0  else{
+                    self.lblSelectedCategory.text = "Suggestion"
+                    if let previousSelected = self.previousSelectedSection{
+                        previousSelected.isSectionSelected = false
+                    }
+                    sender.isSectionSelected = true
+                    self.previousSelectedSection = sender
+                    
+                    self.scrollView.isHidden = false
+                    return
+            }
+            
+//            self.selectionData[self.selectedSubCategoryName] =
+            
+//            {[weak self] (index: Int, item: String) in
+//                guard let strongSelf = self else{ return }
+//                strongSelf.selectionData[strongSelf.selectedSubCategoryName] = item
+            
+            if let selectedSubCat = subcats.filter( { $0.subCatId! == filter.subCatId!}).first{
+                self.selectionData[self.selectedSubCategoryValue] = filter.subCatId
+                self.lblSelectedCategory.text = selectedSubCat.name
+                if let previousSelected = self.previousSelectedSection{
+                    previousSelected.isSectionSelected = false
+                }
+                isLocal.curState = (selectedSubCat.isLocal)! == true ? .L : .R
+                sender.isSectionSelected = true
+                previousSelectedSection = sender
+                scrollView.isHidden = false
+                if let subCatId = selectedSubCat.subCatId{
+                    // get micro categories for selected subcategory.
+                    tabController?.showThemedLoader(true)
+                    interactor.getMicroCategoriesFor(subcategoryId: subCatId, completion: { (microCategories) in
+                        self.tabController?.showThemedLoader(false)
+                        self.microCategories = microCategories
+                        if let microCategories = microCategories, microCategories.count > 0{
+                            self.configureForm(isMicroCatAvailable: true)
+                        }else{
+                            self.configureForm(isMicroCatAvailable: false)
+                        }
+                    })
+                }
+            }
+        }
     }
     
     @IBAction func doCategorySelection(sender : TAISection){
